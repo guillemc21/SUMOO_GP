@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'SUMO GP') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,14 +21,31 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-#ffd17dbf shadow-sm" style="background-color: #ffd17dbf; padding: 15px;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'SUMO GP') }}
                 </a>
+                <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <style>
+                    a.py-2.d-none.d-md-inline-block{
+                        text-decoration: none; 
+                        color: black;
+                        padding-inline: 20px;
+                        border-radius: 20px;
+                    }
+
+                    a.py-2.d-none.d-md-inline-block:hover{
+                        background-color: #ffd27f;
+                    }
+                </style>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
