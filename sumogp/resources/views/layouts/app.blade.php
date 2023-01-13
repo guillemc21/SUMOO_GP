@@ -26,26 +26,13 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'SUMO GP') }}
                 </a>
-                <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+                <a class="py-2 d-none d-md-inline-block" style="margin-left: 60px" href="#">Tour</a>
                 <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
                 <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
                 <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <style>
-                    a.py-2.d-none.d-md-inline-block{
-                        text-decoration: none; 
-                        color: black;
-                        padding-inline: 20px;
-                        border-radius: 20px;
-                    }
-
-                    a.py-2.d-none.d-md-inline-block:hover{
-                        background-color: #ffd27f;
-                    }
-                </style>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
