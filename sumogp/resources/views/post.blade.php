@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('content')
+@section('contenido')
 
     <!-- Contenido -->
     <section class="container-fluid content py-5">

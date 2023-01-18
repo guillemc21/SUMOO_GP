@@ -22,7 +22,7 @@
     </nav>
 
     <!-- Contenido -->
-    @yield('content')
+    @yield('contenido')
    
     <!-- Footer -->
 
