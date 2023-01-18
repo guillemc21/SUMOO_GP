@@ -24,17 +24,3 @@ Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name(
 
 Auth::routes();
 
-
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-<<<<<<< Updated upstream
-=======
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> Stashed changes
