@@ -25,6 +25,8 @@ Route::get('/home', function(){
     return view('home');
 })->middleware('auth');
 
+Route::get('/admin/categories', [App\Http\Controllers\Admin\CategoriesController::class, 'index'])->name('admin.categories');
+
 
 Auth::routes();
 
