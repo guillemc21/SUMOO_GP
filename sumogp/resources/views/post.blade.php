@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('titulo', 'Post')
+
 @section('contenido')
 
     <!-- Contenido -->
@@ -62,3 +64,4 @@
 
 @endsection
 
+ 
