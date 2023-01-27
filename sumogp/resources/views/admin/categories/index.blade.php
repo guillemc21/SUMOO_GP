@@ -40,10 +40,41 @@
                                 <td>{{$category->id}}</td>
                                 <td>{{$category->name}}</td>
                                 <td>
-                                    <button class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
+                                 Editar
+                                </button>
                                     <button class="btn btn-danger">Eliminar</button>
                                 </td>
                             </tr>
+                            <!-- modal UPDATE -->
+                            <div class="modal fade" id="modal-update-category-{{$category->id}}">
+                                <div class="modal-dialog">
+                                    <div class="modal-content bg-default">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Actualizar Categoría</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                        <form action="{{ route('admin.categories.store') }}" method="POST">
+                                            {{ csrf_field() }}
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="name">Categoria</label> 
+                                                    <input type="text" name="name" class="form-control" id="category" value>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                                            </div>
+                                        </form> 
+                                    </div>
+                                <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
                         @endforeach
                     </tbody>
                     <tfoot>
@@ -64,7 +95,7 @@
     <!-- /.row -->
 </div>
 
-<!-- modal -->
+<!-- modal CREATE -->
 <div class="modal fade" id="modal-create-category">
     <div class="modal-dialog">
         <div class="modal-content bg-default">
@@ -92,6 +123,8 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+
 
 @stop
 
