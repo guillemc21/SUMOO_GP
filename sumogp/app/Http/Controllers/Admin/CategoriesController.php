@@ -30,4 +30,17 @@ class CategoriesController extends Controller
        //dd($request->all());
        return redirect()->back();
     }
+    
+    public function update(Request $request, $categoryId)
+    {
+       // dd( \App\Models\Models\Category::all());
+        
+       $category = Category::find($categoryId); 
+       
+       $category->name  = $request->name;
+       $category->save();
+       //dd($request->category);
+       //dd($request->all());
+       return redirect()->back();
+    }
 }
