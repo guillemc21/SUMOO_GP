@@ -6,7 +6,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
-            <form action="{{ route('admin.categories.store') }}" method="POST">
+            <form action="{{ route('admin.categories.update', $category->id) }}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
