@@ -47,7 +47,7 @@
                                 </td>
                             </tr>
                             <!-- modal UPDATE -->
-                            <div class="modal fade" id="modal-update-category-{{$category->id}}">
+                       <!-- <div class="modal fade" id="modal-update-category-{{$category->id}}">
                                 <div class="modal-dialog">
                                     <div class="modal-content bg-default">
                                         <div class="modal-header">
@@ -72,9 +72,10 @@
                                 <!-- /.modal-content -->
                                 </div>
                                 <!-- /.modal-dialog -->
-                            </div>
+                            </div>   -->
+                            @include('modal-update-category')
                             <!-- /.modal -->
-
+                        
                         @endforeach
                     </tbody>
                     <tfoot>
