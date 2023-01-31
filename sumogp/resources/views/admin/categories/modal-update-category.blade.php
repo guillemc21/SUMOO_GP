@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="name">Categoria</label> 
-                        <input type="text" name="name" class="form-control" id="category" value>
+                        <input type="text" name="name" class="form-control" id="category" value="{{ $category->name }}">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
