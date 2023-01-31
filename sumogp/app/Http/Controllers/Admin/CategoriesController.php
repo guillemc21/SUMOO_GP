@@ -15,8 +15,8 @@ class CategoriesController extends Controller
 
     public function index()
     {
-       
-       return view('admin.categories.index');
+       $categories = category::all();
+       return view('admin.categories.index', ['categories' => $categories]);
     }
 
     public function store(Request $request)
@@ -26,6 +26,19 @@ class CategoriesController extends Controller
        $newCategory = new Category();
        $newCategory->name  = $request->name;
        $newCategory->save();
+       //dd($request->category);
+       //dd($request->all());
+       return redirect()->back();
+    }
+    
+    public function update(Request $request, $categoryId)
+    {
+       // dd( \App\Models\Models\Category::all());
+        
+       $category = Category::find($categoryId); 
+       
+       $category->name  = $request->name;
+       $category->save();
        //dd($request->category);
        //dd($request->all());
        return redirect()->back();
