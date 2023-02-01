@@ -43,4 +43,15 @@ class CategoriesController extends Controller
        //dd($request->all());
        return redirect()->back();
     }
+
+    public function delete(Request $request, $categoryId)
+    {
+       // dd( \App\Models\Models\Category::all());
+        
+       $category = Category::find($categoryId); 
+       $category->delete();
+       //dd($request->category);
+       //dd($request->all());
+       return redirect()->back();
+    }
 }

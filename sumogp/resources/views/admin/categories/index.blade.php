@@ -43,7 +43,12 @@
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
                                  Editar
                                 </button>
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <form action="{{route('admin.categories.delete', $category->id)}}" method="POST">
+                                        {{ csrf_field() }}
+                                        @method('DELETE')
+                                        <button class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                    
                                 </td>
                             </tr>
                             <!-- modal UPDATE -->
