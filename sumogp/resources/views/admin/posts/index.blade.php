@@ -38,7 +38,7 @@
                         @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->id}}</td>
-                                <td>{{$post->name}}</td>
+                                <td>{{$post->title}}</td>
                                 <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-post-{{$post->id}}">
                                  Editar
@@ -88,8 +88,8 @@
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Post</label> 
-                        <input type="text" name="name" class="form-control" id="post">
+                        <label for="title">Post</label> 
+                        <input type="text" name="title" class="form-control" id="post">
                     </div>
                     <div class="form-group">
                         <label for="category_id">Categoria</label> 

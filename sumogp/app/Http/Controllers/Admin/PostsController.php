@@ -28,7 +28,7 @@ class PostsController extends Controller
      {
         // dd( \App\Models\Models\Category::all());
         $newPost = new Post();
-        $newPost->name  = $request->name;
+        $newPost->title  = $request->title;
         $newPost->category_id  = $request->category_id;
         $newPost->content  = $request->content;
         $newPost->author  = $request->author;
@@ -38,18 +38,18 @@ class PostsController extends Controller
         return redirect()->back();
      }
     
-    // public function update(Request $request, $categoryId)
-    // {
-    //    // dd( \App\Models\Models\Category::all());
-        
-    //    $category = Category::find($categoryId); 
-       
-    //    $category->name  = $request->name;
-    //    $category->save();
-    //    //dd($request->category);
-    //    //dd($request->all());
-    //    return redirect()->back();
-    // }
+     public function update(Request $request, $postId)
+     {
+        // dd( \App\Models\Models\Category::all());
+      
+        $post = Post::find($postId); 
+     
+        $post->title  = $request->title;
+        $post->save();
+        //dd($request->category);
+        //dd($request->all());
+        return redirect()->back();
+     }
 
     // public function delete(Request $request, $categoryId)
     // {
