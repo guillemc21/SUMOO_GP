@@ -30,6 +30,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Categoria</th>
                             <th>Post</th>
                             <th>Acciones</th>
                         </tr>
@@ -38,6 +39,7 @@
                         @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->id}}</td>
+                                <td>{{$post->category->name}}</td>
                                 <td>{{$post->title}}</td>
                                 <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-post-{{$post->id}}">
@@ -60,6 +62,7 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
+                            <th>Categoria</th>
                             <th>Post</th>
                             <th>Acciones</th>
                         </tr>

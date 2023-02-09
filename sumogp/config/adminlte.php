@@ -329,6 +329,11 @@ return [
             'url'  => 'admin/posts',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        [
+            'text' => 'Menu',
+            'url'  => 'admin/categories',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',

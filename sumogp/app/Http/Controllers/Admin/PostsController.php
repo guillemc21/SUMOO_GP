@@ -51,14 +51,14 @@ class PostsController extends Controller
         return redirect()->back();
      }
 
-    // public function delete(Request $request, $categoryId)
-    // {
-    //    // dd( \App\Models\Models\Category::all());
-        
-    //    $category = Category::find($categoryId); 
-    //    $category->delete();
-    //    //dd($request->category);
-    //    //dd($request->all());
-    //    return redirect()->back();
-    // }
+     public function delete(Request $request, $postId)
+     {
+        // dd( \App\Models\Models\Category::all());
+  
+        $post = Post::find($postId); 
+        $post->delete();
+        //dd($request->category);
+        //dd($request->all());
+        return redirect()->back();
+     }
 }
