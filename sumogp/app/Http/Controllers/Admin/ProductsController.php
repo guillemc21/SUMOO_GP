@@ -38,14 +38,19 @@ class ProductsController extends Controller
         return redirect()->back();
      }
     
-     public function update(Request $request, $postId)
+     public function update(Request $request, $productId)
      {
         // dd( \App\Models\Models\Category::all());
       
-        $post = Product::find($postId); 
+        $new_product = Product::find($productId); 
      
-        $post->title  = $request->title;
-        $post->save();
+        $new_product->name_product  = $request->name_product;
+        $new_product->sell_price  = $request->sell_price;
+        $new_product->content  = $request->content;
+        $new_product->category_id  = $request->category_id;
+        $new_product->brand_id  = $request->brand_id;
+        $new_product->stock  = $request->stock;
+        $new_product->save();
         //dd($request->category);
         //dd($request->all());
         return redirect()->back();

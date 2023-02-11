@@ -43,7 +43,7 @@
                             <tr>
                                 <td>{{$product->id}}</td>
                                 <td>{{$product->name_product}}</td>
-                                <td>{{$product->sell_price}}</td>
+                                <td>{{$product->sell_price}} €</td>
                                 <td>{{$product->content}}</td>
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->brand->name}}</td>

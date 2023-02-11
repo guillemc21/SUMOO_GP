@@ -6,12 +6,42 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
-            <form action="{{ route('admin.products.update', $product->id) }}" method="product">
+            <form action="{{ route('admin.products.update', $product->id) }}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="title">product</label> 
-                        <input type="text" name="title" class="form-control" id="category" value="{{ $product->title }}">
+                        <label for="name_product">Producto</label> 
+                        <input type="text" name="name_product" class="form-control" id="category" value="{{ $product->name_product }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="sell_price">Precio</label> 
+                        <input type="decimal" name="sell_price" class="form-control" id="category" value="{{ $product->sell_price }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Contenido</label> 
+                        <textarea name="content" class="form-control" id="content" cols="30" rows="10">{{ $product->content }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category_id">Categoria</label> 
+                        <select name="category_id" id="category_id" class="form-control">
+                            <option value="">-- Elegir categoria --</option>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}"> {{$category->name}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand_id">Marca</label> 
+                        <select name="brand_id" id="brand_id" class="form-control">
+                            <option value="">-- Elegir marca --</option>
+                            @foreach ($brands as $brand)
+                            <option value="{{$brand->id}}"> {{$brand->name}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock</label> 
+                        <input type="decimal" name="stock" class="form-control" id="category" value="{{ $product->stock }}">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
