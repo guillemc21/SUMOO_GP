@@ -48,15 +48,15 @@ class ProductsController extends Controller
      {
         // dd( \App\Models\Models\Category::all());
       
-        $new_product = Product::find($productId); 
+        $product = Product::find($productId); 
      
-        $new_product->name_product  = $request->name_product;
-        $new_product->sell_price  = $request->sell_price;
-        $new_product->content  = $request->content;
-        $new_product->category_id  = $request->category_id;
-        $new_product->brand_id  = $request->brand_id;
-        $new_product->stock  = $request->stock;
-        $new_product->save();
+        $product->name_product  = $request->name_product;
+        $product->sell_price  = $request->sell_price;
+        $product->content  = $request->content;
+        $product->category_id  = $request->category_id;
+        $product->brand_id  = $request->brand_id;
+        $product->stock  = $request->stock;
+        $product->save();
         //dd($request->category);
         //dd($request->all());
         return redirect()->back();
