@@ -40,6 +40,10 @@ Route::post('/admin/products/store', [App\Http\Controllers\Admin\ProductsControl
 Route::post('/admin/products/{productId}/update', [App\Http\Controllers\Admin\ProductsController::class, 'update'])->name('admin.products.update');
 Route::delete('/admin/products/{productId}/delete', [App\Http\Controllers\Admin\ProductsController::class, 'delete'])->name('admin.products.delete');
 
+Route::get('/admin/brnads', [App\Http\Controllers\Admin\brnadsController::class, 'index'])->name('admin.brnads');
+Route::post('/admin/brnads/store', [App\Http\Controllers\Admin\brnadsController::class, 'store'])->name('admin.brnads.store');
+Route::post('/admin/brnads/{brnadtId}/update', [App\Http\Controllers\Admin\brnadsController::class, 'update'])->name('admin.brnads.update');
+Route::delete('/admin/brnads/{brnadtId}/delete', [App\Http\Controllers\Admin\brnadsController::class, 'delete'])->name('admin.brnads.delete');
 
 Auth::routes();
 
