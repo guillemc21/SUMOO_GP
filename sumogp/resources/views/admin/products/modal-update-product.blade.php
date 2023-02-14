@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Actualizar product</h4>
+                <h4 class="modal-title">Actualizar producto</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
@@ -11,11 +11,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="name_product">Producto</label> 
-                        <input type="text" name="name_product" class="form-control" id="category" value="{{ $product->name_product }}">
+                        <input type="text" name="name_product" class="form-control" id="name_product" value="{{ $product->name_product }}">
                     </div>
                     <div class="form-group">
                         <label for="sell_price">Precio</label> 
-                        <input type="decimal" name="sell_price" class="form-control" id="category" value="{{ $product->sell_price }}">
+                        <input type="decimal" name="sell_price" class="form-control" id="sell_price" value="{{ $product->sell_price }}">
                     </div>
                     <div class="form-group">
                         <label for="content">Contenido</label> 
@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group">
                         <label for="stock">Stock</label> 
-                        <input type="decimal" name="stock" class="form-control" id="category" value="{{ $product->stock }}">
+                        <input type="decimal" name="stock" class="form-control" id="stock" value="{{ $product->stock }}">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">

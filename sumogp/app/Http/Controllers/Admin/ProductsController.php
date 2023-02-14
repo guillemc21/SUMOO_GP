@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -18,9 +19,11 @@ class ProductsController extends Controller
     {
         $products = Product::all();
         $categories = Category::all();
+        $brands = Brand::all();
         return view('admin.products.index', [
             'products' => $products,
-            'categories' => $categories
+            'categories' => $categories,
+            'brands' => $brands
         ]);
     }
 
@@ -28,10 +31,13 @@ class ProductsController extends Controller
      {
         // dd( \App\Models\Models\Category::all());
         $newPost = new Product();
-        $newPost->title  = $request->title;
-        $newPost->category_id  = $request->category_id;
+        $newPost->name_product  = $request->name_product;
+        $newPost->sell_price  = $request->sell_price;
         $newPost->content  = $request->content;
-        $newPost->author  = $request->author;
+        $newPost->category_id  = $request->category_id;
+        $newPost->brand_id  = $request->brand_id;
+        $newPost->stock  = $request->stock;
+        
         $newPost->save();
         //dd($request->category);
         //dd($request->all());

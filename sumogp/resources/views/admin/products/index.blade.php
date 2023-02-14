@@ -8,7 +8,7 @@
 
 @section('content_header')
     <h1 style="font-family: system-ui">
-        products
+        Productos
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-product">
             Crear
         </button>
@@ -22,7 +22,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Listado de products</h3>
+                    <h3 class="card-title">Listado de productos</h3>
                 </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -93,16 +93,24 @@
     <div class="modal-dialog">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Crear product</h4>
+                <h4 class="modal-title">Crear producto</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 </div>
-            <form action="{{ route('admin.products.store') }}" method="product">
+            <form action="{{ route('admin.products.store') }}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="title">product</label> 
-                        <input type="text" name="title" class="form-control" id="product">
+                        <label for="name_product">Producto</label> 
+                        <input type="text" name="name_product" class="form-control" id="name_product">
+                    </div>
+                    <div class="form-group">
+                        <label for="sell_price">Precio</label> 
+                        <input type="decimal" name="sell_price" class="form-control" id="sell_price">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Contenido</label> 
+                        <textarea name="content" class="form-control" id="content" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="category_id">Categoria</label> 
@@ -114,13 +122,17 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="content">Contenido</label> 
-                        <textarea name="content" class="form-control" id="content" cols="30" rows="10"></textarea>
-                        
+                        <label for="brand_id">Marca</label> 
+                        <select name="brand_id" id="brand_id" class="form-control">
+                            <option value="">-- Elegir marca --</option>
+                            @foreach ($brands as $brand)
+                            <option value="{{$brand->id}}"> {{$brand->name}} </option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="author">Autor</label> 
-                        <input type="text" name="author" class="form-control" id="author">
+                        <label for="stock">Stock</label> 
+                        <input type="decimal" name="stock" class="form-control" id="stock">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
