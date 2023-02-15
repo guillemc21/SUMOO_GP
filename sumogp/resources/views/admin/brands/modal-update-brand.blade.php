@@ -1,17 +1,17 @@
-<div class="modal fade" id="modal-update-category-{{$category->id}}">
+<div class="modal fade" id="modal-update-brand-{{$brand->id}}">
     <div class="modal-dialog">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Actualizar Categoría</h4>
+                <h4 class="modal-title">Actualizar Marca</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
-            <form action="{{ route('admin.categories.update', $category->id) }}" method="POST">
+            <form action="{{ route('admin.brands.update', $brand->id) }}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Categoria</label> 
-                        <input type="text" name="name" class="form-control" id="category" value="{{ $category->name }}">
+                        <label for="name">Marca</label> 
+                        <input type="text" name="name" class="form-control" id="brand" value="{{ $brand->name }}">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">

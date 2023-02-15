@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminCategorias - SUMOGP')
+@section('title', 'AdminMarcas - SUMOGP')
 
 @section('css')
     <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
@@ -8,8 +8,8 @@
 
 @section('content_header')
     <h1 style="font-family: system-ui">
-        Categorías
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-category">
+        Marcas
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-brand">
             Crear
         </button>
     </h1>
@@ -22,28 +22,28 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Listado de categorías</h3>
+                    <h3 class="card-title">Listado de marcas</h3>
                 </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <table id="categories" class="table table-bordered table-striped">
+                <table id="brands" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Categoria</th>
+                            <th>Marca</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($categories as $category)
+                        @foreach ($brands as $brand)
                             <tr>
-                                <td>{{$category->id}}</td>
-                                <td>{{$category->name}}</td>
+                                <td>{{$brand->id}}</td>
+                                <td>{{$brand->name}}</td>
                                 <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
                                  Editar
                                 </button>
-                                    <form action="{{route('admin.categories.delete', $category->id)}}" method="POST">
+                                    <form action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
@@ -52,7 +52,7 @@
                                 </td>
                             </tr>
                             <!-- modal UPDATE -->
-                            @include('admin.categories.modal-update-category')
+                            @include('admin.brands.modal-update-brand')
                             <!-- /.modal -->
                         
                         @endforeach
@@ -60,7 +60,7 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Categoria</th>
+                            <th>Marca</th>
                             <th>Acciones</th>
                         </tr>
                     </tfoot>
@@ -76,20 +76,20 @@
 </div>
 
 <!-- modal CREATE -->
-<div class="modal fade" id="modal-create-category">
+<div class="modal fade" id="modal-create-brand">
     <div class="modal-dialog">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Crear Categoría</h4>
+                <h4 class="modal-title">Crear Marca</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 </div>
-            <form action="{{ route('admin.categories.store') }}" method="POST">
+            <form action="{{ route('admin.brands.store') }}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Categoria</label> 
-                        <input type="text" name="name" class="form-control" id="category">
+                        <label for="name">Marca</label> 
+                        <input type="text" name="name" class="form-control" id="brand">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -111,7 +111,7 @@
 @section('js')
     <script>
     $(document).ready(function() {
-        $('#categories').DataTable( {
+        $('#brands').DataTable( {
             "order": [[ 3, "desc" ]]
         } );
     } );

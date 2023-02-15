@@ -43,7 +43,7 @@ Route::delete('/admin/products/{productId}/delete', [App\Http\Controllers\Admin\
 Route::get('/admin/brands', [App\Http\Controllers\Admin\BrandsController::class, 'index'])->name('admin.brands');
 Route::post('/admin/brands/store', [App\Http\Controllers\Admin\BrandsController::class, 'store'])->name('admin.brands.store');
 Route::post('/admin/brands/{brandId}/update', [App\Http\Controllers\Admin\BrandsController::class, 'update'])->name('admin.brands.update');
-Route::delete('/admin/brands/{brandtId}/delete', [App\Http\Controllers\Admin\BrandsController::class, 'delete'])->name('admin.brands.delete');
+Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\BrandsController::class, 'delete'])->name('admin.brands.delete');
 
 Auth::routes();
 

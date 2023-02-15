@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Adminproducts - SUMOGP')
+@section('title', 'AdminProductos - SUMOGP')
 
 @section('css')
     <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
@@ -52,7 +52,7 @@
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-product-{{$product->id}}">
                                  Editar
                                 </button>
-                                    <form action="{{route('admin.products.delete', $product->id)}}" method="product">
+                                    <form action="{{route('admin.products.delete', $product->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
