@@ -36,6 +36,7 @@
                             <th>Categoria</th>
                             <th>Marca</th>
                             <th>Stock</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,6 +76,7 @@
                             <th>Categoria</th>
                             <th>Marca</th>
                             <th>Stock</th>
+                            <th>Acciones</th>
                         </tr>
                     </tfoot>
                 </table>

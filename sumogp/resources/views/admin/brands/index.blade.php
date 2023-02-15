@@ -112,8 +112,11 @@
     <script>
     $(document).ready(function() {
         $('#brands').DataTable( {
-            "order": [[ 3, "desc" ]]
+            "order": [[ 2, "desc" ]]
         } );
     } );
     </script>
 @stop
+
+
+
