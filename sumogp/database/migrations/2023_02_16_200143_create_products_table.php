@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('category_id')->constrained('categories');
             $table->foreignId('brand_id')->constrained('brands');
             $table->integer('stock');
-            
+            $table->string('image_product');
             $table->timestamps();
         });
     }

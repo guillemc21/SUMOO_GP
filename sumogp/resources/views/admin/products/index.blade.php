@@ -36,6 +36,7 @@
                             <th>Categoria</th>
                             <th>Marca</th>
                             <th>Stock</th>
+                            <th>Imagen</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -49,6 +50,9 @@
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->brand->name}}</td>
                                 <td>{{$product->stock}}</td>
+                                <td>
+                                    <img src="{{asset($product->image_product)}}" alt="{{ $product->name_product }}" class="img-fluid img-thumbnail" width="100px">
+                                </td>
                                 <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-product-{{$product->id}}">
                                  Editar
@@ -76,6 +80,7 @@
                             <th>Categoria</th>
                             <th>Marca</th>
                             <th>Stock</th>
+                            <th>Imagen</th>
                             <th>Acciones</th>
                         </tr>
                     </tfoot>

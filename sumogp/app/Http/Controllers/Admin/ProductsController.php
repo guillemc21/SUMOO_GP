@@ -37,7 +37,7 @@ class ProductsController extends Controller
             $destinationPath = 'images/featureds/';
             $filename = time() . '-' . $file->getClientOriginalName();
             $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
-            $newPost->featured = $destinationPath . $filename;
+            $newPost->image_product = $destinationPath . $filename;
         }
 
         $newPost->name_product  = $request->name_product;
@@ -59,12 +59,22 @@ class ProductsController extends Controller
       
         $product = Product::find($productId); 
      
+        
+
         $product->name_product  = $request->name_product;
         $product->sell_price  = $request->sell_price;
         $product->content  = $request->content;
         $product->category_id  = $request->category_id;
         $product->brand_id  = $request->brand_id;
         $product->stock  = $request->stock;
+        
+        if( $request->hasFile('featured') ){
+            $file = $request->file('featured');
+            $destinationPath = 'images/featureds/';
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
+            $product->image_product = $destinationPath . $filename;
+        }
         $product->save();
         //dd($request->category);
         //dd($request->all());
