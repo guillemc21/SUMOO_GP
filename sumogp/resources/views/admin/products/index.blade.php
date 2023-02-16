@@ -99,7 +99,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 </div>
-            <form action="{{ route('admin.products.store') }}" method="POST">
+            <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
@@ -135,6 +135,10 @@
                     <div class="form-group">
                         <label for="stock">Stock</label> 
                         <input type="decimal" name="stock" class="form-control" id="stock">
+                    </div>
+                    <div class="form-group">
+                        <label for="featured">Imagen del producto</label> 
+                        <input type="file" name="featured" class="form-control" id="featured">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">

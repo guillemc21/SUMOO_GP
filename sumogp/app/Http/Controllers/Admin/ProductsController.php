@@ -31,6 +31,15 @@ class ProductsController extends Controller
      {
         // dd( \App\Models\Models\Category::all());
         $newPost = new Product();
+
+        if( $request->hasFile('featured') ){
+            $file = $request->file('featured');
+            $destinationPath = 'images/featureds/';
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
+            $newPost->featured = $destinationPath . $filename;
+        }
+
         $newPost->name_product  = $request->name_product;
         $newPost->sell_price  = $request->sell_price;
         $newPost->content  = $request->content;
