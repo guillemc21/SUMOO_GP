@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
+
 Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
 
 Route::get('/home', function(){

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,13 +25,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $category=Category::find(6);
-        // dd($category->posts);
-        return view('posts');
+        $categories=Category::all();
+        $products=Product::all();
+        
+        return view('posts', [
+            'categories' => $categories,
+            'products' => $products
+        ]);
     }
 
     public function post()
     {
         return view('post');
+    }
+
+    public function productByCategory($category)
+    {
+        $categories=Category::all();
+        $category = Category::where('name', '=' ,$category)->first();
+        $products = Product::where('category_id', '=' , $category->id)->get();
+        return view('posts', [
+            'categories' => $categories,
+            'products' => $products
+        ]);
     }
 }
