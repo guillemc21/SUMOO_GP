@@ -43,10 +43,12 @@ class HomeController extends Controller
     {
         $categories=Category::all();
         $category = Category::where('name', '=' ,$category)->first();
-        $products = Product::where('category_id', '=' , $category->id)->get();
+        $categoryIdSelected = $category->id;
+        $products = Product::where('category_id', '=' , $categoryIdSelected)->get();
         return view('posts', [
             'categories' => $categories,
-            'products' => $products
+            'products' => $products,
+            'categoryIdSelected' => $categoryIdSelected
         ]);
     }
 }

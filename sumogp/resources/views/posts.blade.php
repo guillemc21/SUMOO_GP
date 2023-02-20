@@ -10,8 +10,9 @@
         <div class="row justify-content-center">
             <div class="col-10 col-md-12">
                 <nav class="text-center my-5">
+                    <a href="/" class="mx-3 pb-3 link-category d-block d-md-inline {{isset($categoryIdSelected)? '': 'selected-category' }}" >Todas</a>
                     @foreach ($categories as $category)
-                        <a href="{{route('products.category', $category->name)}}" class="mx-3 pb-3 link-category d-block d-md-inline selected-category" >{{$category->name}}</a>
+                        <a href="{{route('products.category', $category->name)}}" class="mx-3 pb-3 link-category d-block d-md-inline {{  (isset($categoryIdSelected) && $category->id == $categoryIdSelected)? 'selected-category': '' }}" >{{$category->name}}</a>
                     @endforeach
                     
                 </nav>
