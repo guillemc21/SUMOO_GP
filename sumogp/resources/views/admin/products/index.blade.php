@@ -3,8 +3,9 @@
 @section('title', 'AdminProductos - SUMOGP')
 
 @section('css')
-    <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
+    <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 @stop
+
 
 @section('content_header')
     <h1 style="font-family: system-ui">
@@ -53,16 +54,15 @@
                                 <td>
                                     <img src="{{asset($product->image_product)}}" alt="{{ $product->name_product }}" class="img-fluid img-thumbnail" width="100px">
                                 </td>
-                                <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-product-{{$product->id}}">
-                                 Editar
-                                </button>
+                                <td class="btn_td">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-product-{{$product->id}}">
+                                    Editar
+                                    </button>
                                     <form action="{{route('admin.products.delete', $product->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
-                                        <button class="btn btn-danger">Eliminar</button>
+                                        <button  class="btn btn-danger">Eliminar</button>
                                     </form>
-                                    
                                 </td>
                             </tr>
                             <!-- modal UPDATE -->
@@ -169,5 +169,9 @@
             "order": [[ 3, "desc" ]]
         } );
     } );
+
+
+    
+
     </script>
 @stop
