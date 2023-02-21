@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+#products_wrapper {
+    width: 100%;
+    margin: 30px;
+}
+
 .btn_td {
     
     /* width: 100vw; */
