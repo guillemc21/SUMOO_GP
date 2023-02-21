@@ -58,10 +58,10 @@
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-product-{{$product->id}}">
                                     Editar
                                     </button>
-                                    <form action="{{route('admin.products.delete', $product->id)}}" method="POST">
+                                    <form class="form-eliminar" action="{{route('admin.products.delete', $product->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
-                                        <button  class="btn btn-danger">Eliminar</button>
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
                                     </form>
                                 </td>
                             </tr>
@@ -163,15 +163,46 @@
 @stop
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (session('eliminar') == 'OK')
+        <script>
+            Swal.fire(
+                'Eliminado!',
+                'El producto a sido eliminado.',
+                'success',
+            )
+        </script>
+    @endif
     <script>
-    $(document).ready(function() {
-        $('#products').DataTable( {
-            "order": [[ 3, "desc" ]]
-        } );
-    } );
+        
+        $(document).ready(function() {
+            $('#products').DataTable( {
+                "order": [[ 1, "desc" ]]
+            } );
+        } );    
 
+        $('.form-eliminar').submit(function(e){
+            e.preventDefault();
+            Swal.fire({
+                title: 'Estas seguro?',
+                text: "No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, eliminar ahora!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                
+                this.submit()
+                
+            }
+            });
+        });
 
-    
+        
 
     </script>
+    
 @stop

@@ -5,6 +5,12 @@
     --light-blue: #51adf6;
 }
 
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn_td {
     
     /* width: 100vw; */

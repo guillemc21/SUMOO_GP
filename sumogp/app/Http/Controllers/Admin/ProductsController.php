@@ -89,6 +89,6 @@ class ProductsController extends Controller
         $post->delete();
         //dd($request->category);
         //dd($request->all());
-        return redirect()->back();
+        return redirect()->route('admin.products')->with('eliminar', 'OK');
      }
 }
