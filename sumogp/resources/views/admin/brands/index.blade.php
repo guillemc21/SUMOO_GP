@@ -3,7 +3,7 @@
 @section('title', 'AdminMarcas - SUMOGP')
 
 @section('css')
-    <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
+    <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 @stop
 
 @section('content_header')
@@ -25,7 +25,7 @@
                     <h3 class="card-title">Listado de Marcas</h3>
                 </div>
             <!-- /.card-header -->
-            <div class="card-body">
+                <div class="card-body">
                 <table id="brands" class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -39,10 +39,10 @@
                             <tr>
                                 <td>{{$brand->id}}</td>
                                 <td>{{$brand->name}}</td>
-                                <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
-                                 Editar
-                                </button>
+                                <td class="btn_td">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
+                                    Editar
+                                    </button>
                                     <form action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
@@ -65,7 +65,7 @@
                         </tr>
                     </tfoot>
                 </table>
-            </div>
+                </div>
             <!-- /.card-body -->
             </div>
             <!-- /.card -->

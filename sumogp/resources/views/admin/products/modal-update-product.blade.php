@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label for="featured">Imagen del producto</label> 
-                        <input type="file" name="featured" class="form-control" id="featured" value="{{ $product->image_product }}">{{ $product->image_product }}
+                        <input type="file" name="featured" class="form-control" id="featured" value="{{ $product->image_product }}">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
