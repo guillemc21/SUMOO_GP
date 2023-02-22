@@ -43,10 +43,17 @@ Route::post('/admin/products/store', [App\Http\Controllers\Admin\ProductsControl
 Route::post('/admin/products/{productId}/update', [App\Http\Controllers\Admin\ProductsController::class, 'update'])->name('admin.products.update');
 Route::delete('/admin/products/{productId}/delete', [App\Http\Controllers\Admin\ProductsController::class, 'delete'])->name('admin.products.delete');
 
+<<<<<<< Updated upstream
 Route::get('/admin/brands', [App\Http\Controllers\Admin\BrandsController::class, 'index'])->name('admin.brands');
 Route::post('/admin/brands/store', [App\Http\Controllers\Admin\BrandsController::class, 'store'])->name('admin.brands.store');
 Route::post('/admin/brands/{brandId}/update', [App\Http\Controllers\Admin\BrandsController::class, 'update'])->name('admin.brands.update');
 Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\BrandsController::class, 'delete'])->name('admin.brands.delete');
+=======
+Route::get('/admin/brnads', [App\Http\Controllers\Admin\brnadsController::class, 'index'])->name('admin.brnads');
+Route::post('/admin/brnads/store', [App\Http\Controllers\Admin\brnadsController::class, 'store'])->name('admin.brnads.store');
+Route::post('/admin/brnads/{productId}/update', [App\Http\Controllers\Admin\brnadsController::class, 'update'])->name('admin.brnads.update');
+Route::delete('/admin/brnads/{productId}/delete', [App\Http\Controllers\Admin\brnadsController::class, 'delete'])->name('admin.brnads.delete');
+>>>>>>> Stashed changes
 
 Auth::routes();
 

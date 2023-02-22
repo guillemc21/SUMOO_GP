@@ -34,7 +34,7 @@
                         <label for="brand_id">Marca</label> 
                         <select name="brand_id" id="brand_id" class="form-control">
                             <option value="">-- Elegir marca --</option>
-                            @foreach ($brands as $brand)
+                            @foreach ($categories as $brand)
                             <option value="{{$brand->id}}"> {{$brand->name}} </option>
                             @endforeach
                         </select>
