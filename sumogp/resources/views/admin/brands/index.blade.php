@@ -1,10 +1,6 @@
 @extends('adminlte::page')
 
-<<<<<<< Updated upstream
 @section('title', 'AdminMarcas - SUMOGP')
-=======
-@section('title', 'AdminCategorias - SUMOGP')
->>>>>>> Stashed changes
 
 @section('css')
     <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
@@ -26,11 +22,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-<<<<<<< Updated upstream
-                    <h3 class="card-title">Listado de marcas</h3>
-=======
                     <h3 class="card-title">Listado de Marcas</h3>
->>>>>>> Stashed changes
                 </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -38,11 +30,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-<<<<<<< Updated upstream
                             <th>Marca</th>
-=======
-                            <th>Categoria</th>
->>>>>>> Stashed changes
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -72,11 +60,7 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-<<<<<<< Updated upstream
                             <th>Marca</th>
-=======
-                            <th>Categoria</th>
->>>>>>> Stashed changes
                             <th>Acciones</th>
                         </tr>
                     </tfoot>
@@ -128,18 +112,11 @@
     <script>
     $(document).ready(function() {
         $('#brands').DataTable( {
-<<<<<<< Updated upstream
             "order": [[ 2, "desc" ]]
-=======
-            "order": [[ 3, "desc" ]]
->>>>>>> Stashed changes
         } );
     } );
     </script>
 @stop
-<<<<<<< Updated upstream
 
 
 
-=======
->>>>>>> Stashed changes
