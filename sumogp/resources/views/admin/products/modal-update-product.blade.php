@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label for="category_id">Categoria</label> 
                         <select name="category_id" id="category_id" class="form-control">
-                            <option value="">-- Elegir categoria --</option>
+                            <option value="{{ $product->category_id }}">{{ $product->category->name }}</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}"> {{$category->name}} </option>
                             @endforeach
@@ -33,8 +33,9 @@
                     <div class="form-group">
                         <label for="brand_id">Marca</label> 
                         <select name="brand_id" id="brand_id" class="form-control">
-                            <option value="">-- Elegir marca --</option>
-                            @foreach ($categories as $brand)
+                            
+                            <option value="{{ $product->brand_id }}">{{ $product->brand->name }}</option>
+                            @foreach ($brands as $brand)
                             <option value="{{$brand->id}}"> {{$brand->name}} </option>
                             @endforeach
                         </select>
@@ -45,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label for="featured">Imagen del producto</label> 
-                        <input type="file" name="featured" class="form-control" id="featured">
+                        <input type="file" name="featured" class="form-control" id="featured" value="{{ $product->image_product }}">{{ $product->image_product }}
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
