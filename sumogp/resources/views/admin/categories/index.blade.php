@@ -3,7 +3,7 @@
 @section('title', 'AdminCategorias - SUMOGP')
 
 @section('css')
-    <!-- <link rel="stylesheet" href="css/admin_custom.css"> -->
+    <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 @stop
 
 @section('content_header')
@@ -39,7 +39,7 @@
                             <tr>
                                 <td>{{$category->id}}</td>
                                 <td>{{$category->name}}</td>
-                                <td>
+                                <td class="btn_td">
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
                                  Editar
                                 </button>
