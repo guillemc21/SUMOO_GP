@@ -1,8 +1,8 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('title', 'Posts')
 
-@section('contenido')
+@section('content')
     
     <!-- Contenido -->
     <section class="container-fluid content">
