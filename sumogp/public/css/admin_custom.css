@@ -16,6 +16,11 @@
     margin: 30px;
 }
 
+#brands_wrapper {
+    width: 100%;
+    margin: 30px;
+}
+
 .btn_td {
     
     /* width: 100vw; */
@@ -45,7 +50,10 @@
         font-size: 0.8rem;
         width: 400px;
     }
-    
+    #brands{
+        font-size: 0.8rem;
+        width: 100%px;
+    }
 }
 
 @media (max-width:1065px) {
@@ -56,6 +64,9 @@
         font-size: 0.6rem;      
     }
     #products {
+        font-size: 0.7rem;
+    }
+    #brands{
         font-size: 0.7rem;
     }
     
