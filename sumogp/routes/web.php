@@ -22,6 +22,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
 
+Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'productByCategory'])->name('store.category');
+
+
 Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
 
 Route::get('/home', function(){
@@ -47,6 +50,8 @@ Route::get('/admin/brands', [App\Http\Controllers\Admin\BrandsController::class,
 Route::post('/admin/brands/store', [App\Http\Controllers\Admin\BrandsController::class, 'store'])->name('admin.brands.store');
 Route::post('/admin/brands/{brandId}/update', [App\Http\Controllers\Admin\BrandsController::class, 'update'])->name('admin.brands.update');
 Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\BrandsController::class, 'delete'])->name('admin.brands.delete');
+
+Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
 
 
 Auth::routes();
