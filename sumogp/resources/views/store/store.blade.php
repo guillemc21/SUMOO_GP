@@ -24,6 +24,7 @@
             </div>
 
             <div class="col-10">
+                <a href="{{route('cart.show')}}">Carrito</a>
                 <div class="row">
                     <!-- Post 1 -->
                     @foreach ($products as $product)
@@ -38,6 +39,9 @@
                                 </div>
                                 <a href="#" class="post-link"><b>Leer más</b></a>
                                 <hr>
+                                <div class="row">
+                                    <a class="btn btn-warning btn-block" href="{{route('cart.show',$product->name_product)}}"><i class="fa fa-cart-plus">Añadir al carrito</i></a>
+                                </div>
                                 <div class="row">
                                     <div class="col-6 text-left">
                                         <span class="card-txt-author">{{$product->sell_price}} €</span>

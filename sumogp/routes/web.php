@@ -53,6 +53,9 @@ Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\Bran
 
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
 
+Route::get('/cart/show', [App\Http\Controllers\CartProductController::class, 'show'])->name('cart.show');
+
+// Route::get('/cart/prueba', [App\Http\Controllers\CartProductController::class, 'prueba'])->name('cart.show');
 
 Auth::routes();
 
