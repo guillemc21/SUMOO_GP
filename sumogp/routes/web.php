@@ -25,7 +25,7 @@ Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 
 Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'productByCategory'])->name('store.category');
 
 
-Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
+// Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
 
 Route::get('/home', function(){
     return view('home');

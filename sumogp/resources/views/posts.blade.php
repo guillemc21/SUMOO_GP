@@ -15,7 +15,7 @@
             </div>
         </div>
         <!-- Categorías -->
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-10 col-md-12">
                 <nav class="text-center my-5">
                     <a href="/" class="mx-3 pb-3 link-category d-block d-md-inline {{isset($categoryIdSelected)? '': 'selected-category' }}" >Todas</a>
@@ -25,13 +25,13 @@
                     
                 </nav>
             </div>
-        </div>
+        </div> -->
 
         <!-- Posts -->
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-10">
                 <div class="row">
-                    <!-- Post 1 -->
+                    
                     @foreach ($products as $product)
                     <div class="col-md-4 col-12 justify-content-center mb-5">
                         <div class="card m-auto" style="width: 18rem;">
@@ -56,16 +56,13 @@
                         </div>
                     </div>
                     @endforeach
-                    <!-- Post 2 -->
+                   
                     
                 </div>
             </div>
 
-            <div class="col-12">
-                <!-- Paginador -->
-
-            </div>
-        </div>
+            
+        </div> -->
     </section>
 
 @endsection
