@@ -37,19 +37,17 @@
     /* align-content: space-between; */
     flex-direction: column;
     
-}
-
-.btn_td>button {
-    width: 50%;
-    margin-bottom: 15px;
-}
-.btn_td form {
-    width: 50%;
+    position: relative;
     
 }
 
-form>button {
+.btn_td button {
     width: 100%;
+    
+}
+.btn_td form {
+    width: 100%;
+    
 }
 
 @media (max-width:1150px) {
