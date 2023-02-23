@@ -41,13 +41,17 @@
     
 }
 
-.btn_td button {
-    width: 100%;
-    
+.btn_td>button {
+    width: 50%;
+    margin-bottom: 15px;
 }
 .btn_td form {
-    width: 100%;
+    width: 50%;
     
+}
+
+form>button{
+    width: 100%;
 }
 
 @media (max-width:1150px) {
