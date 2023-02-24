@@ -28,27 +28,27 @@ class HomeController extends Controller
         $categories=Category::all();
         $products=Product::all();
         
-        return view('posts', [
+        return view('inicio', [
             'categories' => $categories,
             'products' => $products
         ]);
     }
 
-    public function post()
-    {
-        return view('post');
-    }
+    // public function post()
+    // {
+    //     return view('post');
+    // }
 
-    public function productByCategory($category)
-    {
-        $categories=Category::all();
-        $category = Category::where('name', '=' ,$category)->first();
-        $categoryIdSelected = $category->id;
-        $products = Product::where('category_id', '=' , $categoryIdSelected)->get();
-        return view('posts', [
-            'categories' => $categories,
-            'products' => $products,
-            'categoryIdSelected' => $categoryIdSelected
-        ]);
-    }
+    // public function productByCategory($category)
+    // {
+    //     $categories=Category::all();
+    //     $category = Category::where('name', '=' ,$category)->first();
+    //     $categoryIdSelected = $category->id;
+    //     $products = Product::where('category_id', '=' , $categoryIdSelected)->get();
+    //     return view('posts', [
+    //         'categories' => $categories,
+    //         'products' => $products,
+    //         'categoryIdSelected' => $categoryIdSelected
+    //     ]);
+    // }
 }
