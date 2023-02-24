@@ -20,9 +20,18 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
 
+
+
+
+//Filtro categorias//
 Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'productByCategory'])->name('store.category');
+
+// Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
+
+
+
+
 
 
 // Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
@@ -33,6 +42,8 @@ Route::get('/home', function(){
 
 
 
+
+//Panel ADMIN + CRUD Categorias//
 Route::get('/admin/categories', [App\Http\Controllers\Admin\CategoriesController::class, 'index'])->name('admin.categories');
 Route::post('/admin/categories/store', [App\Http\Controllers\Admin\CategoriesController::class, 'store'])->name('admin.categories.store');
 Route::post('/admin/categories/{categoryId}/update', [App\Http\Controllers\Admin\CategoriesController::class, 'update'])->name('admin.categories.update');
@@ -40,7 +51,7 @@ Route::delete('/admin/categories/{categoryId}/delete', [App\Http\Controllers\Adm
 
 
 
-
+//Panel ADMIN + CRUD Posts//
 Route::get('/admin/posts', [App\Http\Controllers\Admin\PostsController::class, 'index'])->name('admin.posts');
 Route::post('/admin/posts/store', [App\Http\Controllers\Admin\PostsController::class, 'store'])->name('admin.posts.store');
 Route::post('/admin/posts/{postId}/update', [App\Http\Controllers\Admin\PostsController::class, 'update'])->name('admin.posts.update');
@@ -48,7 +59,7 @@ Route::delete('/admin/posts/{postId}/delete', [App\Http\Controllers\Admin\PostsC
 
 
 
-
+//Panel ADMIN + CRUD Productos//
 Route::get('/admin/products', [App\Http\Controllers\Admin\ProductsController::class, 'index'])->name('admin.products');
 Route::post('/admin/products/store', [App\Http\Controllers\Admin\ProductsController::class, 'store'])->name('admin.products.store');
 Route::post('/admin/products/{productId}/update', [App\Http\Controllers\Admin\ProductsController::class, 'update'])->name('admin.products.update');
@@ -57,6 +68,7 @@ Route::delete('/admin/products/{productId}/delete', [App\Http\Controllers\Admin\
 
 
 
+//Panel ADMIN + CRUD Marcas//
 Route::get('/admin/brands', [App\Http\Controllers\Admin\BrandsController::class, 'index'])->name('admin.brands');
 Route::post('/admin/brands/store', [App\Http\Controllers\Admin\BrandsController::class, 'store'])->name('admin.brands.store');
 Route::post('/admin/brands/{brandId}/update', [App\Http\Controllers\Admin\BrandsController::class, 'update'])->name('admin.brands.update');
@@ -64,7 +76,9 @@ Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\Bran
 
 
 
+
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
+Route::get('/cart/add/{product}', [App\Http\Controllers\CartProductController::class, 'add'])->name('cart.add');
 Route::get('/cart/show', [App\Http\Controllers\CartProductController::class, 'show'])->name('cart.show');
 
 // Route::get('/cart/prueba', [App\Http\Controllers\CartProductController::class, 'prueba'])->name('cart.show');

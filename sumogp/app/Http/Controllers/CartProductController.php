@@ -26,6 +26,19 @@ class CartProductController extends Controller
         return view('store.cart',compact('cart','total'));
     }
 
+    public function add($product)
+    {
+        
+        $cart = Session::get('cart');
+        $product = Product::where('name_product', '=' ,$product)->first();
+        //!!!!En vez de stock hay que crear un campo de cantidad y aplicarlo aqui//
+        $product->stock = 1;
+        $cart[$product->name_product] = $product;
+        Session::put('cart',$cart);
+        return redirect()->route('cart.show');
+
+    }
+
     private function total()
     {
         $cart=Session::get('cart');
