@@ -37,10 +37,8 @@ Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'pr
 // Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
 
 Route::get('/home', function(){
-    return view('home');
+    return view('admin.home_admin');
 })->middleware('auth');
-
-
 
 
 //Panel ADMIN + CRUD Categorias//
