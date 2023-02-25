@@ -39,12 +39,50 @@ class CartProductController extends Controller
 
     }
 
+    public function delete($product)
+    {
+        
+        $cart = Session::get('cart');
+        $product = Product::where('name_product', '=' ,$product)->first();
+        unset($cart[$product->name_product]);
+        Session::put('cart',$cart);
+        return redirect()->route('cart.show');
+
+    }
+
+    public function orderDetail()
+    {
+        
+        
+
+    }
+
+    public function update($product , $stock)
+    {
+        
+        $cart = Session::get('cart');
+        $product = Product::where('name_product', '=' ,$product)->first();
+        $cart[$product->name_product]->stock = $stock;
+        Session::put('cart',$cart);
+        return redirect()->route('cart.show');
+
+    }
+
+    public function trash()
+    {
+        
+        Session::forget('cart');
+        Session::put('cart',array());
+        return redirect()->route('cart.show');
+
+    }
+
     private function total()
     {
         $cart=Session::get('cart');
         $total=0;
         foreach ($cart as $item) {
-            $total += $item->price * $item->quantity;
+            $total += $item->sell_price * $item->stock;
         }
         return $total;
     }
