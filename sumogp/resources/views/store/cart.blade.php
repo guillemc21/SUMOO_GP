@@ -29,7 +29,7 @@
                         <tr>
                             <td><img style="width:75px;height:75px;" src="{{ asset($item->image_product) }}" alt=""></td>
                             <td>{{ $item->name_product }}</td>
-                            <td>{{ number_format($item->sell_price,2) }}</td>
+                            <td>{{ number_format($item->sell_price,2) }} €</td>
                             <td>
                                 <form action="{{ route('cart.update') }}" method="POST">
                                 {{ csrf_field() }}
@@ -43,7 +43,7 @@
                                
                             </td>
                             <td>
-                                {{ number_format($item->sell_price * $item->stock,2) }}
+                                {{ number_format($item->sell_price * $item->stock,2) }} €
                             </td>
                             <td>
                                 <a href="{{ route('cart.delete',$item->name_product) }}" class="btn btn-danger">
@@ -56,7 +56,7 @@
             </table><hr>
             <h3>
                 <span class="badge badge-success text-black">
-                    Total: €{{ number_format($total,2) }}
+                    Total: {{ number_format($total,2) }} €
                 </span> 
             </h3>
         </div>
