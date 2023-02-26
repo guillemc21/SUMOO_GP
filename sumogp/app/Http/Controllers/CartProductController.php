@@ -25,6 +25,7 @@ class CartProductController extends Controller
         $total = $this->total();
         return view('store.cart',compact('cart','total'));
     }
+    
 
     public function add($product)
     {
