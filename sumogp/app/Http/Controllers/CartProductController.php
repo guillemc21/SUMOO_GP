@@ -57,12 +57,12 @@ class CartProductController extends Controller
 
     }
 
-    public function update($product , $stock)
+    public function update(Request $request)
     {
         
         $cart = Session::get('cart');
-        $product = Product::where('name_product', '=' ,$product)->first();
-        $cart[$product->name_product]->stock = $stock;
+        $product = Product::where('name_product', '=' ,$request->name_product)->first();
+        $cart[$product->name_product]->stock = $request->cantidad;
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
 

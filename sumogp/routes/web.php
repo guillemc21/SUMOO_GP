@@ -75,7 +75,7 @@ Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\Bran
 
 
 
-Route::get('/cart/update/{product}/{stock?}', [App\Http\Controllers\CartProductController::class, 'update'])->name('cart.update');
+Route::post('/cart/update', [App\Http\Controllers\CartProductController::class, 'update'])->name('cart.update');
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
 Route::get('/cart/add/{product}', [App\Http\Controllers\CartProductController::class, 'add'])->name('cart.add');
 Route::get('/cart/show', [App\Http\Controllers\CartProductController::class, 'show'])->name('cart.show');

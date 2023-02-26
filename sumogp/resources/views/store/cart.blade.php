@@ -31,22 +31,16 @@
                             <td>{{ $item->name_product }}</td>
                             <td>{{ number_format($item->sell_price,2) }}</td>
                             <td>
-                                <input 
-                                    type="number"
-                                    class="input-update-item"
-                                    min="1"
-                                    max="100"
-                                    value="{{ $item->stock }}"
-                                    id="product_{{ $item->id }}"
-                                >
-                                <a 
-                                    href="#"
-                                    class="btn btn-warning btn-update-item"
-                                    data-href="{{ route('cart.update',$item->name_product) }}"
-                                    data-id="{{ $item->id }}"
-                                >
-                                    <i class="fa fa-refresh"></i>
-                                </a>
+                                <form action="{{ route('cart.update') }}" method="POST">
+                                {{ csrf_field() }}
+                                    <div class="form-group row">
+                                        <input type="hidden" value="{{ $item->name_product }}" id="name_product" name="name_product">
+                                        <input min="1"
+                                        max="100" type="number" class="form-control form-control-sm" value="{{ $item->stock }}" id="cantidad" name="cantidad" style="width: 70px; margin:10px;">
+                                        <button class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></button>
+                                    </div>
+                                </form>
+                               
                             </td>
                             <td>
                                 {{ number_format($item->sell_price * $item->stock,2) }}
