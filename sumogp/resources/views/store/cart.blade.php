@@ -27,7 +27,7 @@
                 <tbody>
                     @foreach($cart as $item)
                         <tr>
-                            <td><img src="{{ $item->image_product }}" alt=""></td>
+                            <td><img style="width:75px;height:75px;" src="{{ asset($item->image_product) }}" alt=""></td>
                             <td>{{ $item->name_product }}</td>
                             <td>{{ number_format($item->sell_price,2) }}</td>
                             <td>
@@ -44,8 +44,8 @@
                                     class="btn btn-warning btn-update-item"
                                     data-href="{{ route('cart.update',$item->name_product) }}"
                                     data-id="{{ $item->id }}"
-                                    >
-                                        <i class="fa fa-refresh"></i>
+                                >
+                                    <i class="fa fa-refresh"></i>
                                 </a>
                             </td>
                             <td>
