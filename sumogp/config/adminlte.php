@@ -318,7 +318,7 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CRUDS'],
         [
             'text' => 'Categorias',
             'url'  => 'admin/categories',
@@ -373,22 +373,22 @@ return [
         //         ],
         //     ],
         // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
+        ['header' => 'ARCHIVO'],
+        [
+            'text'       => 'Cerrar Sesión',
+            'icon_color' => 'red',
+            'url'        => '#',
+        ],
         // [
         //     'text'       => 'warning',
         //     'icon_color' => 'yellow',
         //     'url'        => '#',
         // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
+        [
+            'text'       => 'Inicio',
+            'icon_color' => 'cyan',
+            'url'        => '/',
+        ],
     ],
 
     /*
