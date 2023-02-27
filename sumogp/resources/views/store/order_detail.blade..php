@@ -16,6 +16,9 @@
                 <!-- <tr><td>Direccion:</td><td> {{ Auth::user()->address }}</td></tr> -->
             </table>
         </div>
+        <div class="table-responsive">
+            <h3>Datos del usuario</h3>
+        </div>
     </div>
 </div>
 @endsection

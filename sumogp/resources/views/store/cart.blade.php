@@ -69,7 +69,14 @@
                 <i class="fa fa-chevron-circle-left"></i> Seguir comprando
             </a>
             @if(count($cart))
-            <a href="{{ route('order.detail') }}" class="btn btn-primary">Continuar<i class="fa fa-chevron-circle-right"></i></a>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
+                Continuar
+            </button>
+            <!-- <a href="{{ route('order.detail') }}" class="btn btn-primary">Continuar<i class="fa fa-chevron-circle-right"></i></a> -->
+            
+            <!-- modal UPDATE -->
+            @include('store.modal-detail-cart')
+            <!-- /.modal -->
             @endif
         </p>
     </div>
