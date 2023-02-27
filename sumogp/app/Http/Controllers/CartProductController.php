@@ -51,12 +51,12 @@ class CartProductController extends Controller
 
     }
 
-    public function orderDetail()
-    {
+    // public function orderDetail()
+    // {
         
         
 
-    }
+    // }
 
     public function update(Request $request)
     {
