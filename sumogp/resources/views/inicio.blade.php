@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-10 col-md-12">
                 <nav class="text-center my-5">
-                    <a href="/home" class="btn btn-primary button-text" >Panel Administrador</a>
+                    <a href="/admin" class="btn btn-primary button-text" >Panel Administrador</a>
                 </nav>
             </div>
         </div>
