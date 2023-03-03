@@ -39,7 +39,7 @@ Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'pr
 
 Route::get('/home', function(){
     return view('admin.home_admin');
-})->middleware('auth');
+});
 
 
 //Panel ADMIN + CRUD Categorias//
@@ -85,7 +85,7 @@ Route::get('/cart/trash', [App\Http\Controllers\CartProductController::class, 't
 Route::get('/cart/delete/{product}', [App\Http\Controllers\CartProductController::class, 'delete'])->name('cart.delete');
 
 
-Route::get('/admin', [AdminConttroller::class, 'index'])
+Route::get('/admin', [AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
 // Route::get('/cart/prueba', [App\Http\Controllers\CartProductController::class, 'prueba'])->name('cart.show');
