@@ -21,6 +21,6 @@ class AdminAuth
                 return $next($request);
             }   
         }
-        return redirect()->to('/');
+        return redirect()->to('/')->with('admin_denegado', 'OK');
     }
 }

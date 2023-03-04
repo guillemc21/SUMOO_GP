@@ -26,9 +26,6 @@
             <div class="col-10">
                 <div class="row d-flex justify-content-center my-4">
                     <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>
-                    @if (isset ($cart))
-                        <a class="btn btn-secondary p-5" href="#">Hay {{count($cart)}} productos en el carrito</a>
-                    @endif
                 </div>
                 
                 <div class="row">
