@@ -75,6 +75,14 @@ Route::delete('/admin/brands/{brandId}/delete', [App\Http\Controllers\Admin\Bran
 
 
 
+//Panel ADMIN + CRUD Users//
+Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'index'])->name('admin.users');
+Route::post('/admin/users/store', [App\Http\Controllers\Admin\UsersController::class, 'store'])->name('admin.users.store');
+Route::post('/admin/users/{userId}/update', [App\Http\Controllers\Admin\UsersController::class, 'update'])->name('admin.users.update');
+Route::delete('/admin/users/{userId}/delete', [App\Http\Controllers\Admin\UsersController::class, 'delete'])->name('admin.users.delete');
+
+
+
 
 Route::post('/cart/update', [App\Http\Controllers\CartProductController::class, 'update'])->name('cart.update');
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
