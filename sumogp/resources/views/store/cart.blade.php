@@ -21,7 +21,7 @@
                         <th>Precio</th>
                         <th>Cantidad</th>
                         <th>Subtotal</th>
-                        <th>Quitar</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +36,8 @@
                                     <div class="form-group row">
                                         <input type="hidden" value="{{ $item->name_product }}" id="name_product" name="name_product">
                                         <input min="1"
-                                        max="100" type="number" class="form-control form-control-sm" value="{{ $item->stock }}" id="cantidad" name="cantidad" style="width: 70px; margin:10px;">
-                                        <button class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></button>
+                                        max="100" type="number" class="form-control form-control-sm" value="{{ $item->stock }}" id="cantidad" name="cantidad" style="width: 70px; margin:10px; " onchange="this.form.submit()">
+                                        
                                     </div>
                                 </form>
                                
@@ -47,7 +47,7 @@
                             </td>
                             <td>
                                 <a href="{{ route('cart.delete',$item->name_product) }}" class="btn btn-danger">
-                                    <i class="fa fa-remove"></i>
+                                    Quitar
                                 </a>
                             </td>
                         </tr>
