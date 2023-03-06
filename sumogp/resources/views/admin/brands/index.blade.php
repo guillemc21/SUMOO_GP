@@ -112,7 +112,7 @@
     <script>
     $(document).ready(function() {
         $('#brands').DataTable( {
-            "order": [[ 2, "desc" ]]
+            "order": [[ 0, "asc" ]]
         } );
     } );
     </script>

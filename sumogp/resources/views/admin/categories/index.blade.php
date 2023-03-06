@@ -112,7 +112,7 @@
     <script>
     $(document).ready(function() {
         $('#categories').DataTable( {
-            "order": [[ 2, "desc" ]]
+            "order": [[ 0, "asc" ]]
         } );
     } );
     </script>
