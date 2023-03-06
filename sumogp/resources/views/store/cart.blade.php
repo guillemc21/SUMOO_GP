@@ -53,7 +53,7 @@
                         </tr>
                     @endforeach
                 </tbody>
-            </table><hr>
+            </table><hr style="width: 50%; margin-top:7px; margin-bottom:10px;">
             <h3>
                 <span class="badge badge-success text-black">
                     Total: {{ number_format($total,2) }} €
@@ -64,19 +64,20 @@
             <h3><span class="badge badge-warning text-black">No hay productos en el carrito :(</span></h3>
         @endif
         <hr>
-        <p>
+        <div class="d-flex flex-column w-25 m-auto">
             <a href="{{ route('products.store') }}" class="btn btn-primary">
                 <i class="fa fa-chevron-circle-left"></i> Seguir comprando
             </a>
+            <br>
             @if(count($cart))
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
                 Continuar
             </button>            
             <!-- modal UPDATE -->
             @include('store.modal-detail-cart')
             <!-- /.modal -->
             @endif
-        </p>
+        </div>
     </div>
 </div>
 @endsection
