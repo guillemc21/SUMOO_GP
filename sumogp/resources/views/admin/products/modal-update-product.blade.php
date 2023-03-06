@@ -6,6 +6,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
+            <!-- Form actualizar producto -->
             <form action="{{ route('admin.products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="modal-body">
