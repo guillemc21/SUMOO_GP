@@ -40,10 +40,10 @@
                                 <td>{{$category->id}}</td>
                                 <td>{{$category->name}}</td>
                                 <td class="btn_td">
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
+                                    <button type="button" class="btn btn-warning w-50" data-toggle="modal" data-target="#modal-update-category-{{$category->id}}">
                                     Editar
                                     </button>
-                                    <form action="{{route('admin.categories.delete', $category->id)}}" method="POST">
+                                    <form class="w-50" action="{{route('admin.categories.delete', $category->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>

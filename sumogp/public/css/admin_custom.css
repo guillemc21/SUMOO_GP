@@ -26,6 +26,11 @@
     margin: 30px;
 }
 
+#users_wrapper{
+    width: 75%;
+    margin: 30px;
+}
+
 .btn_td {
     
     /* width: 100vw; */
@@ -42,11 +47,11 @@
 }
 
 .btn_td>button {
-    width: 50%;
+    width: 100%;
     margin-bottom: 15px;
 }
 .btn_td form {
-    width: 50%;
+    width: 100%;
     
 }
 
@@ -67,19 +72,27 @@ form>button{
         font-size: 0.8rem;
         width: 100%;
     }
-}
-
-@media (max-width:1065px) {
-    
+    #users{
+        font-size: 0.8rem;
+        width: 100%;
+    }
     .btn_td button, .btn_td form {
-        width: 50px; 
+        width: 70px !important; 
         height: 25px;
         font-size: 0.6rem;      
+    }
+}
+
+@media (max-width:1165px) {
+    
+    .btn_td button, .btn_td form {
+        width: 70px !important; 
+        height: 25px;
+        font-size: 0.5rem;      
     }
     #products {
         font-size: 0.7rem;
     }
-    
     
 }
 

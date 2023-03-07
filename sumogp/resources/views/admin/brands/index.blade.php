@@ -40,10 +40,10 @@
                                 <td>{{$brand->id}}</td>
                                 <td>{{$brand->name}}</td>
                                 <td class="btn_td">
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
+                                    <button type="button" class="btn btn-warning w-50" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
                                     Editar
                                     </button>
-                                    <form action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
+                                    <form class="w-50" action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
