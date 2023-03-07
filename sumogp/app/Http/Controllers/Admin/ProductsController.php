@@ -81,12 +81,12 @@ class ProductsController extends Controller
         return redirect()->back();
      }
 
-     public function delete(Request $request, $postId)
+     public function delete(Request $request, $productId)
      {
         // dd( \App\Models\Models\Category::all());
   
-        $post = Product::find($postId); 
-        $post->delete();
+        $product = Product::find($productId); 
+        $product->delete();
         //dd($request->category);
         //dd($request->all());
         return redirect()->route('admin.products')->with('eliminar', 'OK');
