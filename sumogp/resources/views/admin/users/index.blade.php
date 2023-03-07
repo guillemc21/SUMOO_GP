@@ -9,9 +9,9 @@
 @section('content_header')
     <h1 style="font-family: system-ui">
         Usuarios
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user">
             Crear
-        </button>
+        </button> -->
     </h1>
     
 @stop
@@ -97,8 +97,24 @@
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Usuario</label> 
+                        <label for="name">Nombre</label> 
                         <input type="text" name="name" class="form-control" id="user">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Apellido</label> 
+                        <input type="text" name="last_name" class="form-control" id="user">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo</label> 
+                        <input type="text" name="email" class="form-control" id="user">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contrasenya</label> 
+                        <input type="text" name="passw0rd" class="form-control" id="user">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label> 
+                        <input type="checkbox" name="role" class="form-control" id="user">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -121,7 +137,7 @@
     <script>
     $(document).ready(function() {
         $('#users').DataTable( {
-            "order": [[ 2, "desc" ]]
+            "order": [[ 0, "asc" ]]
         } );
     } );
     </script>
