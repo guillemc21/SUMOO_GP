@@ -20,16 +20,23 @@ class UsersController extends Controller
 
     public function store(Request $request)
     {
-       // dd( \App\Models\Models\Category::all());
-       $newUser = new User();
-
-       $newUser->name  = $request->name;
-       $newUser->last_name  = $request->last_name;
-       $newUser->email  = $request->email;
-       $newUser->password  = Hash::make($request->password);
-       $newUser->role  = $request->role;
+        // dd( \App\Models\Models\Category::all());
+        //$newUser = new User();
+        //$newUser->name  = $request->name;
+        //$newUser->last_name  = $request->last_name;
+        //$newUser->email  = $request->email;
+        //$newUser->password  = Hash::make($request->password);
+        //    $newUser->role  = $request->role;
        
-       $newUser->save();
+        //    $newUser->save();
+
+        User::create([
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => $request->role,
+        ]);
        //dd($request->category);
        //dd($request->all());
        return redirect()->back();

@@ -9,9 +9,9 @@
 @section('content_header')
     <h1 style="font-family: system-ui">
         Usuarios
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user">
             Crear
-        </button> -->
+        </button>
     </h1>
     
 @stop
@@ -98,23 +98,23 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="name">Nombre</label> 
-                        <input type="text" name="name" class="form-control" id="user">
+                        <input type="text" name="name" class="form-control" id="name">
                     </div>
                     <div class="form-group">
                         <label for="last_name">Apellido</label> 
-                        <input type="text" name="last_name" class="form-control" id="user">
+                        <input type="text" name="last_name" class="form-control" id="last_name">
                     </div>
                     <div class="form-group">
                         <label for="email">Correo</label> 
-                        <input type="text" name="email" class="form-control" id="user">
+                        <input type="text" name="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
                         <label for="password">Contrasenya</label> 
-                        <input type="text" name="passw0rd" class="form-control" id="user">
+                        <input type="text" name="password" class="form-control" id="password">
                     </div>
                     <div class="form-group">
                         <label for="role">Role</label> 
-                        <input type="checkbox" name="role" class="form-control" id="user">
+                        <input type="checkbox" name="role" class="form-control" id="role">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -134,6 +134,16 @@
 @stop
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (session('eliminar') == 'OK')
+        <script>
+            Swal.fire(
+                'Eliminado!',
+                'El usuario a sido eliminado.',
+                'success',
+            )
+        </script>
+    @endif
     <script>
     $(document).ready(function() {
         $('#users').DataTable( {
