@@ -31,7 +31,8 @@ Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'pr
 // Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
 
 
-
+//Logout Panel Admin
+Route::get('/logout', [App\Http\Controllers\LogoutAdminController::class, 'perform'])->name('logout.perform');
 
 
 

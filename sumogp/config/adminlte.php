@@ -382,7 +382,21 @@ return [
         [
             'text'       => 'Cerrar Sesión',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => '/logout',
+            // 'submenu' => [
+            //     [
+            //         'text'    => 'Invites',
+            //         'shift'   => 'ml-3',
+            //         'submenu' => [
+            //             [
+            //                 'text'  => 'View Invites',
+            //                 'route' => 'invite.index',
+            //                 'icon'  => 'fas  fa-users',
+            //                 'shift' => 'ml-4',
+            //             ],
+            //         ],
+            //     ],
+            // ],
         ],
         // [
         //     'text'       => 'warning',
