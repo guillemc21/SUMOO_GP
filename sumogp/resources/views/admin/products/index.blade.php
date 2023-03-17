@@ -8,13 +8,14 @@
 
 
 @section('content_header')
-    <h1 style="font-family: system-ui">
-        Productos
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-product">
-            Crear
-        </button>
+    <h1 style="font-family: system-ui;">
+        <a>Productos</a>
     </h1>
-    
+    <hr>
+    <button data-toggle="modal" data-target="#modal-create-product" class="icon-btn add-btn">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Añadir producto</div>
+    </button>
 @stop
 
 @section('content')

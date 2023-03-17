@@ -8,11 +8,13 @@
 
 @section('content_header')
     <h1 style="font-family: system-ui">
-        Categorías
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-category">
-            Crear
-        </button>
+        <a>Categorías</a>
     </h1>
+    <hr>
+    <button data-toggle="modal" data-target="#modal-create-category" class="icon-btn add-btn">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Añadir categoria</div>
+    </button>
     
 @stop
 

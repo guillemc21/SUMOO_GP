@@ -8,11 +8,13 @@
 
 @section('content_header')
     <h1 style="font-family: system-ui">
-        Marcas
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-brand">
-            Crear
-        </button>
+        <a>Marcas</a>
     </h1>
+    <hr>
+    <button data-toggle="modal" data-target="#modal-create-brand" class="icon-btn add-btn">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Añadir marca</div>
+    </button>
     
 @stop
 

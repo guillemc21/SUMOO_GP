@@ -8,12 +8,13 @@
 
 @section('content_header')
     <h1 style="font-family: system-ui">
-        Usuarios
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user">
-            Crear
-        </button>
+        <a>Usuarios</a>
     </h1>
-    
+    <hr>
+    <button data-toggle="modal" data-target="#modal-create-user" class="icon-btn add-btn">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Añadir usuario</div>
+    </button>
 @stop
 
 @section('content')
