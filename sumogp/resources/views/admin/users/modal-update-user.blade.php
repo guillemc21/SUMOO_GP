@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Contrasenya</label> 
-                        <input type="text" name="passw0rd" class="form-control" id="password">
+                        <input type="text" name="password" class="form-control" id="password">
                     </div>
                     <div class="form-group">
                         <label for="role">Role</label> 
