@@ -107,6 +107,11 @@
 
 
 
+
+/* CRUDS */
+td {
+    max-width: 200px;
+}
 .card-body{
     display: flex;
     justify-content: center;

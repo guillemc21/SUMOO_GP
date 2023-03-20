@@ -42,6 +42,27 @@ class UsersController extends Controller
        return redirect()->back();
     }
 
+    public function update(Request $request, $userId)
+    {
+    // dd( \App\Models\Models\Category::all());
+    
+    $user = User::find($userId); 
+    
+    
+
+    $user->name  = $request->name;
+    $user->last_name  = $request->last_name;
+    $user->email  = $request->email;
+    $user->password  = Hash::make($request->password);
+    $user->role  = $request->role;
+    
+    
+    $user->save();
+    //dd($request->category);
+    //dd($request->all());
+    return redirect()->back();
+    }
+
     public function delete(Request $request, $userId)
      {
         // dd( \App\Models\Models\Category::all());

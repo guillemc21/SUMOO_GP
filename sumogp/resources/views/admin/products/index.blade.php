@@ -4,6 +4,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
+    <link rel="shortcut icon" href="{{asset('images/logo/sumogp.png')}}">
 @stop
 
 
