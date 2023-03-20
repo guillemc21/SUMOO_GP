@@ -32,8 +32,8 @@ class CartProductController extends Controller
         
         $cart = Session::get('cart');
         $product = Product::where('name_product', '=' ,$product)->first();
-        //!!!!En vez de stock hay que crear un campo de cantidad y aplicarlo aqui//
-        $product->stock = 1;
+        
+        $product->quantity = 1;
         $cart[$product->name_product] = $product;
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
@@ -63,9 +63,10 @@ class CartProductController extends Controller
         
         $cart = Session::get('cart');
         $product = Product::where('name_product', '=' ,$request->name_product)->first();
-        $cart[$product->name_product]->stock = $request->cantidad;
+        $cart[$product->name_product]->quantity = $request->cantidad;
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
+        
 
     }
 
@@ -83,7 +84,7 @@ class CartProductController extends Controller
         $cart=Session::get('cart');
         $total=0;
         foreach ($cart as $item) {
-            $total += $item->sell_price * $item->stock;
+            $total += $item->sell_price * $item->quantity;
         }
         return $total;
     }

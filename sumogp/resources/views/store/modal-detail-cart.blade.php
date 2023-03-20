@@ -28,9 +28,9 @@
                             @foreach($cart as $item)
                                 <tr>
                                     <td>{{ $item->name_product }}</td>
-                                    <td>{{ number_format($item->sell_price,2) }} €</td>
-                                    <td>{{ $item->stock }}</td>
-                                    <td>{{ number_format($item->sell_price * $item->stock,2) }}</td>
+                                    <td>{{ number_format($item->sell_price,2) }}€</td>
+                                    <td>{{ $item->quantity }}</td>
+                                    <td>{{ number_format($item->sell_price * $item->quantity,2) }}€</td>
                                 </tr>
                             @endforeach
                         </table><hr style="width: 50%; margin-top:5px; margin-bottom:5px;">
