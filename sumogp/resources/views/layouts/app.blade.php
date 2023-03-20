@@ -21,6 +21,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="shortcut icon" href="{{asset('images/logo/sumogp.png')}}">
+
 </head>
 <body>
     <div id="app">
@@ -41,7 +43,11 @@
 
                     
                     <ul class="navbar-nav ms-auto">
-                        
+                        <img width="25px" height="25px" src="{{ asset('images/main/cart.png')}}" alt="cart">
+                        @if (session('cart'))
+                            <a>{{ count(session('cart')) }}</a>
+                        @endif
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
