@@ -52,6 +52,6 @@ class BrandsController extends Controller
        $brand->delete();
        //dd($request->brand);
        //dd($request->all());
-       return redirect()->back();
+       return redirect()->back()->with('eliminar', 'OK');
     }
 }

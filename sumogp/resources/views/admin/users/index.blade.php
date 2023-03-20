@@ -51,7 +51,7 @@
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-user-{{$user->id}}">
                                     Editar
                                     </button>
-                                    <form action="{{route('admin.users.delete', $user->id)}}" method="POST">
+                                    <form class="form-elimar" action="{{route('admin.users.delete', $user->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
@@ -163,6 +163,26 @@
             }
         } );
     } );
+
+    $('.form-eliminar').submit(function(e){
+        e.preventDefault();
+        Swal.fire({
+            title: 'Estas seguro?',
+            text: "No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, eliminar ahora!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            
+            this.submit()
+            
+        }
+        });
+    });
     </script>
 @stop
 

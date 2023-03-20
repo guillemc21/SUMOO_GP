@@ -26,8 +26,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
+                <img width="50px" height="50px" src="{{ asset('images/logo/sumogp.png')}}" alt="sumogp">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'SUMO GP') }}
                 </a>
@@ -43,14 +44,18 @@
 
                     
                     <ul class="navbar-nav ms-auto">
-                        <div class="div-cart">
-                            <a href="{{route('cart.show')}}">
+                        <li id="cart-block" class="nav-item">
+                            <a class="nav-link" href="{{route('cart.show')}}">
                                 <img width="25px" height="25px" src="{{ asset('images/main/cart.png')}}" alt="cart">
                             </a>
-                            @if (session('cart'))
-                                <a>{{ count(session('cart')) }}</a>
-                            @endif
-                        </div>
+                        </li>
+                    @if (session('cart'))
+                        <li id="cart-num" class="nav-item">{{ count(session('cart')) }}</li>
+                    @endif
+
+                        <li style="width:50px;" class="nav-item"></li>
+                            
+                        
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

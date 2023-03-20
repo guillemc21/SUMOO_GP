@@ -30,24 +30,24 @@ class ProductsController extends Controller
      public function store(Request $request)
      {
         // dd( \App\Models\Models\Category::all());
-        $newPost = new Product();
+        $newProduct = new Product();
 
         if( $request->hasFile('featured') ){
             $file = $request->file('featured');
             $destinationPath = 'images/featureds/';
             $filename = time() . '-' . $file->getClientOriginalName();
             $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
-            $newPost->image_product = $destinationPath . $filename;
+            $newProduct->image_product = $destinationPath . $filename;
         }
 
-        $newPost->name_product  = $request->name_product;
-        $newPost->sell_price  = $request->sell_price;
-        $newPost->content  = $request->content;
-        $newPost->category_id  = $request->category_id;
-        $newPost->brand_id  = $request->brand_id;
-        $newPost->stock  = $request->stock;
-        
-        $newPost->save();
+        $newProduct->name_product  = $request->name_product;
+        $newProduct->sell_price  = $request->sell_price;
+        $newProduct->content  = $request->content;
+        $newProduct->category_id  = $request->category_id;
+        $newProduct->brand_id  = $request->brand_id;
+        $newProduct->stock  = $request->stock;
+        $newProduct->quantity  = 0;
+        $newProduct->save();
         //dd($request->category);
         //dd($request->all());
         return redirect()->back();

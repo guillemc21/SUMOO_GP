@@ -46,7 +46,7 @@
                                     <button type="button" class="btn btn-warning w-50" data-toggle="modal" data-target="#modal-update-brand-{{$brand->id}}">
                                     Editar
                                     </button>
-                                    <form class="w-50" action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
+                                    <form class="w-50 form-eliminar" action="{{route('admin.brands.delete', $brand->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
@@ -112,6 +112,17 @@
 @stop
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (session('eliminar') == 'OK')
+        <script>
+            Swal.fire(
+                'Eliminado!',
+                'La marca a sido eliminada.',
+                'success',
+            )
+        </script>
+    @endif
+
     <script>
     $(document).ready(function() {
         $('#brands').DataTable( {
@@ -129,6 +140,27 @@
             }
         } );
     } );
+
+    $('.form-eliminar').submit(function(e){
+        e.preventDefault();
+        Swal.fire({
+            title: 'Estas seguro?',
+            text: "No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, eliminar ahora!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            
+            this.submit()
+            
+        }
+        });
+    });
+    
     </script>
 @stop
 

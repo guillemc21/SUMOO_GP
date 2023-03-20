@@ -52,6 +52,6 @@ class CategoriesController extends Controller
        $category->delete();
        //dd($request->category);
        //dd($request->all());
-       return redirect()->back();
+       return redirect()->back()->with('eliminar', 'OK');
     }
 }

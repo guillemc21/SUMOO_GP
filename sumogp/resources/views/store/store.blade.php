@@ -33,10 +33,11 @@
                             <div class="card-body">
                                 <small class="card-txt-category">Categoría: {{$product->category->name}}</small>
                                 <h5 class="card-title my-2">{{$product->name_product}}</h5>
-                                <div class="d-card-text">
-                                    {{$product->content}}
+                                <div class="d-card-text truncate-text">
+                                    <p>{{$product->content}}</p>
                                 </div>
-                                <a href="#" class="post-link"><b>Leer más</b></a>
+                                @include('store.modal-item-content')
+                                <a data-toggle="modal" data-target="#modal-item-content-{{$product->id}}" class="post-link"><b>Leer más</b></a>
                                 <hr>
                                 <div class="row">
                                     <a class="btn btn-warning btn-block" href="{{route('cart.add',$product->name_product)}}">Añadir al carrito</a>
