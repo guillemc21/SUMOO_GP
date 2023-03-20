@@ -43,11 +43,14 @@
 
                     
                     <ul class="navbar-nav ms-auto">
-                        <img width="25px" height="25px" src="{{ asset('images/main/cart.png')}}" alt="cart">
-                        @if (session('cart'))
-                            <a>{{ count(session('cart')) }}</a>
-                        @endif
-
+                        <div class="div-cart">
+                            <a href="{{route('cart.show')}}">
+                                <img width="25px" height="25px" src="{{ asset('images/main/cart.png')}}" alt="cart">
+                            </a>
+                            @if (session('cart'))
+                                <a>{{ count(session('cart')) }}</a>
+                            @endif
+                        </div>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
