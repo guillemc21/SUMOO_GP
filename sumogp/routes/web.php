@@ -94,10 +94,14 @@ Route::get('/cart/trash', [App\Http\Controllers\CartProductController::class, 't
 Route::get('/cart/delete/{product}', [App\Http\Controllers\CartProductController::class, 'delete'])->name('cart.delete');
 
 
+
 Route::get('/admin', [AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
-// Route::get('/cart/prueba', [App\Http\Controllers\CartProductController::class, 'prueba'])->name('cart.show');
+
+
+//Restar stock//
+Route::get('/subtract/stock', [\App\Http\Controllers\CartProductController::class, 'add_order_details'])->name('subtract.stock');
 
 Auth::routes();
 

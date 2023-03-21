@@ -51,12 +51,12 @@ class CartProductController extends Controller
 
     }
 
-    // public function orderDetail()
-    // {
-        
-        
+     public function add_order_details()
+     {
+        $cart = Session::get('cart');
+        dd($cart);
 
-    // }
+     }
 
     public function update(Request $request)
     {

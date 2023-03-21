@@ -44,7 +44,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
-                    <button href="#" class="btn btn-outline-primary">Pagar con fifapoints</button>
+                    <button href="{{ route('subtract.stock') }}" class="btn btn-outline-primary">Pagar</button>
                 </div>
             
         </div>
