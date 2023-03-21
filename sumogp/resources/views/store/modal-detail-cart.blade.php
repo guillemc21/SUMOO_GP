@@ -44,7 +44,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
-                    <button href="{{ route('subtract.stock') }}" class="btn btn-outline-primary">Pagar</button>
+                    <a href="{{ route('subtract.stock') }}"><button class="btn btn-outline-primary">Pagar</button></a>
                 </div>
             
         </div>
