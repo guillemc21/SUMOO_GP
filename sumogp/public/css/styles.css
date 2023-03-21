@@ -140,14 +140,16 @@ hr {
   
   max-width:400px;
   margin: auto;
+  
 }
 
 
 /* Fondo imagen TIENDA */
 
 #app {
-  background-image: url('/images/main/background1.jpg');
+  background-image: url('/images/main/background4.avif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+  filter:saturate(200%);
 }
