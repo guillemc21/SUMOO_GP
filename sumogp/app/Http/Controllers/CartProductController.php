@@ -32,7 +32,6 @@ class CartProductController extends Controller
         
         $cart = Session::get('cart');
         $product = Product::where('name_product', '=' ,$product)->first();
-        
         $product->quantity = 1;
         $cart[$product->name_product] = $product;
         Session::put('cart',$cart);
@@ -55,7 +54,6 @@ class CartProductController extends Controller
      {
         $cart = Session::get('cart');
         dd($cart);
-
      }
 
     public function update(Request $request)
