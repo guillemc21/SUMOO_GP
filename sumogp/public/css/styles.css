@@ -149,10 +149,15 @@ hr {
 
 
 /* Fondo imagen TIENDA */
-/* .col-10 {
- 
-} */
 
 .content {
   background-image: url(https://img.freepik.com/vector-premium/fondo-transparente-herramientas-papeleria-ilustracion-dibujada-mano_257845-821.jpg);
+}
+
+.col-2 {
+  background-color: #ffffff;
+}
+
+.row {
+  opacity: 0.5;
 }
