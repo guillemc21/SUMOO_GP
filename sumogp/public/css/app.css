@@ -771,7 +771,11 @@ progress {
 .col-10 {
   flex: 0 0 auto;
   width: 83.33333333%;
+  background-image: url(https://img.freepik.com/vector-premium/fondo-transparente-herramientas-papeleria-ilustracion-dibujada-mano_257845-821.jpg);
+  bg-opacity: 0.5;
+  
 }
+
 
 .col-11 {
   flex: 0 0 auto;

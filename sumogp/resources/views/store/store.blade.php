@@ -22,6 +22,7 @@
             <div class="col-10">
                 <div class="row d-flex justify-content-center my-4">
                     <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>
+                    
                 </div>
                 
                 <div class="row">
