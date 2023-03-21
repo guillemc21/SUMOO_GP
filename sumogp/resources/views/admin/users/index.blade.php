@@ -51,7 +51,7 @@
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-update-user-{{$user->id}}">
                                     Editar
                                     </button>
-                                    <form class="form-elimiar" action="{{route('admin.users.delete', $user->id)}}" method="POST">
+                                    <form class="form-eliminar" action="{{route('admin.users.delete', $user->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
                                         <button class="btn btn-danger">Eliminar</button>
