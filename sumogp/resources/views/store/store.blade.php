@@ -8,8 +8,8 @@
     <section class="container-fluid content">
         
         <!-- Categorías -->
-        <div class="row justify-content-center">
-            <div class="col-2">
+        <div id="bg_images" class="row justify-content-center">
+            <div class="col-2" id="bg_cat">
                 <nav class="text-center my-5 d-flex flex-column">
                     <a href="{{route('products.store')}}" class="mx-3 pb-3 link-category d-block d-md-inline {{isset($categoryIdSelected)? '': 'selected-category' }}" >Todas</a>
                     @foreach ($categories as $category)
@@ -19,7 +19,7 @@
                 </nav>
             </div>
 
-            <div class="col-10">
+            <div class="col-10" id="filter_images">
                 <div class="row d-flex justify-content-center my-4">
                     <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>
                     

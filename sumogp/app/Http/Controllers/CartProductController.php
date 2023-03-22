@@ -53,7 +53,13 @@ class CartProductController extends Controller
      public function add_order_details()
      {
         $cart = Session::get('cart');
-        dd($cart);
+        
+        foreach ($cart as $key => $item) {
+            $product = Product::where('id', '=' ,$item->id)->first();
+            $product->stock -= $item->quantity;
+            $product->save();
+        }
+        // return redirect()->route('cart.trash');
      }
 
     public function update(Request $request)
