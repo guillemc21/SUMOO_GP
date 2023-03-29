@@ -95,6 +95,9 @@ Route::get('/cart/delete/{product}', [App\Http\Controllers\CartProductController
 
 
 
+
+
+
 Route::get('/admin', [AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');

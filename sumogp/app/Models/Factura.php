@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Factura extends Model
 {
     public function users(){
-        return $this->hasMany('App\Models\User');
+        return $this->belongsTo('App\Models\User');
     }
 }

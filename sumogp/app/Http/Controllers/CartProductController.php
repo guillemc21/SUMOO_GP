@@ -92,4 +92,5 @@ class CartProductController extends Controller
         }
         return $total;
     }
+
 }

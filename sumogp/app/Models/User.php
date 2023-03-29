@@ -45,7 +45,7 @@ class User extends Authenticatable
     ];
 
     public function factura(){
-        return $this->belongsTo('App\Models\Factura');
+        return $this->hasMany('App\Models\Factura');
     }
 
 }
