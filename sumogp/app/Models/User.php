@@ -44,4 +44,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function factura(){
+        return $this->belongsTo('App\Models\Factura');
+    }
+
 }
