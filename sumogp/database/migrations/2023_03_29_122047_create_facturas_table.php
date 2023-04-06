@@ -14,9 +14,10 @@ class CreateFacturasTable extends Migration
     public function up()
     {
         Schema::create('facturas', function (Blueprint $table) {
-            $table->idFactura();
-            $table->iduser();
-            $table->content();
+            $table->id();
+            $table->integer('iduser');
+            $table->string('nameuser');
+            $table->longText('content');
             $table->timestamps();
         });
     }

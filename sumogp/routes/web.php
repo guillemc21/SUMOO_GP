@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
+use App\Models\Factura;
+use barryvdh\DomPDF\Facade\Pdf;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +25,16 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::get('/factura/{id}', function($id) {
+    // Obtener los datos de la factura a través del ID
+    $factura = Factura::find($id);
 
+    // Generar la vista de la factura y pasar los datos
+    $pdf = PDF::loadView('factura', compact('factura'));
+
+    // Descargar el archivo PDF
+    return $pdf->download('factura-'.$id.'.pdf');
+});
 
 
 //Filtro categorias//
