@@ -80,7 +80,7 @@ class CartProductController extends Controller
         $newFactura->content  = $content_factura;
         $newFactura->save();
 
-        return redirect()->route('products.store')->with('eliminar', 'OK');
+        return redirect()->route('products.store')->with('send', 'OK');
      }
 
     public function update(Request $request)

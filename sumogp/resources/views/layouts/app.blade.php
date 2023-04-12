@@ -108,7 +108,7 @@
         </script>
     @endif
 
-    @if (session('eliminar') == 'OK')
+    @if (session('send') == 'OK')
         <script>
             
             Swal.fire({

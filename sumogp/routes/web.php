@@ -96,7 +96,15 @@ Route::delete('/admin/users/{userId}/delete', [App\Http\Controllers\Admin\UsersC
 
 
 
+//Panel ADMIN + CRUD Facturas//
+Route::get('/admin/facturas', [App\Http\Controllers\Admin\FacturaController::class, 'index'])->name('admin.facturas');
+Route::post('/admin/facturasa/store', [App\Http\Controllers\Admin\FacturaController::class, 'store'])->name('admin.facturas.store');
+Route::post('/admin/facturas/{facturaId}/update', [App\Http\Controllers\Admin\FacturaController::class, 'update'])->name('admin.facturas.update');
+Route::delete('/admin/facturas/{facturaId}/delete', [App\Http\Controllers\Admin\FacturaController::class, 'delete'])->name('admin.facturas.delete');
 
+
+
+//Carrito//
 Route::post('/cart/update', [App\Http\Controllers\CartProductController::class, 'update'])->name('cart.update');
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
 Route::get('/cart/add/{product}', [App\Http\Controllers\CartProductController::class, 'add'])->name('cart.add');

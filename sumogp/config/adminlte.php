@@ -339,7 +339,11 @@ return [
             'url'  => 'admin/users',
             'icon' => 'fas fa-fw fa-user',
         ],
-        
+        [
+            'text' => 'Facturas',
+            'url'  => 'admin/facturas',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',
