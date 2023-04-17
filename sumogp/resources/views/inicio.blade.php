@@ -44,9 +44,9 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container mt-5 mb-5">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                     <img src="https://via.placeholder.com/286x180.png?text=Imagen+1" class="card-img-top" alt="Imagen 1">
                     <div class="card-body">
@@ -56,9 +56,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x180.png?text=Imagen+2" class="card-img-top" alt="Imagen 2">
+                    <img src="https://via.placeholder.com/286x180.png?text=Imagen+2" class="card-img-top" alt="Imagen 2">
                     <div class="card-body">
                         <h5 class="card-title">Título de la carta 2</h5>
                         <p class="card-text">Texto de la carta 2. Aquí puedes escribir una descripción corta del contenido de la carta.</p>
@@ -66,20 +66,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x180.png?text=Imagen+3" class="card-img-top" alt="Imagen 3">
-                <div class="card-body">
-                    <h5 class="card-title">Título de la carta 3</h5>
-                    <p class="card-text">Texto de la carta 3. Aquí puedes escribir una descripción corta del contenido de la carta.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
+                    <img src="https://via.placeholder.com/286x180.png?text=Imagen+3" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la carta 3</h5>
+                        <p class="card-text">Texto de la carta 3. Aquí puedes escribir una descripción corta del contenido de la carta.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
         
         </div>
         
         <div class="cart_hover">
-            <h5>Catálogo escolar</h5>
+            <h5><b>Catálogo escolar</b></h5>
             <p>Aqui podras ver una pequeña muestra de los materiales escolares que vendemos, compralo ya en nuestra tienda!.</p>
             <br>
             <div class="row">

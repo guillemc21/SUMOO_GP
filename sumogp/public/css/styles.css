@@ -181,6 +181,7 @@ hr {
 
 .card_2{}
 
+
 /* cart inicio */
 .cart_hover{
   margin-top: 3rem;
@@ -195,6 +196,8 @@ hr {
   position:relative;
   width: 250px;
   transition: all .3s ease;
+  margin: 25px;
+  border-radius: 10px;
 }
 
 .cart_hover div > article > img:first-child {
