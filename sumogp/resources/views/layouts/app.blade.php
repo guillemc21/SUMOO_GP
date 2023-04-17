@@ -96,6 +96,25 @@
             @yield('content')
         </main>
     </div>
+    <footer class="container-fluid footer_layout">
+        <div class="row text-center p-4">
+            <div class="mb-3">
+                <img src="{{asset('images/logo/sumogp.png')}}" alt="YouDevs logo" width="120" id="logofooter">
+            </div>
+            <div id="col-md-10">
+                <a href="https://www.facebook.com/youdevs">
+                    <img src="{{asset('images/facebook.png')}}" class="img-fluid" width="40px" alt="facebook youdevs">
+                </a>
+                <a href="https://www.instagram.com/youdevs">
+                    <img src="{{asset('images/instagram.png')}}" class="img-fluid" width="40px" alt="instagram youdevs">
+                </a>
+                <a href="https://www.youtube.com/c/YouDevsOficial">
+                    <img src="{{asset('images/youtube.png')}}" class="img-fluid" width="40px" alt="youtube youdevs">
+                </a>
+                <p class="mt-3">Copyright © 2023 SUMOGP, Tienda Online. <hr class="mb-0"> Este proyecto esta hecho para poder presentarse como <b>proyecto final Ciclo Formativo<br>Desarrollo de aplicaciones Web (DAW)</b>.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if (session('admin_denegado') == 'OK')

@@ -185,10 +185,10 @@ hr {
 /* cart inicio */
 .cart_hover{
   margin-top: 3rem;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #e0dfd9, #ffffff);
-  box-shadow:  14px 14px 21px #c7c6c1,
-              -14px -14px 21px #ffffff;
+  border-radius: 7px;
+background: #f2e8e3;
+box-shadow:  9px 9px 18px #a7a09d,
+             -9px -9px 18px #ffffff;
   padding: 25px;
 }
 
@@ -249,4 +249,15 @@ hr {
 .cart_hover div > article:hover img:last-child{
   opacity: 1;
   transform: translateY(10%);
+}
+
+
+
+/* footer layout */
+.footer_layout {
+  background-color: #FFCA05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23FF6618' stroke-width='46.4' stroke-opacity='0.03' %3E%3Ccircle fill='%23FFCA05' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23f6bb0f' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23edad16' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23e39f1b' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23d8911f' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23cc8422' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23c07824' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23b36b25' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23a66025' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23985525' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%238a4b24' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%237b4122' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236d3820' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e2f1e' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234f271b' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23401f17' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23321813' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%2324110C' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
 }
