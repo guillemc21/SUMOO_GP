@@ -180,3 +180,70 @@ hr {
 }
 
 .card_2{}
+
+/* cart inicio */
+.cart_hover{
+  margin-top: 3rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #e0dfd9, #ffffff);
+  box-shadow:  14px 14px 21px #c7c6c1,
+              -14px -14px 21px #ffffff;
+  padding: 25px;
+}
+
+.cart_hover div > article {
+  position:relative;
+  width: 250px;
+  transition: all .3s ease;
+}
+
+.cart_hover div > article > img:first-child {
+  box-shadow: 0 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cart_hover div > article > img:last-child {
+  position: absolute;
+  width: 200px;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.cart_hover div > article:hover{
+  transform: perspective(250px) 
+             rotateX(10deg) 
+             translateY(-5%) 
+             translateZ(0);
+}
+
+.cart_hover div > article::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgb(255, 255, 255) 95%
+  );
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.cart_hover div > article:hover::before{
+  opacity: 1;
+}
+
+.cart_hover div > article:hover img:last-child{
+  opacity: 1;
+  transform: translateY(10%);
+}

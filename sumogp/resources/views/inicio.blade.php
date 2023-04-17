@@ -75,9 +75,54 @@
                     <a href="#" class="btn btn-primary">Ver más</a>
                 </div>
             </div>
+        
+        </div>
+        
+        <div class="cart_hover">
+            <h5>Catálogo escolar</h5>
+            <p>Aqui podras ver una pequeña muestra de los materiales escolares que vendemos, compralo ya en nuestra tienda!.</p>
+            <br>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+                    <article>
+                        <img src="images\main\mochila_hover.jpg" alt="">
+                        <img src="images\main\mochila_hover_after.png" alt="">
+                    </article>
+                </div>
             </div>
+            
         </div>
-        </div>
+        
     </section>
 
 @endsection
