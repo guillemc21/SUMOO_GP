@@ -1,3 +1,7 @@
+/* body {
+min-height: 100vh;
+} */
+
 a {
   text-decoration: none;
   color: black;
@@ -193,7 +197,7 @@ box-shadow:  9px 9px 18px #a7a09d,
 
 .cart_hover div > article {
   position:relative;
-  width: 250px;
+  width: 200px;
   transition: all .3s ease;
   margin: 25px;
   border-radius: 10px;
@@ -208,7 +212,7 @@ box-shadow:  9px 9px 18px #a7a09d,
 
 .cart_hover div > article > img:last-child {
   position: absolute;
-  width: 200px;
+  width: 150px;
   top: 25%;
   left: 0;
   right: 0;
@@ -250,6 +254,14 @@ box-shadow:  9px 9px 18px #a7a09d,
   transform: translateY(10%);
 }
 
+
+/* carrsuel hover */
+.carrusel_hover{
+  background-color:#190a02;
+  width: 100%;
+  height: 300px;
+  color: white;
+}
 
 
 /* footer layout */
