@@ -15,8 +15,8 @@
                 </nav>
             </div>
         </div>
-        <div class="container" style="margin: top 30px;">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -24,20 +24,32 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="images\main\background3.jpg" height="600" width="800" class="d-block w-100" alt="Imagen 1">
+                    <img class="d-block w-100" src="images\main\background3.jpg" height="600" width="800" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola mundo</h5>
+                        <p>HOla mundo que tal estas</p>
+                    </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="images\main\background4.jpg" height="600" class="d-block w-100" alt="Imagen 2">
+                    <img class="d-block w-100" src="images\main\background4.jpg" height="600" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola mundo</h5>
+                        <p>HOla mundo que tal estas</p>
+                    </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="images\main\background5.jpg" height="600" class="d-block w-100" alt="Imagen 3">
+                    <img class="d-block w-100" src="images\main\background5.jpg" height="600" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola mundo</h5>
+                        <p>HOla mundo que tal estas</p>
+                    </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>

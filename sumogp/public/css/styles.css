@@ -167,10 +167,11 @@ hr {
   font-weight: bold;
 }
 
-.container_carrusel {
+.carousel-caption {
+  background-color: #00000052;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .container_cards{
@@ -178,8 +179,6 @@ hr {
   justify-content: center;
   margin: 30px;
 }
-
-.card_2{}
 
 
 /* cart inicio */
