@@ -107,9 +107,10 @@ hr {
 }
 
 #cart-block{
-  border-radius: 13px;
-  background: #f0eadb;
-  box-shadow: 18px 18px 38px #8e8a81, -18px -18px 38px #ffffff;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #ffffff, #e0ddd8);
+  box-shadow:  6px 6px 8px #73716e,
+              -6px -6px 8px #ffffff;
   display: grid;
   place-items: center;
   max-width: 45px;
