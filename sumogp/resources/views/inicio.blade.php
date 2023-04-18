@@ -104,14 +104,14 @@
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
                     <article>
-                        <img src="images\main\mochila_hover.jpg" alt="">
-                        <img src="images\main\mochila_hover_after.png" alt="">
+                        <img src="images\main\estuche_hover.jpg" alt="">
+                        <img src="images\main\estuche_hover_after.png" alt="">
                     </article>
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
                     <article>
-                        <img src="images\main\mochila_hover.jpg" alt="">
-                        <img src="images\main\mochila_hover_after.png" alt="">
+                        <img src="images\main\sacapuntas_hover.jpg" alt="">
+                        <img src="images\main\sacapuntas_hover_after.png" alt="">
                     </article>
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
