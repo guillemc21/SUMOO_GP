@@ -29,7 +29,7 @@
         <nav class="navbar navbar-expand-md navbar-light" id="header">
             <div class="container" >
                 <img width="50px" height="50px" src="{{ asset('images/logo/sumogp.png')}}" alt="sumogp">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'SUMO GP') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
