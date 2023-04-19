@@ -258,12 +258,15 @@ box-shadow:  9px 9px 18px #a7a09d,
 
 /* carrsuel hover */
 .carrusel_hover{
-  background-color:#190a02;
+  background-color: #190a02;
   width: 100%;
   height: 300px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* footer layout */
 .footer_layout {
@@ -392,6 +395,29 @@ box-shadow:  9px 9px 18px #a7a09d,
   100% {
     transform: scale(1);
   }
+}
+
+
+/* galeri */
+.conocenos-galeri{
+  display:flex;
+  height: 20rem;
+  gap:1rem;
+  margin: auto;
+  width: 1300px;
+}
+
+.conocenos-galeri > div{
+  flex:1;
+  border-radius:1rem;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: auto 100%;
+  transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.conocenos-galeri > div:hover {
+  flex: 5;
 }
 
 /* header layout */
