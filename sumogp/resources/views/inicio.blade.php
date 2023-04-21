@@ -2,21 +2,20 @@
 
 @section('title', 'Inicio')
 
+
 @section('content')
-    
+
     <!-- Contenido -->
     <section class="container-fluid content" style="padding: 0;">
+       
         <!-- Tienda -->
-        <div class="container justify-content-center">
-            <div>
-                <nav class="text-center my-1">
-                    <a href="/admin" class="btn btn-primary button-text" >Panel Administrador</a>
-                    <a href="{{ route('products.store') }}" class="btn btn-danger button-text" >Tienda</a>
-                </nav>
+        <div style="margin-top: -30px;">
+            <div id="boton_tienda" class="text-center my-1">     
+                <a href="{{ route('products.store') }}" class="btn btn-warning button-text" >Tienda</a>
             </div>
         </div>
         <div class="container">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -45,11 +44,11 @@
                     </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only" style="font-size: 10px;"></span>
+                    <span class="sr-only"></span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only"></span>
                 </a>

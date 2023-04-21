@@ -31,7 +31,7 @@
                     <div class="col-xl-4 col-md-6 col-12 justify-content-center mb-5">
                         <div class="card m-auto p-3" style="width: 18rem; display:flex !important; align-items:center;justify-content:center;">
                             <img style="width:75px;height:75px;" class="m-2" src="{{asset($product->image_product)}}" alt="{{$product->name_product}}">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <small class="card-txt-category">Categoría: {{$product->category->name}}</small>
                                 <h5 class="card-title my-2">{{$product->name_product}}</h5>
                                 <div class="d-card-text truncate-text">
