@@ -150,7 +150,7 @@
             }).then((result) => {
             if (result.isConfirmed) {
                 
-                
+                window.location.href = "/generar-pdf/4";
             }
             });
         
