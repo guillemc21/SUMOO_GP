@@ -116,6 +116,8 @@ hr {
   max-width: 45px;
 }
 
+
+
 #cart-num{
   border-radius: 82px;
   /* display: flex; */
@@ -152,7 +154,7 @@ hr {
 /* Fondo imagen TIENDA */
 
 #bg_images {
-  background-image: url('/images/main/background4.avif');
+  background-image: url('#');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -428,4 +430,9 @@ box-shadow:  9px 9px 18px #a7a09d,
   background-size: cover;
   color: white ;
   padding: 25px;
+}
+
+#boton_tienda{
+  background-color: #bb501200;
+  padding: 15px;
 }
