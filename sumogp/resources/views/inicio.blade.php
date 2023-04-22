@@ -14,47 +14,39 @@
                 <a href="{{ route('products.store') }}" class="btn btn-warning button-text" >Tienda</a>
             </div>
         </div>
-        <div class="container">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img class="d-block w-100" src="images\main\background3.jpg" height="600" width="800" alt="First slide">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images\main\background1.jpg" class="d-block w-100 img-responsive" alt="imagen1">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
                         <p>HOla mundo que tal estas</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img class="d-block w-100" src="images\main\background4.jpg" height="600" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Hola mundo</h5>
-                        <p>HOla mundo que tal estas</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img class="d-block w-100" src="images\main\background5.jpg" height="600" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Hola mundo</h5>
-                        <p>HOla mundo que tal estas</p>
-                    </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
+                <div class="carousel-item">
+                    <img src="images\main\background4.jpg" class="d-block w-100" height="600" alt="imagen2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola mundo</h5>
+                        <p>HOla mundo que tal estas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images\main\background6.webp" class="d-block w-100" height="600" alt="imagen3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola mundo</h5>
+                        <p>HOla mundo que tal estas</p>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
@@ -88,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         
         <div class="container cart_hover">
             <h5><b>Catálogo escolar</b></h5>
