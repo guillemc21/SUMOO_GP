@@ -17,26 +17,27 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images\main\background1.jpg" class="d-block w-100 img-responsive" alt="imagen1">
+                    <img src="images\main\background1 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen1">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
                         <p>HOla mundo que tal estas</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images\main\background4.jpg" class="d-block w-100" height="600" alt="imagen2">
+                    <img src="images\main\background3 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen3">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
                         <p>HOla mundo que tal estas</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images\main\background6.webp" class="d-block w-100" height="600" alt="imagen3">
+                    <img src="images\main\galeri1 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen2">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
                         <p>HOla mundo que tal estas</p>
                     </div>
                 </div>
+                
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
