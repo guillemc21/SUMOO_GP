@@ -20,11 +20,15 @@
             </div>
 
             <div class="col-10" id="filter_images">
-                <div class="row d-flex justify-content-center my-4">
-                    <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>
-                    
-                </div>
                 
+                <!-- <div class="row d-flex justify-content-center my-4">
+                    <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>    
+                    <button class="custom-btn btn-14">Read More</button>
+                </div> -->
+                <div class="frame">
+                    <a href="{{route('cart.show')}}" class="custom-btn btn-14">Ir al carrito</a>
+                </div>
+
                 <div class="row">
                     <!-- Post 1 -->
                     @foreach ($products as $product)
