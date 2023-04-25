@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Factura;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class CartProductController extends Controller
@@ -54,12 +56,31 @@ class CartProductController extends Controller
      {
         $cart = Session::get('cart');
         
+        //Reducir la cantidad del stock de x producto mediante la compra del cliente
         foreach ($cart as $key => $item) {
             $product = Product::where('id', '=' ,$item->id)->first();
             $product->stock -= $item->quantity;
             $product->save();
         }
-        // return redirect()->route('cart.trash');
+
+        //Datos de factura
+        $content_factura = null;
+        foreach ($cart as $key => $item) {
+            $content_factura = $content_factura.'|'.$item->name_product.','.$item->quantity.','.$item->sell_price.'.';
+        }
+
+        //Vaciar carrito
+        Session::forget('cart');
+        Session::put('cart',array());
+
+        //Crear factura
+        $newFactura = new Factura();
+        $newFactura->iduser  = Auth::user()->id;
+        $newFactura->nameuser  = Auth::user()->name;
+        $newFactura->content  = $content_factura;
+        $newFactura->save();
+
+        return redirect()->route('products.store')->with('send', 'OK');
      }
 
     public function update(Request $request)

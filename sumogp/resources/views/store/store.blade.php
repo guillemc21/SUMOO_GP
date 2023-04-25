@@ -20,18 +20,22 @@
             </div>
 
             <div class="col-10" id="filter_images">
-                <div class="row d-flex justify-content-center my-4">
-                    <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>
-                    
-                </div>
                 
+                <!-- <div class="row d-flex justify-content-center my-4">
+                    <a class="btn btn-primary w-25" href="{{route('cart.show')}}">Ir al carrito</a>    
+                    <button class="custom-btn btn-14">Read More</button>
+                </div> -->
+                <div class="frame">
+                    <a href="{{route('cart.show')}}" class="custom-btn btn-14">Ir al carrito</a>
+                </div>
+
                 <div class="row">
                     <!-- Post 1 -->
                     @foreach ($products as $product)
                     <div class="col-xl-4 col-md-6 col-12 justify-content-center mb-5">
                         <div class="card m-auto p-3" style="width: 18rem; display:flex !important; align-items:center;justify-content:center;">
                             <img style="width:75px;height:75px;" class="m-2" src="{{asset($product->image_product)}}" alt="{{$product->name_product}}">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <small class="card-txt-category">Categoría: {{$product->category->name}}</small>
                                 <h5 class="card-title my-2">{{$product->name_product}}</h5>
                                 <div class="d-card-text truncate-text">

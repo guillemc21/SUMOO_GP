@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('content')
-<div class="container">
+<div class="container" style="height: 51.5rem;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

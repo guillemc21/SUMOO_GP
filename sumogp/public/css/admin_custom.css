@@ -138,6 +138,11 @@ td {
     margin: 30px;
 }
 
+#facturas_wrapper{
+    width: 100%;
+    margin: 30px;
+}
+
 .btn_td {
     
     /* width: 100vw; */
@@ -180,6 +185,14 @@ form>button{
         width: 100%;
     }
     #users{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    #users{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    #facturas{
         font-size: 0.8rem;
         width: 100%;
     }
