@@ -11,7 +11,7 @@
         <!-- Tienda -->
         <div style="margin-top: -30px;">
             <div id="boton_tienda" class="text-center my-1">     
-                <a href="{{ route('products.store') }}" class="btn btn-warning button-text" >Tienda</a>
+                <a href="{{ route('products.store') }}" class="custom-btn btn-14" >Tienda</a>
             </div>
         </div>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -108,20 +108,20 @@
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
                     <article>
-                        <img src="images\main\mochila_hover.jpg" alt="">
-                        <img src="images\main\mochila_hover_after.png" alt="">
+                        <img src="images\main\posit_hover.jpg" alt="">
+                        <img src="images\main\posit_hover_after.png" alt="">
                     </article>
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
                     <article>
-                        <img src="images\main\mochila_hover.jpg" alt="">
-                        <img src="images\main\mochila_hover_after.png" alt="">
+                        <img src="images\main\libreta_hover.jpg" alt="">
+                        <img src="images\main\libreta_hover_after.png" alt="">
                     </article>
                 </div>
                 <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
                     <article>
-                        <img src="images\main\mochila_hover.jpg" alt="">
-                        <img src="images\main\mochila_hover_after.png" alt="">
+                        <img src="images\main\retulador_hover.jpg" alt="">
+                        <img src="images\main\retulador_hover_after.png" alt="">
                     </article>
                 </div>
             </div>
