@@ -109,11 +109,16 @@ hr {
 #cart-block{
   border-radius: 11px;
   background: linear-gradient(145deg, #ffffff, #e0ddd8);
-  box-shadow:  6px 6px 8px #73716e,
-              -6px -6px 8px #ffffff;
+  /* box-shadow:  6px 6px 8px #73716e,
+              -6px -6px 8px #ffffff; */
   display: grid;
   place-items: center;
   max-width: 45px;
+
+}
+
+#cart-block:hover{
+  background: linear-gradient(145deg, #b4b4b4, #939393);
 }
 
 
@@ -501,4 +506,114 @@ box-shadow:  9px 9px 18px #a7a09d,
 }
 .btn-14:active {
   top: 2px;
+}
+
+/* Pagination */
+
+.pagination {
+	margin-top: 30px;
+	border-top: 3px solid #ddd;
+	text-align: center;
+	position: relative;
+	color: #777;
+	list-style: none;
+	border-radius: 0rem;
+}
+
+.page-link {
+	display: inline-block;
+	border: 0px;
+	border-top: 0px solid #ddd;
+	padding: 15px 15px 15px;
+	font-size: 1.25rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #777;
+	background-color: #fff;
+}
+
+.page-link:hover {
+	margin-top: -3px;
+	border-top: 3px solid;
+	border-top-color: #ffbb00; 
+	color: #ffbb00;
+}
+
+.page-link:focus {
+	margin-top: -3px;
+	z-index: 2;
+	outline: 0;
+	color: #ffbb00;
+	border-top-color: #ffbb00; 
+}
+
+.page-item:first-child .page-link {
+	margin-left: 0;
+	border-top-left-radius: 0rem;
+	border-bottom-left-radius: 0rem;
+	color: #444;
+	margin-top: -3px;
+	border-top: 3px solid #ddd;
+}
+
+.page-item:last-child .page-link {
+	border-top-right-radius: 0rem;
+	border-bottom-right-radius: 0rem;
+	color: #444;
+	border-top-color: #444;
+	border-top: 3px solid #ddd;
+	padding: 15px 10px 10px;
+	margin-top: -3px;
+}
+
+.page-item.active .page-link {
+	z-index: 1;
+	background-color: #fff;
+	margin-top: -3px;
+	border-top: 3px solid #ffbb00;
+	color: #ffbb00;
+	border-top-color: #ffbb00; 
+}
+
+.page-item.disabled .page-link {
+	color: #6c757d;
+	pointer-events: none;
+	cursor: auto;
+	background-color: #fff;
+	border-color: #dee2e6;
+	display: inline-block;
+	margin-top: -2px; 
+}
+
+.pagination-lg .page-link {
+	padding: .75rem 1.5rem;
+	font-size: 1.25rem;
+	line-height: 1.5
+}
+
+.pagination-lg .page-item:first-child .page-link {
+	border-top-left-radius: .3rem;
+	border-bottom-left-radius: .3rem
+}
+
+.pagination-lg .page-item:last-child .page-link {
+	border-top-right-radius: .3rem;
+	border-bottom-right-radius: .3rem
+}
+
+.pagination-sm .page-link {
+	padding: .25rem .5rem;
+	font-size: .875rem;
+	line-height: 1.5
+}
+
+.pagination-sm .page-item:first-child .page-link {
+	border-top-left-radius: .2rem;
+	border-bottom-left-radius: .2rem
+}
+
+.pagination-sm .page-item:last-child .page-link {
+	border-top-right-radius: .2rem;
+	border-bottom-right-radius: .2rem
 }

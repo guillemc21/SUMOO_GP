@@ -60,7 +60,7 @@
                     </div>
                     @endforeach
                     <div class="row">
-                        <div class="col-12 d-flex pt-5 justify-content-center">
+                        <div class="col-12 d-flex pt-5 justify-content-center pagination-lg">
                             {{ $products->links("pagination::bootstrap-4") }}
                         </div>
                     </div>
