@@ -435,6 +435,8 @@ box-shadow:  9px 9px 18px #a7a09d,
 #boton_tienda{
   background-color: #bb501200;
   padding: 15px;
+  display: grid;
+  place-content: center;
 }
 
 /* Boton refavhero */
