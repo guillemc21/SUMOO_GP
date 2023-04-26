@@ -20,6 +20,8 @@ class CartProductController extends Controller
     //     Session::put('name', 'Guille Mendoza');
     //     return view('store.cart');
     // }
+
+   
     
     public function show()
     {
