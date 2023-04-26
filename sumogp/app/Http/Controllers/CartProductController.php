@@ -20,12 +20,12 @@ class CartProductController extends Controller
     //     Session::put('name', 'Guille Mendoza');
     //     return view('store.cart');
     // }
-
-   
     
     public function show()
     {
         $cart = Session::get('cart');
+        // dd($cart);
+        // session::forget('cart');
         $total = $this->total();
         return view('store.cart',compact('cart','total'));
     }
@@ -38,6 +38,8 @@ class CartProductController extends Controller
         $product = Product::where('name_product', '=' ,$product)->first();
         $product->quantity = 1;
         $cart[$product->name_product] = $product;
+        $cart['created_at'] = now()->toDateTimeString();
+        $cart['updated_at'] = now()->toDateTimeString();
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
 
@@ -60,15 +62,19 @@ class CartProductController extends Controller
         
         //Reducir la cantidad del stock de x producto mediante la compra del cliente
         foreach ($cart as $key => $item) {
-            $product = Product::where('id', '=' ,$item->id)->first();
-            $product->stock -= $item->quantity;
-            $product->save();
+            if($item!=$cart['created_at'] or $item!=$cart['updated_at']) {
+                $product = Product::where('id', '=' ,$item->id)->first();
+                $product->stock -= $item->quantity;
+                $product->save();
+            }
         }
 
         //Datos de factura
         $content_factura = null;
         foreach ($cart as $key => $item) {
-            $content_factura = $content_factura.'|'.$item->name_product.','.$item->quantity.','.$item->sell_price.'.';
+            if($item!=$cart['created_at'] or $item!=$cart['updated_at']){
+                $content_factura = $content_factura.'|'.$item->name_product.','.$item->quantity.','.$item->sell_price.'.';
+            }
         }
 
         //Vaciar carrito
@@ -111,7 +117,11 @@ class CartProductController extends Controller
         $cart=Session::get('cart');
         $total=0;
         foreach ($cart as $item) {
-            $total += $item->sell_price * $item->quantity;
+            
+            if($item!=$cart['created_at'] or $item!=$cart['updated_at']){
+                $total += $item->sell_price * $item->quantity;
+            }
+            
         }
         return $total;
     }
