@@ -20,21 +20,21 @@
                     <img src="images\main\background1 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen1">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
-                        <p>HOla mundo que tal estas</p>
+                        <p>Bienvenidos a nuestra tienda en línea de materiales de oficina. Aquí encontrará todo lo que necesita para mantener su oficina en funcionamiento, desde papel y lápices hasta impresoras y suministros de limpieza. ¡Explore nuestro sitio y descubra nuestras ofertas y promociones especiales!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="images\main\background3 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen3">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
-                        <p>HOla mundo que tal estas</p>
+                        <p>En nuestra tienda en línea de materiales de oficina, nos esforzamos por proporcionar a nuestros clientes productos de alta calidad a precios asequibles. Nuestra amplia selección de suministros de oficina está diseñada para satisfacer las necesidades de cualquier empresa, desde pequeñas empresas hasta grandes corporaciones.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="images\main\galeri1 (2).jpg" class="d-block w-100 img-responsive"  alt="imagen2">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Hola mundo</h5>
-                        <p>HOla mundo que tal estas</p>
+                        <p>¿Está buscando la mejor selección de materiales de oficina? ¡No busque más! En nuestra tienda en línea, ofrecemos una amplia variedad de productos, desde artículos de papelería básicos hasta los últimos productos tecnológicos. Con envío rápido y precios competitivos, somos su destino número uno para todo lo relacionado con la oficina.</p>
                     </div>
                 </div>
                 
