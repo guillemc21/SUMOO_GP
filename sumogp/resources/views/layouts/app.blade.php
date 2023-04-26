@@ -50,7 +50,7 @@
                             </a>
                         </li>
                     @if (session('cart'))
-                        <li id="cart-num" class="nav-item">{{ count(session('cart')) }}</li>
+                        <li id="cart-num" class="nav-item">{{ count(session('cart'))-2 }}</li>
                     @endif
 
                         <li style="width:50px;" class="nav-item"></li>
