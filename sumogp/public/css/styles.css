@@ -264,6 +264,16 @@ box-shadow:  9px 9px 18px #a7a09d,
 
 
 /* carrsuel hover */
+.carrusel_hover_title{
+  background-color: #190a02;
+  width: 100%;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .carrusel_hover{
   background-color: #190a02;
   width: 100%;

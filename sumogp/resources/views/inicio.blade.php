@@ -129,8 +129,12 @@
         </div>
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#190a02" fill-opacity="1" d="M0,224L17.1,202.7C34.3,181,69,139,103,149.3C137.1,160,171,224,206,224C240,224,274,160,309,144C342.9,128,377,160,411,192C445.7,224,480,256,514,266.7C548.6,277,583,267,617,266.7C651.4,267,686,277,720,282.7C754.3,288,789,288,823,250.7C857.1,213,891,139,926,133.3C960,128,994,192,1029,208C1062.9,224,1097,192,1131,186.7C1165.7,181,1200,203,1234,186.7C1268.6,171,1303,117,1337,106.7C1371.4,96,1406,128,1423,144L1440,160L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path></svg>
-        <div class="carrusel_hover">
+        <div class="carrusel_hover_title">
             <h3>Sobre nosotros</h3><hr>
+            <p style="width: 500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quod numquam eum, earum fuga, sed incidunt commodi non minus asperiores temporibus illum repellat laudantium tempora architecto. Suscipit soluta maxime eum.</p>
+            <p style="width: 500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quod numquam eum, earum fuga, sed incidunt commodi non minus asperiores temporibus illum repellat laudantium tempora architecto. Suscipit soluta maxime eum.</p>
+        </div>
+        <div class="carrusel_hover">
             <div class="conocenos-galeri">
                 <div style="background-image:url('images/main/galeri2.jpg');"></div>
                 <div style="background-image:url('images/main/sobre_nosotros_1.jpg');"></div>
