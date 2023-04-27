@@ -101,7 +101,7 @@ Route::delete('/admin/facturas/{facturaId}/delete', [App\Http\Controllers\Admin\
 Route::post('/cart/update', [App\Http\Controllers\CartProductController::class, 'update'])->name('cart.update');
 Route::get('/store', [App\Http\Controllers\CartController::class, 'store'])->name('products.store');
 Route::get('/cart/add/{product}', [App\Http\Controllers\CartProductController::class, 'add'])->name('cart.add');
-Route::get('/cart/show', [App\Http\Controllers\CartProductController::class, 'show'])->name('cart.show')->middleware('auth');
+Route::get('/cart/show', [App\Http\Controllers\CartProductController::class, 'show'])->name('cart.show')->middleware('auth')->middleware('cart.time');
 Route::get('/cart/trash', [App\Http\Controllers\CartProductController::class, 'trash'])->name('cart.trash');
 // Route::get('/cart/detail', [App\Http\Controllers\CartProductController::class, 'orderDetail'])->name('order.detail')->middleware('auth');
 Route::get('/cart/delete/{product}', [App\Http\Controllers\CartProductController::class, 'delete'])->name('cart.delete');

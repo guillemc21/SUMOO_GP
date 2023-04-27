@@ -8,7 +8,7 @@
         <h1><i class="fa fa-shopping-cart"></i>Carrito de compra</h1>
     </div>
     <div class="tsble-cart">
-        @if(count($cart))
+        @if(count($cart)>2)
         <p>
             <a href="{{ route('cart.trash') }}" class="btn btn-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
         </p>
@@ -65,7 +65,8 @@
             </h3>
         </div>
         @else
-            <h3><span class="badge badge-warning text-black">No hay productos en el carrito :(</span></h3>
+            <h3><span class="badge badge-warning text-black"><b>Tu carrito está vació</b></span></h3>
+            <h5>Los productos permanecen en tu carrito durante 30 minutos y luego van a tus artìculos guardados</h5>
         @endif
         <hr>
         <div class="d-flex flex-column w-25 m-auto">
@@ -73,7 +74,7 @@
                 <i class="fa fa-chevron-circle-left"></i> Seguir comprando
             </a>
             <br>
-            @if(count($cart))
+            @if(count($cart)>2)
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
                 Continuar
             </button>            

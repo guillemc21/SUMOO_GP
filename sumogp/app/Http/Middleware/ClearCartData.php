@@ -43,11 +43,16 @@ class ClearCartData
             $timeDiffS = $timeDiff->format('%s');
 
             // Verifica si han pasado más de 30 minutos desde la última vez que se actualizó el carrito
-            if ($timeDiffS>20) {
+            if ($timeDiffS>1800) {
                 // Vacía el carrito
                 $request->session()->forget('cart');
                 // $cart['created_at'] = now()->toDateTimeString();
                 // $cart['updated_at'] = now()->toDateTimeString();
+                $request->session()->put('cart',array());
+                $cart = $request->session()->get('cart');
+                $cart['created_at'] = now()->toDateTimeString();
+                $cart['updated_at'] = now()->toDateTimeString();
+                $request->session()->put('cart',$cart);
                 
             }
         }
