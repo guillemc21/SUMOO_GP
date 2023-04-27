@@ -38,9 +38,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item" style="margin-left: 30px;">
+                            <a href="#cat_escolar" class="menu-item" style="color:white; text-decoration:none; ">Catalogo escolar</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 30px;">
+                            <a href="#sobre_nosotros" class="menu-item" style="color:white; text-decoration:none; ">Sobre nosotros</a>
+                        </li>  
                     </ul>
+                    
 
                     
                     <ul class="navbar-nav ms-auto" style="color: white !important;">
@@ -70,7 +76,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-whitecd" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

@@ -40,9 +40,9 @@
 
 
 @section('footer')
-    <p>Soy el footer.</p>
+    
 @stop
 
 @section('js')
-    <script> console.log('hi!'); </script>
+    
 @stop
