@@ -54,7 +54,7 @@ class CartProductController extends Controller
         
         $cart = Session::get('cart');
         $product = Product::where('name_product', '=' ,$product)->first();
-        $cart['updated_at'] = now()->toDateTimeString();
+        // $cart['updated_at'] = now()->toDateTimeString();
         unset($cart[$product->name_product]);
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
@@ -102,7 +102,7 @@ class CartProductController extends Controller
         $cart = Session::get('cart');
         $product = Product::where('name_product', '=' ,$request->name_product)->first();
         $cart[$product->name_product]->quantity = $request->cantidad;
-        $cart['updated_at'] = now()->toDateTimeString();
+        // $cart['updated_at'] = now()->toDateTimeString();
         Session::put('cart',$cart);
         return redirect()->route('cart.show');
         
