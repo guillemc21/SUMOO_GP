@@ -93,6 +93,10 @@ class CartProductController extends Controller
         //Vaciar carrito
         Session::forget('cart');
         Session::put('cart',array());
+        $cart = Session::get('cart');
+        $cart['created_at'] = now()->toDateTimeString();
+        $cart['updated_at'] = now()->toDateTimeString();
+        Session::put('cart',$cart);
 
         //Crear factura
         $newFactura = new Factura();
