@@ -18,7 +18,15 @@ class CartProductController extends Controller
 {
      public function __construct()
      {
-        if(!Session::has('cart')) Session::put('cart',array()); // Session::push('cart',['created_at' => now()->toDateTimeString(), 'updated_at' => now()->toDateTimeString()]);
+        if(!Session::has('cart')) {
+            Session::put('cart',array()); 
+            $cart = Session::get('cart'); 
+            $cart['created_at'] = now()->toDateTimeString(); 
+            $cart['updated_at'] = now()->toDateTimeString();
+            Session::put('cart',$cart);
+            // Session::push('cart',['created_at' => now()->toDateTimeString(), 'updated_at' => now()->toDateTimeString()]);
+            // dd(Session::get('cart'));
+        }
      }
     // public function prueba()
     // {
