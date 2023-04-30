@@ -57,11 +57,9 @@
     </style>
 </head>
 <body>
-    @if($content != null)
-      <h1>DIOSSS</h1>
-    @endif
-    <h1>{{ $content }}</h1>
-    <p>{{ $content }}</p>
+    <!-- @if($content != null)
+      <h1>prueba</h1>
+    @endif -->
     <header>
       <h1>Factura</h1>
       <p>Fecha: {{ $date }}</p>
@@ -91,29 +89,25 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Producto 1</td>
-          <td>2</td>
-          <td>$10.00</td>
-          <td>$20.00</td>
-        </tr>
-        <tr>
-          <td>Producto 2</td>
-          <td>1</td>
-          <td>$15.00</td>
-          <td>$15.00</td>
-        </tr>
-        <tr>
-          <td>Producto 3</td>
-          <td>3</td>
-          <td>$5.00</td>
-          <td>$15.00</td>
-        </tr>
+        @foreach($content as $item)
+        <!-- <h5>{{ $item->name_product }}</h5>
+        <h5>{{ $item->sell_price }}</h5>
+        <h5>{{ $item->content }}</h5>
+        <h5>{{ $item->category->name }}</h5>
+        <h5>{{ $item->brand->name }}</h5> -->
+          <tr>
+            <td>{{ $item->name_product }}</td>
+            <td>{{ $item->quantity }}</td>
+            <td>{{ $item->sell_price }}</td>
+            <td>{{ number_format($item->sell_price * $item->quantity,2)}}</td>
+          </tr>
+        @endforeach
+        
       </tbody>
     </table>
 
     <div class="total">
-      <p>Total: $50.00</p>
+      <p>Total: {{ number_format($total,2) }} €</p>
     </div>
 </body>
 </html>

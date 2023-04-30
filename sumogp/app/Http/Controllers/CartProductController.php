@@ -84,17 +84,20 @@ class CartProductController extends Controller
         }
 
         //Datos de factura
-        $content_factura = null;
-        // $content_factura = array();
+        // $content_factura = null;
+        $content_factura = array();
         foreach ($cart as $key => $item) {
             if($item!=$cart['created_at'] or $item!=$cart['updated_at']){
-                $content_factura = $content_factura.' |||  NOMBRE DEL PRODUCTO ='.$item->name_product.' , CATEGORIA DEL PRODUCTO='.$item->category->name.' , MARCA DEL PRODUCTO='.$item->brand->name.' , CANTIDAD ='.$item->quantity.' , PRECIO ='.$item->sell_price.'.';
+                // $content_factura = $content_factura.' |||  NOMBRE DEL PRODUCTO ='.$item->name_product.' , CATEGORIA DEL PRODUCTO='.$item->category->name.' , MARCA DEL PRODUCTO='.$item->brand->name.' , CANTIDAD ='.$item->quantity.' , PRECIO ='.$item->sell_price.'.';
                 // array_push($content_factura, $item->name_product);
                 // print($item.'---');
-                // array_push($content_factura, $item);
+                array_push($content_factura, $item);
             }
         }
         
+        // Almacenamos el precio total del carrito antes de vaciarlo
+        $total = $this->total();
+
         //Vaciar carrito
         Session::forget('cart');
         Session::put('cart',array());
@@ -104,11 +107,13 @@ class CartProductController extends Controller
         Session::put('cart',$cart);
 
         //Crear factura
+        
         $newFactura = new Factura();
         $newFactura->iduser  = Auth::user()->id;
         $newFactura->nameuser  = Auth::user()->name;
-        // $content_factura_serialize = serialize($content_factura);
-        $newFactura->content  = $content_factura;
+        $content_factura_serialize = serialize($content_factura);
+        $newFactura->content  = $content_factura_serialize;
+        $newFactura->sell_price_total  = $total;
         $newFactura->save();
 
         return redirect()->route('products.store')->with('send', 'OK');

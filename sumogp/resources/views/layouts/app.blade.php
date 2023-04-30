@@ -163,7 +163,7 @@
             }).then((result) => {
             if (result.isConfirmed) {
                 
-                window.location.href = "/generar-pdf/16";
+                window.location.href = "/generar-pdf/3";
             }
             });
         

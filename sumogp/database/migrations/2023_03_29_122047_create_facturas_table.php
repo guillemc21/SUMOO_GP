@@ -18,6 +18,7 @@ class CreateFacturasTable extends Migration
             $table->integer('iduser');
             $table->string('nameuser');
             $table->longText('content');
+            $table->decimal('sell_price_total',12,2);
             $table->timestamps();
         });
     }

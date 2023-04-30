@@ -10,10 +10,13 @@ class PdfController extends Controller
     public function generarPdf(Request $request, $facturaId)
     {
         $factura = Factura::find($facturaId);
+        $content_uns = unserialize($factura->content);
+        // dd($content_uns);
         $data = [
             'title' => $factura->nameuser,
-            'content' => $factura->content,
-            'date' => $factura->created_at
+            'content' => $content_uns,
+            'date' => $factura->created_at,
+            'total' => $factura->sell_price_total
         ];
 
         $pdf = PDF::loadView('pdf.pdf_factura', $data);
