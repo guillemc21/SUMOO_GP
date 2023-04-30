@@ -16,7 +16,7 @@ class PdfController extends Controller
             'date' => $factura->created_at
         ];
 
-        $pdf = PDF::loadView('pdf.ejemplo', $data);
+        $pdf = PDF::loadView('pdf.pdf_factura', $data);
         return $pdf->download('Factura.pdf');
     }
 

@@ -85,12 +85,16 @@ class CartProductController extends Controller
 
         //Datos de factura
         $content_factura = null;
+        // $content_factura = array();
         foreach ($cart as $key => $item) {
             if($item!=$cart['created_at'] or $item!=$cart['updated_at']){
-                $content_factura = $content_factura.'|'.$item->name_product.','.$item->quantity.','.$item->sell_price.'.';
+                $content_factura = $content_factura.' |||  NOMBRE DEL PRODUCTO ='.$item->name_product.' , CATEGORIA DEL PRODUCTO='.$item->category->name.' , MARCA DEL PRODUCTO='.$item->brand->name.' , CANTIDAD ='.$item->quantity.' , PRECIO ='.$item->sell_price.'.';
+                // array_push($content_factura, $item->name_product);
+                // print($item.'---');
+                // array_push($content_factura, $item);
             }
         }
-
+        
         //Vaciar carrito
         Session::forget('cart');
         Session::put('cart',array());
@@ -103,6 +107,7 @@ class CartProductController extends Controller
         $newFactura = new Factura();
         $newFactura->iduser  = Auth::user()->id;
         $newFactura->nameuser  = Auth::user()->name;
+        // $content_factura_serialize = serialize($content_factura);
         $newFactura->content  = $content_factura;
         $newFactura->save();
 
