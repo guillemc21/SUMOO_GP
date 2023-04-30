@@ -9,6 +9,7 @@ use App\Models\Factura;
 use DateTime;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Exception;
 
 //Fecha y hora actuales
 date_default_timezone_set("Europe/Madrid");
@@ -110,13 +111,17 @@ class CartProductController extends Controller
 
     public function update(Request $request)
     {
+        try{
+            $cart = Session::get('cart');
+            $product = Product::where('name_product', '=' ,$request->name_product)->first();
+            $cart[$product->name_product]->quantity = $request->cantidad;
+            // $cart['updated_at'] = now()->toDateTimeString();
+            Session::put('cart',$cart);
+            return redirect()->route('cart.show');
+        }catch(Exception $e){
+            return redirect()->route('products.store')->with('cart0', 'OK');
+        }
         
-        $cart = Session::get('cart');
-        $product = Product::where('name_product', '=' ,$request->name_product)->first();
-        $cart[$product->name_product]->quantity = $request->cantidad;
-        // $cart['updated_at'] = now()->toDateTimeString();
-        Session::put('cart',$cart);
-        return redirect()->route('cart.show');
         
 
     }

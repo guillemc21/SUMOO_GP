@@ -36,8 +36,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+
+                    @if(request()->is('/'))
                     <ul class="navbar-nav me-auto ">
                         <li class="nav-item" style="margin-left: 30px;">
                             <a href="#cat_escolar" class="menu-item" style="color:white; text-decoration:none; ">Catalogo escolar</a>
@@ -46,7 +47,7 @@
                             <a href="#sobre_nosotros" class="menu-item" style="color:white; text-decoration:none; ">Sobre nosotros</a>
                         </li>  
                     </ul>
-                    
+                    @endif
 
                     
                     <ul class="navbar-nav ms-auto" style="color: white !important;">
@@ -133,11 +134,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if (session('admin_denegado') == 'OK')
         <script>
-            Swal.fire(
-                'Acceso denegado!',
-                'Debes de ser usuario administrador para poder entrar.',
-                'warning',
-            )
+            Swal.fire({
+                title: 'Acceso denegado!',
+                text: 'Debes de ser usuario administrador para poder entrar.',
+                imageUrl: 'images/logo/sumogp.png',
+                imageWidth: 150,
+                imageHeight: 150,
+                imageAlt: 'Custom image'
+            });
         </script>
     @endif
 
@@ -163,6 +167,21 @@
             }
             });
         
+        </script>
+    @endif
+
+    @if (session('cart0') == 'OK')
+        <script>
+            Swal.fire({
+                title: 'Tu carrito acaba de ser vaciado justo en este momento.',
+                text: 'Por favor vuelve a añadir tus producto deseados, gracias (Se cerrará en 6 segundos.)',
+                imageUrl: 'images/logo/sumogp.png',
+                imageWidth: 150,
+                imageHeight: 150,
+                imageAlt: 'Custom image',
+                timer: 6000,
+                showConfirmButton: false
+            });
         </script>
     @endif
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

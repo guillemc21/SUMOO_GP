@@ -12,7 +12,7 @@
         <p>
             <a href="{{ route('cart.trash') }}" class="btn btn-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
         </p>
-        <div class="table-responsive">
+        <div class="table-responsive" style="max-height: 500px;">
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
@@ -66,7 +66,7 @@
         </div>
         @else
             <h3><span class="badge badge-warning text-black"><b>Tu carrito está vació</b></span></h3>
-            <h5>Los productos permanecen en tu carrito durante 30 minutos y luego van a tus artìculos guardados</h5>
+            <h5>Los productos permanecen en tu carrito durante 30 minutos en el caso de que no haya ninguna modificación agregando nuevos productos.</h5>
         @endif
         <hr>
         <div class="d-flex flex-column w-25 m-auto">

@@ -12,11 +12,12 @@ class PdfController extends Controller
         $factura = Factura::find($facturaId);
         $data = [
             'title' => $factura->nameuser,
-            'content' => $factura->content
+            'content' => $factura->content,
+            'date' => $factura->created_at
         ];
 
         $pdf = PDF::loadView('pdf.ejemplo', $data);
-        return $pdf->download('ejemplo.pdf');
+        return $pdf->download('Factura.pdf');
     }
 
 }

@@ -116,7 +116,10 @@
         Swal.fire({
             title: 'Estas seguro?',
             text: "No podrás revertir esto!",
-            icon: 'warning',
+            imageUrl: '/images/logo/sumogp.png',
+            imageWidth: 150,
+            imageHeight: 150,
+            imageAlt: 'Custom image',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
