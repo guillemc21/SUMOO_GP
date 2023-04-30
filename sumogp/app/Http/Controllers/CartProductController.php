@@ -111,12 +111,19 @@ class CartProductController extends Controller
         $newFactura = new Factura();
         $newFactura->iduser  = Auth::user()->id;
         $newFactura->nameuser  = Auth::user()->name;
+        $newFactura->last_name  = Auth::user()->last_name;
+        $newFactura->email  = Auth::user()->email;
         $content_factura_serialize = serialize($content_factura);
         $newFactura->content  = $content_factura_serialize;
         $newFactura->sell_price_total  = $total;
         $newFactura->save();
+        // dd($newFactura->id);
 
-        return redirect()->route('products.store')->with('send', 'OK');
+        //return redirect()->route('products.store')->with('send', 'OK');
+
+        $id_facture = $newFactura;
+       
+        return redirect()->route('facture.store',compact('id_facture'))->with('send', 'OK');
      }
 
     public function update(Request $request)

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Factura de {{ $title }}</title>
+    <title>Factura de {{ $nameuser }}</title>
      <style>
       /* Estilos para el encabezado */
       header {
@@ -67,8 +67,9 @@
 
     <div class="emisor">
       <h2>Información del emisor</h2>
-      <p>Nombre: Juan Pérez</p>
-      <p>Dirección: Calle 123, Ciudad</p>
+      <p>Nombre: {{ $nameuser }}</p>
+      <p>Apellidos: {{ $last_name }}</p>
+      <p>Correo electronico: {{ $email }}</p>
       <p>Teléfono: 555-1234</p>
     </div>
 

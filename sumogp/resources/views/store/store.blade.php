@@ -28,7 +28,9 @@
                 <div class="frame">
                     <a href="{{route('cart.show')}}" class="custom-btn btn-14">Ir al carrito</a>
                 </div>
-
+                @isset($factureID)
+                    <input hidden id="id_facture" type="text" value="{{$factureID}}">
+                @endisset
                 <div class="row">
                     <!-- Post 1 -->
                     @foreach ($products as $product)

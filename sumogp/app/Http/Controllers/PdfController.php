@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use PDF;
 use App\Models\Factura;
 
+
 class PdfController extends Controller
 {
     public function generarPdf(Request $request, $facturaId)
@@ -13,7 +14,9 @@ class PdfController extends Controller
         $content_uns = unserialize($factura->content);
         // dd($content_uns);
         $data = [
-            'title' => $factura->nameuser,
+            'nameuser' => $factura->nameuser,
+            'last_name' => $factura->last_name,
+            'email' => $factura->email,
             'content' => $content_uns,
             'date' => $factura->created_at,
             'total' => $factura->sell_price_total

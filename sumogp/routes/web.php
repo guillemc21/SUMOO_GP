@@ -108,6 +108,8 @@ Route::get('/cart/delete/{product}', [App\Http\Controllers\CartProductController
 
 
 
+// Pdf factura actual
+Route::get('/store/pdf-facture/{id_facture}', [App\Http\Controllers\CartController::class, 'factureById'])->name('facture.store');
 
 
 

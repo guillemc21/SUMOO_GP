@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Factura;
 
 
 class CartController extends Controller
@@ -12,7 +13,7 @@ class CartController extends Controller
     public function store()
     {
         $categories = Category::all();
-        $products = Product::paginate(6);
+        $products = Product::paginate(9);
         return view('store.store',compact('products','categories'));
     }
 
@@ -28,6 +29,19 @@ class CartController extends Controller
             'products' => $products,
             'categoryIdSelected' => $categoryIdSelected
         ]);
+    }
+
+    public function factureById($facture)
+    {
+        $factures = Factura::all();
+        $facture = Factura::where('id', '=' ,$facture)->first();
+        $factureID = $facture->id;
+
+        $categories = Category::all();
+        $products = Product::paginate(9);
+        
+        return view('store.store',compact('products','categories','factureID'));      
+        
     }
     
 }

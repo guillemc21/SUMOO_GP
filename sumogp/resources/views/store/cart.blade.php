@@ -66,7 +66,7 @@
         </div>
         @else
             <h3><span class="badge badge-warning text-black"><b>Tu carrito está vació</b></span></h3>
-            <h5 style="line-height:35px;">Los productos permanecen en tu carrito durante 30 minutos,<br>en el caso de que no haya ninguna modificación agregando nuevos productos.</h5>
+            <h5 style="line-height:35px;">Los productos permanecen en tu carrito durante 30 minutos<br>en el caso de que no haya ninguna modificación agregando nuevos productos.</h5>
         @endif
         <hr>
         <div class="d-flex flex-column w-25 m-auto">

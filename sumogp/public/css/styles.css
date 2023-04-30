@@ -171,11 +171,11 @@ hr {
 } */
 
 #bg_cat {
-  backdrop-filter: brightness(0.2) blur(8px);
+  /* backdrop-filter: brightness(0.2) blur(8px); */
 }
 
 #bg_cat a {
-  color: rgb(255, 255, 255);
+  color: rgb(8, 4, 4);
   font-weight: bold;
 }
 
