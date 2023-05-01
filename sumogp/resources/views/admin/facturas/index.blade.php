@@ -31,7 +31,7 @@
                             <th>ID</th>
                             <th>Id Usuario</th>
                             <th>Nombre Usuario</th>
-                            <th>Informacion de la factura</th>
+                            <th>Fecha y hora de creacion</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -41,11 +41,11 @@
                                 <td>{{$factura->id}}</td>
                                 <td>{{$factura->iduser}}</td>
                                 <td>{{$factura->nameuser}}</td>
-                                <td>{{$factura->content}}</td>
+                                <td>{{$factura->created_at}}</td>
                                 <td class="btn_td">
-                                    <button type="button" class="btn btn-secondary w-50">
+                                    <a class="btn btn-secondary w-50" href="/generar-pdf/{{$factura->id}}">
                                     Descargar
-                                    </button>
+                                    </a>
                                     <form class="w-50 form-eliminar" action="{{route('admin.facturas.delete', $factura->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         @method('DELETE')
@@ -63,7 +63,7 @@
                             <th>ID</th>
                             <th>Id Usuario</th>
                             <th>Nombre Usuario</th>
-                            <th>Informacion de la factura</th>
+                            <th>Fecha y hora de creacion</th>
                             <th>Acciones</th>
                         </tr>
                     </tfoot>
