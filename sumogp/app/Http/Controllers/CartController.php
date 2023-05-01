@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Factura;
+use Carbon\Carbon;
 
 
 class CartController extends Controller
 {
     public function store()
     {
+        Carbon::setLocale('es');
         $categories = Category::all();
         $products = Product::paginate(9);
         return view('store.store',compact('products','categories'));
@@ -33,6 +35,7 @@ class CartController extends Controller
 
     public function factureById($facture)
     {
+        Carbon::setLocale('es');
         $factures = Factura::all();
         $facture = Factura::where('id', '=' ,$facture)->first();
         $factureID = $facture->id;
