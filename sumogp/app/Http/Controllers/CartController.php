@@ -21,6 +21,7 @@ class CartController extends Controller
 
     public function productByCategory($category)
     {
+        Carbon::setLocale('es');
         $categories=Category::all();
         $category = Category::where('name', '=' ,$category)->first();
         $categoryIdSelected = $category->id;
