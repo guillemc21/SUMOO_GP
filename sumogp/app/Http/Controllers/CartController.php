@@ -18,7 +18,8 @@ class CartController extends Controller
         $categories = Category::all();
         $brands = Brand::all();
         $products = Product::paginate(9);
-        return view('store.store',compact('products','categories','brands'));
+        $productsCatFilter = Product::all();
+        return view('store.store',compact('products','categories','brands','productsCatFilter'));
     }
 
     public function productByCategory($category)
@@ -34,7 +35,8 @@ class CartController extends Controller
             'categories' => $categories,
             'products' => $products,
             'brands' => $brands,
-            'categoryIdSelected' => $categoryIdSelected
+            'categoryIdSelected' => $categoryIdSelected,
+            'productsCatFilter' => $products
         ]);
     }
 
@@ -51,7 +53,8 @@ class CartController extends Controller
             'brands' => $brands,
             'products' => $products,
             'categories' => $categories,
-            'brandIdSelected' => $brandIdSelected
+            'brandIdSelected' => $brandIdSelected,
+            'productsCatFilter' => $products
         ]);
     }
 
@@ -62,11 +65,13 @@ class CartController extends Controller
         $facture = Factura::where('id', '=' ,$facture)->first();
         $factureID = $facture->id;
 
+        $productsCatFilter = Product::all();
+
         $categories = Category::all();
         $brands = Brand::all();
         $products = Product::paginate(9);
         
-        return view('store.store',compact('products','categories','brands','factureID'));      
+        return view('store.store',compact('products','categories','brands','factureID','productsCatFilter'));      
         
     }
     

@@ -200,6 +200,44 @@
             });
         </script>
     @endif
+
+    <script>
+        function fS() {
+            var input, filter, ul, ul2, li, a, i, divProd;
+            input = document.getElementById('iS');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("sU");
+
+            // Desaparecemos el catalogo con paginate
+            ul2 = document.getElementById("sU2");
+            ul2.style.display = "none";
+
+            // Mostramos el catalogo sin paginate para mostrar los productos con el filtro de buscador que se ejecutar a continuacion
+            ul.style.display = "";
+
+            li = ul.getElementsByTagName('li');
+            divProd = ul.getElementsByClassName("dPf");
+            
+            for (i = 0; i < li.length; i++) {
+                
+                a = li[i].getElementsByTagName("a")[0];
+                // console.log(a);
+                // console.log(li);
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    
+                    divProd[i].style.display = "";
+                } else {
+                    
+                    divProd[i].style.display = "none";
+                }
+            }
+            // Si en el buscador no hay nada ,desaparecera el catalogo sin paginate y se mostrara el que tiene
+            if (input.value == '') {    
+                    ul2.style.display = "";
+                    ul.style.display = "none";
+            }
+        }
+    </script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
