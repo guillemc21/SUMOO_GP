@@ -70,12 +70,12 @@
     @endif -->
   <header>
     <h1>Factura Nº {{ $id }}</h1>
-    <p>Fecha: {{ $date }}</p>
+    <p style="font-weight: bold;">Fecha: {{ $date }}</p>
   </header>
 
   <hr>
 
-  <table style="font-size: 0.7rem;">
+  <table style="font-size: 0.9rem;">
     <thead>
       <tr>
         <th>SUMO GP</th>
@@ -106,10 +106,12 @@
       <p>Teléfono: 555-5678</p>
     </div> -->
 
-  <table>
+  <table style="font-size: 0.9rem;">
     <thead>
       <tr>
         <th>Producto</th>
+        <th>Categoría</th>
+        <th>Marca</th>
         <th>Cantidad</th>
         <th>Precio unitario</th>
         <th>Total</th>
@@ -124,9 +126,11 @@
         <h5>{{ $item->brand->name }}</h5> -->
       <tr>
         <td>{{ $item->name_product }}</td>
+        <td>{{ $item->category->name }}</td>
+        <td>{{ $item->brand->name }}</td>
         <td>{{ $item->quantity }}</td>
-        <td>{{ $item->sell_price }}</td>
-        <td>{{ number_format($item->sell_price * $item->quantity,2)}}</td>
+        <td>{{ $item->sell_price }} €</td>
+        <td>{{ number_format($item->sell_price * $item->quantity,2)}} €</td>
       </tr>
       @endforeach
 
