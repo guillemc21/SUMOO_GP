@@ -78,6 +78,9 @@ class CartProductController extends Controller
         foreach ($cart as $key => $item) {
             if($item!=$cart['created_at'] or $item!=$cart['updated_at']) {
                 $product = Product::where('id', '=' ,$item->id)->first();
+                if($item->quantity > $product->stock){
+                    return redirect()->route('products.store')->with('err_stock', 'OK');
+                }
                 $product->stock -= $item->quantity;
                 $product->save();
             }
