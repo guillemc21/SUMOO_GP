@@ -19,6 +19,7 @@ class PdfController extends Controller
             'email' => $factura->email,
             'content' => $content_uns,
             'date' => $factura->created_at,
+            'id' => $factura->id,
             'total' => $factura->sell_price_total
         ];
 
