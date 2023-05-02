@@ -19,30 +19,30 @@ class FacturaController extends Controller
        return view('admin.facturas.index', ['facturas' => $facturas]);
     }
 
-    public function store(Request $request)
-    {
-       // dd( \App\Models\Models\Factura::all());
+   //  public function store(Request $request)
+   //  {
+   //     // dd( \App\Models\Models\Factura::all());
 
-       $newFactura = new Factura();
-       $newFactura->name  = $request->name;
-       $newFactura->save();
-       //dd($request->Factura);
-       //dd($request->all());
-       return redirect()->back();
-    }
+   //     $newFactura = new Factura();
+   //     $newFactura->name  = $request->name;
+   //     $newFactura->save();
+   //     //dd($request->Factura);
+   //     //dd($request->all());
+   //     return redirect()->back();
+   //  }
     
-    public function update(Request $request, $facturaId)
-    {
-       // dd( \App\Models\Models\Category::all());
+   //  public function update(Request $request, $facturaId)
+   //  {
+   //     // dd( \App\Models\Models\Category::all());
         
-       $factura = Factura::find($facturaId); 
+   //     $factura = Factura::find($facturaId); 
        
-       $factura->name  = $request->name;
-       $factura->save();
-       //dd($request->factura);
-       //dd($request->all());
-       return redirect()->back();
-    }
+   //     $factura->name  = $request->name;
+   //     $factura->save();
+   //     //dd($request->factura);
+   //     //dd($request->all());
+   //     return redirect()->back();
+   //  }
 
     public function delete(Request $request, $facturaId)
     {

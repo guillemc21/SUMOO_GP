@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Exception;
 
 class ProductsController extends Controller
 {
@@ -29,28 +30,32 @@ class ProductsController extends Controller
 
      public function store(Request $request)
      {
-        // dd( \App\Models\Models\Category::all());
-        $newProduct = new Product();
+        try{
+            // dd( \App\Models\Models\Category::all());
+            $newProduct = new Product();
 
-        if( $request->hasFile('featured') ){
-            $file = $request->file('featured');
-            $destinationPath = 'images/featureds/';
-            $filename = time() . '-' . $file->getClientOriginalName();
-            $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
-            $newProduct->image_product = $destinationPath . $filename;
+            if( $request->hasFile('featured') ){
+                $file = $request->file('featured');
+                $destinationPath = 'images/featureds/';
+                $filename = time() . '-' . $file->getClientOriginalName();
+                $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
+                $newProduct->image_product = $destinationPath . $filename;
+            }
+
+            $newProduct->name_product  = $request->name_product;
+            $newProduct->sell_price  = $request->sell_price;
+            $newProduct->content  = $request->content;
+            $newProduct->category_id  = $request->category_id;
+            $newProduct->brand_id  = $request->brand_id;
+            $newProduct->stock  = $request->stock;
+            $newProduct->quantity  = 0;
+            $newProduct->save();
+            //dd($request->category);
+            //dd($request->all());
+            return redirect()->back();
+        }catch(Exception $e){
+            return redirect()->back()->with('error', 'OK');
         }
-
-        $newProduct->name_product  = $request->name_product;
-        $newProduct->sell_price  = $request->sell_price;
-        $newProduct->content  = $request->content;
-        $newProduct->category_id  = $request->category_id;
-        $newProduct->brand_id  = $request->brand_id;
-        $newProduct->stock  = $request->stock;
-        $newProduct->quantity  = 0;
-        $newProduct->save();
-        //dd($request->category);
-        //dd($request->all());
-        return redirect()->back();
      }
     
      public function update(Request $request, $productId)

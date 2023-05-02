@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \App\Models\Brand;
+use Exception;
 
 class BrandsController extends Controller
 {
@@ -21,14 +22,18 @@ class BrandsController extends Controller
 
     public function store(Request $request)
     {
-       // dd( \App\Models\Models\Brand::all());
+      try{
+         // dd( \App\Models\Models\Brand::all());
 
-       $newBrand = new Brand();
-       $newBrand->name  = $request->name;
-       $newBrand->save();
-       //dd($request->Brand);
-       //dd($request->all());
-       return redirect()->back();
+         $newBrand = new Brand();
+         $newBrand->name  = $request->name;
+         $newBrand->save();
+         //dd($request->Brand);
+         //dd($request->all());
+         return redirect()->back();
+      }catch(Exception $e){
+            return redirect()->back()->with('error', 'OK');
+      }
     }
     
     public function update(Request $request, $brandId)

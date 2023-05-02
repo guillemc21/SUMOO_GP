@@ -11,9 +11,14 @@
         <div id="bg_images" class="row justify-content-center">
             <div class="col-2" id="bg_cat">
                 <nav class="text-center my-5 d-flex flex-column">
-                    <a href="{{route('products.store')}}" class="mx-3 pb-3 link-category d-block d-md-inline {{isset($categoryIdSelected)? '': 'selected-category' }}" >Todas</a>
+                    <a href="{{route('products.store')}}" class="mx-3 pb-3 d-block d-md-inline {{  (isset($categoryIdSelected) || isset($brandIdSelected))? '': 'selected-all' }}" >Todas</a>
+                    <hr>
                     @foreach ($categories as $category)
-                        <a href="{{route('store.category', $category->name)}}" class="my-3 pb-3 link-category d-block d-md-inline {{  (isset($categoryIdSelected) && $category->id == $categoryIdSelected)? 'selected-category': '' }}" >{{$category->name}}</a>
+                        <a href="{{route('store.category', $category->name)}}" class="my-3 pb-3 d-block d-md-inline {{  (isset($categoryIdSelected) && $category->id == $categoryIdSelected)? 'selected-category': '' }}" >{{$category->name}}</a>
+                    @endforeach
+                    <hr>
+                    @foreach ($brands as $brand)
+                        <a href="{{route('store.brand', $brand->name)}}" class="my-3 pb-3 d-block d-md-inline {{  (isset($brandIdSelected) && $brand->id == $brandIdSelected)? 'selected-brand': '' }}" >{{$brand->name}}</a>
                     @endforeach
                     
                 </nav>
@@ -38,16 +43,17 @@
                         <div class="card m-auto p-3" style="width: 18rem; display:flex !important; align-items:center;justify-content:center;">
                             <img style="width:75px;height:75px;" class="m-2" src="{{asset($product->image_product)}}" alt="{{$product->name_product}}">
                             <div class="card-body" >
-                                <small class="card-txt-category">Categoría: {{$product->category->name}}</small>
+                                <small class="card-txt-category">Categoría: {{$product->category->name}}</small><br>
+                                <small class="card-txt-category">Marca: {{$product->brand->name}}</small>
                                 <h5 class="card-title my-2">{{$product->name_product}}</h5>
                                 <div class="d-card-text truncate-text">
                                     <p>{{$product->content}}</p>
                                 </div>
                                 @include('store.modal-item-content')
-                                <a data-toggle="modal" data-target="#modal-item-content-{{$product->id}}" class="post-link"><b>Leer más</b></a>
+                                <a data-toggle="modal" data-target="#modal-item-content-{{$product->id}}" style="cursor:pointer;" class="post-link"><b>Leer más</b></a>
                                 <hr>
                                 <div class="row">
-                                    <a class="btn btn-warning btn-block" href="{{route('cart.add',$product->name_product)}}">Añadir al carrito</a>
+                                    <a class="btn btn-warning btn-block" style="font-family: 'Inter', sans-serif;" href="{{route('cart.add',$product->name_product)}}">Añadir al carrito</a>
                                 </div>
                                 <div class="row">
                                     <div class="col-6 text-left">

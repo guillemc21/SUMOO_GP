@@ -122,7 +122,15 @@
             )
         </script>
     @endif
-
+    @if (session('error') == 'OK')
+        <script>
+            Swal.fire(
+                'Error!',
+                'Debes de llenar todos los campos.',
+                'error',
+            )
+        </script>
+    @endif            
     <script>
     $(document).ready(function() {
         $('#brands').DataTable( {

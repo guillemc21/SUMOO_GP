@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \App\Models\Category;
+use Exception;
 
 class CategoriesController extends Controller
 {
@@ -21,14 +22,18 @@ class CategoriesController extends Controller
 
     public function store(Request $request)
     {
-       // dd( \App\Models\Models\Category::all());
+      try{
+         // dd( \App\Models\Models\Category::all());
 
-       $newCategory = new Category();
-       $newCategory->name  = $request->name;
-       $newCategory->save();
-       //dd($request->category);
-       //dd($request->all());
-       return redirect()->back();
+         $newCategory = new Category();
+         $newCategory->name  = $request->name;
+         $newCategory->save();
+         //dd($request->category);
+         //dd($request->all());
+         return redirect()->back();
+      }catch(Exception $e){
+            return redirect()->back()->with('error', 'OK');
+      }
     }
     
     public function update(Request $request, $categoryId)

@@ -31,7 +31,11 @@ Route::get('/generar-pdf/{facturaId}', [App\Http\Controllers\PdfController::clas
 
 
 //Filtro categorias//
-Route::get('/store/{category}', [App\Http\Controllers\CartController::class, 'productByCategory'])->name('store.category');
+Route::get('/store/filter-category/{category}', [App\Http\Controllers\CartController::class, 'productByCategory'])->name('store.category');
+
+
+//Filtro marcas//
+Route::get('/store/filter-brand/{brand}', [App\Http\Controllers\CartController::class, 'productByBrand'])->name('store.brand');
 
 // Route::get('/products/{category}', [App\Http\Controllers\HomeController::class, 'productByCategory'])->name('products.category');
 
@@ -91,8 +95,6 @@ Route::delete('/admin/users/{userId}/delete', [App\Http\Controllers\Admin\UsersC
 
 //Panel ADMIN + CRUD Facturas//
 Route::get('/admin/facturas', [App\Http\Controllers\Admin\FacturaController::class, 'index'])->name('admin.facturas');
-Route::post('/admin/facturasa/store', [App\Http\Controllers\Admin\FacturaController::class, 'store'])->name('admin.facturas.store');
-Route::post('/admin/facturas/{facturaId}/update', [App\Http\Controllers\Admin\FacturaController::class, 'update'])->name('admin.facturas.update');
 Route::delete('/admin/facturas/{facturaId}/delete', [App\Http\Controllers\Admin\FacturaController::class, 'delete'])->name('admin.facturas.delete');
 
 

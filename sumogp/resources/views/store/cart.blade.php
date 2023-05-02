@@ -10,7 +10,7 @@
     <div class="tsble-cart">
         @if(count($cart)>2)
         <p>
-            <a href="{{ route('cart.trash') }}" class="btn btn-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
+            <a href="{{ route('cart.trash') }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
         </p>
         <div class="table-responsive" style="max-height: 500px;">
             <table class="table table-striped table-hover table-bordered">
@@ -69,18 +69,18 @@
             <h5 style="line-height:35px;">Los productos permanecen en tu carrito durante 30 minutos<br>en el caso de que no haya ninguna modificación agregando nuevos productos.</h5>
         @endif
         <hr>
-        <div class="d-flex flex-column w-25 m-auto">
-            <a href="{{ route('products.store') }}" class="btn btn-primary">
-                <i class="fa fa-chevron-circle-left"></i> Seguir comprando
+        <div class="d-flex justify-content-center flex-column w-25 m-auto">
+            <a href="{{ route('products.store') }}" class="custom-btn btn-14 w-100">
+                Seguir comprando
             </a>
             <br>
             @if(count($cart)>2)
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
-                Continuar
-            </button>            
-            <!-- modal DETAIL -->
-            @include('store.modal-detail-cart')
-            <!-- /.modal -->
+                <button type="button" class="custom-btn btn-14 w-100" data-toggle="modal" data-target="#modal-detail-cart-{{count($cart)}}">
+                    Continuar
+                </button>            
+                <!-- modal DETAIL -->
+                @include('store.modal-detail-cart')
+                <!-- /.modal -->
             @endif
         </div>
     </div>

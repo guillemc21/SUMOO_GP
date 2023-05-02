@@ -1,144 +1,114 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Factura de {{ $nameuser }}</title>
-  <style>
-    .factura {
-      table-layout: fixed;
-    }
+    <title>Factura de {{ $nameuser }}</title>
+     <style>
+      /* Estilos para el encabezado */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #444;
+        color: white;
+        padding: 1rem;
+      }
 
-    .fact-info>div>h5 {
-      font-weight: bold;
-    }
+      /* Estilos para la información del emisor */
+      .emisor {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+      }
 
-    .factura>thead {
-      border-top: solid 3px #000;
-      border-bottom: 3px solid #000;
-    }
+      /* Estilos para la información del receptor */
+      .receptor {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+      }
 
-    .factura>thead>tr>th:nth-child(2),
-    .factura>tbod>tr>td:nth-child(2) {
-      width: 300px;
-    }
+      /* Estilos para la tabla de productos */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
 
-    .factura>thead>tr>th:nth-child(n+3) {
-      text-align: right;
-    }
+      th, td {
+        border: 1px solid black;
+        padding: 0.5rem;
+        text-align: center;
+      }
 
-    .factura>tbody>tr>td:nth-child(n+3) {
-      text-align: right;
-    }
+      th {
+        background-color: #444;
+        color: white;
+      }
 
-    .factura>tfoot>tr>th,
-    .factura>tfoot>tr>th:nth-child(n+3) {
-      font-size: 24px;
-      text-align: right;
-    }
-
-    .cond {
-      border-top: solid 2px #000;
-    }
-  </style>
-
+      /* Estilos para el total */
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+      }
+    </style>
 </head>
-
 <body>
-  <div id="app" class="col-11">
+    <!-- @if($content != null)
+      <h1>prueba</h1>
+    @endif -->
+    <header>
+      <h1>Factura</h1>
+      <p>Fecha: {{ $date }}</p>
+    </header>
 
-    <h2>Factura</h2>
-
-    <div class="row my-3">
-      <div class="col-10">
-        <h1>Mil Pasos</h1>
-        <p>Av. Winston Churchill</p>
-        <p>Plaza Orleans 3er. nivel</p>
-        <p>local 312</p>
-      </div>
-      <div class="col-2">
-        <img src="~/images/Mil-Pasos_Negro.png" />
-      </div>
+    <div class="emisor">
+      <h2>Información del emisor</h2>
+      <p>Nombre: {{ $nameuser }}</p>
+      <p>Apellidos: {{ $last_name }}</p>
+      <p>Correo electronico: {{ $email }}</p>
+      <p>Teléfono: 555-1234</p>
     </div>
 
-    <hr />
-
-    <div class="row fact-info mt-3">
-      <div class="col-3">
-        <h5>Facturar a</h5>
-        <p>
-          Arian Manuel Garcia Reynoso
-        </p>
-      </div>
-      <div class="col-3">
-        <h5>Enviar a</h5>
-        <p>
-          Cotui, Sanchez Ramirez
-          Santa Fe, #19
-          arianmanuel75@gmail.com
-        </p>
-      </div>
-      <div class="col-3">
-        <h5>N° de factura</h5>
-        <h5>Fecha</h5>
-        <h5>Fecha de vencimiento</h5>
-      </div>
-      <div class="col-3">
-        <h5>103</h5>
-        <p>09/05/2019</p>
-        <p>09/05/2019</p>
-      </div>
+    <div class="receptor">
+      <h2>Información del receptor</h2>
+      <p>Nombre: Ana Gómez</p>
+      <p>Dirección: Calle 456, Ciudad</p>
+      <p>Teléfono: 555-5678</p>
     </div>
 
-    <div class="row my-5">
-      <table class="table table-borderless factura">
-        <thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio unitario</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($content as $item)
+        <!-- <h5>{{ $item->name_product }}</h5>
+        <h5>{{ $item->sell_price }}</h5>
+        <h5>{{ $item->content }}</h5>
+        <h5>{{ $item->category->name }}</h5>
+        <h5>{{ $item->brand->name }}</h5> -->
           <tr>
-            <th>Cant.</th>
-            <th>Descripcion</th>
-            <th>Precio Unitario</th>
-            <th>Importe</th>
+            <td>{{ $item->name_product }}</td>
+            <td>{{ $item->quantity }}</td>
+            <td>{{ $item->sell_price }}</td>
+            <td>{{ number_format($item->sell_price * $item->quantity,2)}}</td>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Clases de Cha-Cha-Cha</td>
-            <td>3,000.00</td>
-            <td>3,000.00</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Clases de Salsa</td>
-            <td>4,000.00</td>
-            <td>12,000.00</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Total Factura</th>
-            <th>RD$15,000.00</th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+        @endforeach
+        
+      </tbody>
+    </table>
 
-    <div class="cond row">
-      <div class="col-12 mt-3">
-        <h4>Condiciones y formas de pago</h4>
-        <p>El pago se debe realizar en un plazo de 15 dias.</p>
-        <p>
-          Banco Banreserva
-          <br />
-          IBAN: DO XX 0075 XXXX XX XX XXXX XXXX
-          <br />
-          Código SWIFT: BPDODOSXXXX
-        </p>
-      </div>
+    <div class="total">
+      <p>Total: {{ number_format($total,2) }} €</p>
     </div>
-  </div>
 </body>
-
-
 </html>
