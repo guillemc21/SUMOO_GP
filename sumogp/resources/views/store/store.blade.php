@@ -72,9 +72,13 @@
                                     <hr>
                                     <div class="row">
                                         @if($product->stock == 0)
-                                            <a class="btn btn-block disabled" style="font-family: 'Inter', sans-serif;" href="{{route('cart.add',$product->name_product)}}">Añadir al carrito</a>
+                                            <a class="mb-3" style="font-family: 'Inter', sans-serif; padding:0; pointer-events: none;" href="{{route('cart.add',$product->name_product)}}"><button class="add-cart-disabled">
+                                                Añadir al carrito
+                                            </button></a>
                                         @else
-                                            <a class="btn btn-warning btn-block" style="font-family: 'Inter', sans-serif;" href="{{route('cart.add',$product->name_product)}}">Añadir al carrito</a>
+                                            <a class="mb-3" style="font-family: 'Inter', sans-serif; padding:0;" href="{{route('cart.add',$product->name_product)}}"><button class="add-cart">
+                                                Añadir al carrito
+                                            </button></a>
                                         @endif
                                     </div>
                                     <div class="row">
