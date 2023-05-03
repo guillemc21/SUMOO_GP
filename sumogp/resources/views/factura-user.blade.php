@@ -5,42 +5,34 @@
 @section('content')
 <div class="container text-center login-container" style="height: 55rem;">
     <div>
-        <h1><i class="fa fa-shopping-cart"></i>Carrito de compra</h1>
+        <h1><i class="fa fa-shopping-cart"></i>Facturas de {{ Auth::user()->name }}</h1>
     </div>
     <div class="tsble-cart" id="main_transition">
-        
+        @if(count($facturas)>0)
         <p>
-            <a class="btn btn-outline-danger"><i class="fa fa-trash"></i>Facturas de {{ Auth::user()->name }}</a>
+            <a class="btn btn-outline-danger">Facturas de {{ Auth::user()->name }}</a>
         </p>
         <div class="table-responsive" style="max-height: 500px;">
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>Imagen</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Subtotal</th>
-                        <th></th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Precio total</th>
+                        <th>Fecha de creacion</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($facturas as $factura)
                         
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td><a></a></td>
-                                <td>
-                                    
-                                
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
+                                <td>{{ $factura->nameuser }}</td>
+                                <td>{{ $factura->last_name }}</td>
+                                <td>{{ $factura->email }}</td>
+                                <td>{{ $factura->sell_price_total }}</td>
+                                <td>{{ $factura->updated_at }}</td>
+                            
                             </tr>
                         
                     @endforeach
@@ -58,7 +50,7 @@
         
         <hr>
         <div class="d-flex justify-content-center flex-column w-25 m-auto">
-            <a href="home" class="custom-btn btn-14 w-100">
+            <a href="{{route('home')}}" class="custom-btn btn-14 w-100">
                 Volver al Inicio
             </a>
             
