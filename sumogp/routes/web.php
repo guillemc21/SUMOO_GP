@@ -44,8 +44,11 @@ Route::get('/store/filter-brand/{brand}', [App\Http\Controllers\CartController::
 Route::get('/logout', [App\Http\Controllers\LogoutAdminController::class, 'perform'])->name('logout.perform');
 
 
+//Lista Facturas Usuario
+Route::get('/list-facturas/{user}', [App\Http\Controllers\FacturaUser::class, 'ListFacturas'])->name('list-facturas');
 
-// Route::get('/post', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
+
+
 
 Route::get('/home', function(){
     return view('admin.home_admin');

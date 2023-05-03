@@ -90,6 +90,9 @@
                                     <a class="dropdown-item" href="/admin">{{ __('Panel Administrador') }}
                                         
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('list-facturas',Auth::user()->id) }}">{{ __('Facturas de') }} {{ Auth::user()->name }}
+                                        
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
