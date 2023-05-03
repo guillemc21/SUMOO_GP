@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-outline-primary">Guardar</button>
                 </div>
             </form> 

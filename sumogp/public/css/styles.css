@@ -603,6 +603,7 @@ hr {
   top: 2px;
 }
 
+
 /* Pagination */
 .pagination {
 	margin-top: 30px;
@@ -815,8 +816,8 @@ hr {
 
 .button_pdf {
   position: relative;
-  width: 155px;
-  height: 40px;
+  width: 355px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -830,14 +831,14 @@ hr {
 }
 
 .button_pdf .button__text {
-  transform: translateX(22px);
+  transform: translateX(132px);
   color: #fff;
   font-weight: 600;
 }
 
 .button_pdf .button__icon {
   position: absolute;
-  transform: translateX(109px);
+  transform: translateX(310px);
   height: 100%;
   width: 39px;
   background-color: #17795E;
@@ -860,7 +861,7 @@ hr {
 }
 
 .button_pdf:hover .button__icon {
-  width: 148px;
+  width: 338px;
   transform: translateX(0);
 }
 
@@ -870,4 +871,36 @@ hr {
 
 .button_pdf:active {
   border: 1px solid #146c54;
+}
+
+@media (max-width:1200px) {
+    
+  .button_pdf {  
+    height: 60px;
+  }
+  .btn-14 {
+    padding: 20px;
+    font-size: 0.7rem;
+
+  }
+}
+@media (max-width:991px) {
+  .td_date{
+    font-size: 0.7rem;
+  }
+  .button_pdf {
+    height: 70px; 
+  }
+  .button_pdf .button__icon {
+    transform: translateX(254px);
+  }
+  .button_pdf .button__text {
+    transform: translateX(100px);
+  }
+  .button_pdf {
+    width: 301px;
+  }
+  .button_pdf:hover .button__icon {
+    width: 285px;
+}
 }

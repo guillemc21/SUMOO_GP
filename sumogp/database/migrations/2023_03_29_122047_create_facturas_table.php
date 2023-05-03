@@ -20,6 +20,7 @@ class CreateFacturasTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->longText('content');
+            $table->longText('comments')->nullable();
             $table->decimal('sell_price_total',12,2);
             $table->timestamps();
         });

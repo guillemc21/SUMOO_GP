@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="custom-btn btn-14 w-50 m-auto" data-dismiss="modal">Cerrar</button>
                 </div>
             </form> 
         </div>

@@ -196,7 +196,28 @@
             Swal.fire({
                 title: 'Error con el stock de un producto!',
                 text: 'La cantidad de un producto supera al de su stock.',
-                imageUrl: 'images/logo/sumogp.png',
+                imageUrl: '/images/logo/sumogp.png',
+                imageWidth: 150,
+                imageHeight: 150,
+                imageAlt: 'Custom image'
+            });
+        </script>
+    @endif
+    @if (session('error_comment') == 'OK')
+        <script>
+            Swal.fire(
+                'Error!',
+                'Debes de llenar todos los campos.',
+                'error',
+            )
+        </script>
+    @endif
+    @if (session('send_comment') == 'OK')
+        <script>
+            Swal.fire({
+                title: 'Enviado!',
+                text: 'Tu incidencia acaba de ser enviada a nuestra base de datos,lo tendremos en cuenta!.',
+                imageUrl: '/images/logo/sumogp.png',
                 imageWidth: 150,
                 imageHeight: 150,
                 imageAlt: 'Custom image'

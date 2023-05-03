@@ -48,6 +48,9 @@ Route::get('/logout', [App\Http\Controllers\LogoutAdminController::class, 'perfo
 Route::get('/list-facturas/{user}', [App\Http\Controllers\FacturaUser::class, 'ListFacturas'])->name('list-facturas');
 
 
+//Enviar comentario incidencia
+Route::post('/send-factura', [App\Http\Controllers\FacturaUser::class, 'IncidFacturas'])->name('facture.update');
+
 
 
 Route::get('/home', function(){
