@@ -133,14 +133,14 @@ hr {
   background: linear-gradient(145deg, #b4b4b4, #939393);
 }
 
-#cart-block img{
+/* #cart-block img{
   transition: width 0.6s, height 0.6s;
 }
 
 #cart-block img:hover{
   width: 27px;
   height: 27px;
-}
+} */
 
 
 /* Button add cart */
