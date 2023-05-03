@@ -272,8 +272,8 @@ hr {
 .cart_hover{
   margin-top: 3rem;
   border-radius: 7px;
-background: #f2e8e3;
-box-shadow:  9px 9px 18px #a7a09d,
+  background: #f2e8e3;
+  box-shadow:  9px 9px 18px #a7a09d,
              -9px -9px 18px #ffffff;
   padding: 25px;
 }
@@ -339,6 +339,8 @@ box-shadow:  9px 9px 18px #a7a09d,
 }
 
 
+
+
 /* carrsuel hover */
 .carrusel_hover_title{
   background-color: #190a02;
@@ -360,6 +362,9 @@ box-shadow:  9px 9px 18px #a7a09d,
   justify-content: center;
   align-items: center;
 }
+
+
+
 
 /* footer layout */
 .footer_layout {
@@ -491,6 +496,8 @@ box-shadow:  9px 9px 18px #a7a09d,
 }
 
 
+
+
 /* galeri */
 .conocenos-galeri{
   display:flex;
@@ -597,7 +604,6 @@ box-shadow:  9px 9px 18px #a7a09d,
 }
 
 /* Pagination */
-
 .pagination {
 	margin-top: 30px;
 	border-top: 3px solid #ddd;
