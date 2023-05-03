@@ -6,7 +6,7 @@
 @section('content')
 
     <!-- Contenido -->
-    <section class="container-fluid content" style="padding: 0;">
+    <section class="container-fluid content" id="main_transition" style="padding: 0;">
        
         <!-- Tienda -->
         <div style="margin-top: -30px;">

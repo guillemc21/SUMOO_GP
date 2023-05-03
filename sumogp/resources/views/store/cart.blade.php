@@ -7,7 +7,7 @@
     <div>
         <h1><i class="fa fa-shopping-cart"></i>Carrito de compra</h1>
     </div>
-    <div class="tsble-cart">
+    <div class="tsble-cart" id="main_transition">
         @if(count($cart)>2)
         <p>
             <a href="{{ route('cart.trash') }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
