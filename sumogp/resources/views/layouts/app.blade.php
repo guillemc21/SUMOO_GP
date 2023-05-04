@@ -129,7 +129,7 @@
                 </a>
             </div>
             <div>
-                <p class="mt-3">Copyright © 2023 INK SPOT S.L.L, Tienda Online. <hr class="mb-0"> Este proyecto esta hecho para poder presentarse como <b>proyecto final Ciclo Formativo<br>Desarrollo de aplicaciones Web (DAW)</b>.</p>
+                <p class="mt-3">Copyright <b>©</b> 2023 INK SPOT S.L.L, Tienda Online. <hr class="mb-0">C. del Consell de Cent, Barcelona, España<br><b>inkspotsll86@gmail.com ,913 62 11 45</b><br><small>Este proyecto esta hecho para poder presentarse como <b>proyecto final Ciclo Formativo<br>Desarrollo de aplicaciones Web (DAW)</b></small></p>
             </div>
         </div>
     </footer>
