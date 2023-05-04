@@ -85,50 +85,24 @@
     <tbody>
       <tr>
         <td>
-          <tr>
-            <th> <h2>Información de la empresa</h2></th>
-          </tr>
-          <tr>
-            <th><p>Nombre: INK SPOT S.L.L</p></th>
-          </tr>
-          <tr>
-            <th><p>Correo electronico: inkspotsll86@gmial.com</p></th>
-          </tr>
-          <tr>
-            <th> <p>Teléfono: 613621145</p></th>
-          </tr>
-          <tr>
-            <th> <p>Cif: B-43536274</p></th>
-          </tr>
-          <tr>
-            <th> <p>Direccion: C/ Conssell de Cent nº282</p></th>
-          </tr>
-          <!-- <div class="emisor"> 
-          </div> -->
+          
+          <div class="emisor">
+            <h2>Información de la empresa</h2>
+            <p>Nombre: INK SPOT S.L.L</p>
+            <p>Correo electronico: inkspotsll86@gmial.com</p>
+            <p>Teléfono: 613621145</p>
+            <p>Cif: B-43536274</p>
+            <p>Direccion: C/ Conssell de Cent nº282</p>
+          </div>
         </td>
         <td>
-          <tr>
-            <th> <h2>Información del cliente</h2></th>
-          </tr>
-          <tr>
-            <th><p>Nombre: {{ $nameuser }}</p></th>
-          </tr>
-          <tr>
-            <th><p>Apellidos: {{ $last_name }}</p></th>
-          </tr>
-          <tr>
-            <th><p>Correo electronico: {{ $email }}</p></th>
-          </tr>
-          <tr>
-            <th><p>Teléfono: 555-1234</p></th>
-          </tr>
-          <!-- <div class="emisor">
-           
-            
-            
-            
-            
-          </div> -->
+          <div class="emisor">
+            <h2>Información del cliente</h2>
+            <p>Nombre: {{ $nameuser }}</p>
+            <p>Apellidos: {{ $last_name }}</p>
+            <p>Correo electronico: {{ $email }}</p>
+            <p>Teléfono: 555-1234</p>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -174,7 +148,7 @@
   </table>
 
   <div class="total">
-    <p>Total sin iva: {{ number_format($total/(1.21),2) }} €</p>
+    <p>Total sin iva: {{ number_format($total,2) }} €</p>
     <p>Total con iva: {{ number_format($total*(1.21),2) }} €</p>
   </div>
 </body>
