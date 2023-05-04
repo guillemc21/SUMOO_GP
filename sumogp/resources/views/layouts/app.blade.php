@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>SUMOGP - @yield('title')</title>
+    <title>INK SPOT S.L.L - @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +30,7 @@
             <div class="container" >
                 <img width="50px" height="50px" src="{{ asset('images/logo/sumogp.png')}}" alt="sumogp">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    {{ config('app.name', 'SUMO GP') }}
+                    {{ config('app.name', 'INK SPOT S.L.L') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -129,7 +129,7 @@
                 </a>
             </div>
             <div>
-                <p class="mt-3">Copyright © 2023 SUMOGP, Tienda Online. <hr class="mb-0"> Este proyecto esta hecho para poder presentarse como <b>proyecto final Ciclo Formativo<br>Desarrollo de aplicaciones Web (DAW)</b>.</p>
+                <p class="mt-3">Copyright © 2023 INK SPOT S.L.L, Tienda Online. <hr class="mb-0"> Este proyecto esta hecho para poder presentarse como <b>proyecto final Ciclo Formativo<br>Desarrollo de aplicaciones Web (DAW)</b>.</p>
             </div>
         </div>
     </footer>
