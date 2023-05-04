@@ -84,7 +84,16 @@
     </thead>
     <tbody>
       <tr>
-        <td>SUMO GP</td>
+        <td>
+          <div class="emisor">
+            <h2>Información de la empresa</h2>
+            <p>Nombre: INK SPOT S.L.L</p>
+            <p>Correo electronico: inkspotsll86@gmial.com</p>
+            <p>Teléfono: 613621145</p>
+            <p>Cif: B-43536274</p>
+            <p>Direccion: C/ Conssell de Cent nº282</p>
+          </div>
+        </td>
         <td>
           <div class="emisor">
             <h2>Información del cliente</h2>
