@@ -52,7 +52,7 @@
     <div style="background-color: #273036; height: 900px;">
         <h1 style="color: white; padding-top: 30px; text-align:center;">QUÉ VENDEMOS?</h1>
         <h5 style="color: white; text-align: center;">Nos dedicamos a vender material y mobiliario de oficina.</h5>
-        <div class="row justify-content-center text-center" style="padding-top: 30px;">
+        <div class="row justify-content-center text-center" style="padding-top: 30px;margin: 0;">
             <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
                 <div class="card " style="width: 30rem;">
                     <img src="images\main\card1.webp" class="card-img-top" alt="Imagen 1">
