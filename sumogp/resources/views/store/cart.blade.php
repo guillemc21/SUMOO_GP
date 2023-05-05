@@ -5,12 +5,12 @@
 @section('content')
 <div class="container text-center login-container" style="height: 55rem;">
     <div>
-        <h1><i class="fa fa-shopping-cart"></i>Carrito de compra</h1>
+        <h1></i>Carrito de compra</h1>
     </div>
     <div class="tsble-cart" id="main_transition">
         @if(count($cart)>2)
         <p>
-            <a href="{{ route('cart.trash') }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Vaciar carrito</a>
+            <a href="{{ route('cart.trash') }}" class="custom-btn btn-14 w-25 m-auto mt-5 mb-5"></i>Vaciar carrito</a>
         </p>
         <div class="table-responsive" style="max-height: 500px;">
             <table class="table table-striped table-hover table-bordered">

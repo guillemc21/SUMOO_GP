@@ -38,7 +38,11 @@
                         </table><hr style="width: 50%; margin-top:5px; margin-bottom:5px;">
                         <h3>
                             <span class="badge badge-success text-secondary">
-                                Total: {{ number_format($total,2) }} €
+                                Total sin iva: {{ number_format($total,2) }} €
+                            </span>
+                            <hr>
+                            <span class="badge badge-success text-secondary">
+                                Total con IVA( 21% ): {{ number_format($total*(1.21),2) }} €
                             </span>
                         </h3><hr>
                         <div class="flip-card m-auto">

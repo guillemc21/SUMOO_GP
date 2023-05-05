@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminUsuarios - SUMOGP')
+@section('title', 'AdminUsuarios - INK SPOT S.L.L')
 
 @section('css')
     <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
