@@ -5,18 +5,30 @@
 @section('css')
 <link rel="stylesheet" href="css/main_admin_custom.css">
 <link rel="shortcut icon" href="images/logo/sumogp.png">
+<style>
+    .content-wrapper {
+        background-color: #3d3e40;
+        color: #edededc5;
+    }
+    .content {
+        padding: 0 !important;
+    }
+    .container-fluid {
+        padding: 0 !important;
+    }
+</style>
 @stop
 
 @section('content_header')
-<h1 style="font-family: system-ui">Administrador - INK SPOT S.L.L</h1>
+<h1 style="font-family: system-ui;padding-left:30px;">Administrador - INK SPOT S.L.L</h1>
+<p style="padding-left:30px;">Bienvenido al panel de administración.</p>
+<hr style="background-color:#727272; margin-left:30px; width:300px;">
 @stop
 
 @section('content')
-<p>Bienvenido al panel de administración.</p>
-<hr>
 
 <br>
-<div class="menu_admin" style="background-color:#282b2e;" transition-style="in:circle:hesitate">
+<div class="menu_admin" style="background-color:#282b2e; min-height: 78vh;" transition-style="in:circle:hesitate">
     
     <div class="card_ink">
         <div class="header">
@@ -27,7 +39,7 @@
         </div>
 
         <div class="content">
-            <p>
+            <p style="color:white;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, perferendis porro autem, recusandae, facere fugiat rem deserunt animi illum laudantium iusto vel quos possimus. Nihil beatae ut quidem soluta tempore.
             </p>
 
