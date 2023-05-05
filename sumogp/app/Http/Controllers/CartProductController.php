@@ -110,7 +110,6 @@ class CartProductController extends Controller
         Session::put('cart',$cart);
 
         //Crear factura
-        
         $newFactura = new Factura();
         $newFactura->iduser  = Auth::user()->id;
         $newFactura->nameuser  = Auth::user()->name;
