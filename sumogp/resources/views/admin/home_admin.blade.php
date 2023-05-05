@@ -1,48 +1,50 @@
 @extends('adminlte::page')
 
-@section('title', 'Admin - SUMOGP')
+@section('title', 'Admin - INK SPOT S.L.L')
 
 @section('css')
-    <link rel="stylesheet" href="css/main_admin_custom.css">
-    <link rel="shortcut icon" href="images/logo/sumogp.png">
+<link rel="stylesheet" href="css/main_admin_custom.css">
+<link rel="shortcut icon" href="images/logo/sumogp.png">
 @stop
 
 @section('content_header')
-    <h1 style="font-family: system-ui">Admin - SUMOGP</h1>
+<h1 style="font-family: system-ui">Administrador - INK SPOT S.L.L</h1>
 @stop
 
 @section('content')
-    <p>Bienvenido al panel de administración.</p>
-    <hr>
-    <nav class="menu">
-        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
-        <label class="menu-open-button" for="menu-open">
-            <span class="lines line-1"></span>
-            <span class="lines line-2"></span>
-            <span class="lines line-3"></span>
-        </label>
+<p>Bienvenido al panel de administración.</p>
+<hr>
 
-        
-        <a href="#primeraIMG" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
-        <a href="#segundaIMG" class="menu-item red"> <i class="fa fa-heart"></i> </a>
-        <a href="#terceraIMG" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
-        
-    </nav>
-    <br>
-    <div class="menu_admin">
-        <img id="primeraIMG" src="images/main/background1.jpg" width="400px">
-        <img id="segundaIMG" src="images/main/background2.jpg" width="400px">
-        <img id="terceraIMG" src="images/main/background3.jpg" width="400px">
+<br>
+<div class="menu_admin">
+    
+    <div class="card_ink">
+        <div class="header">
+            <div class="img-box">
+                <img id="primeraIMG" src="/images/logo/sumogp.png" width="100px">
+            </div>
+            <h1 class="title">INK SPOT S.L.L</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, perferendis porro autem, recusandae, facere fugiat rem deserunt animi illum laudantium iusto vel quos possimus. Nihil beatae ut quidem soluta tempore.
+            </p>
+
+            <a class="btn-link">Leer mas...</a>
+        </div>
     </div>
-        
+
+</div>
+
 @stop
 
 
 
 @section('footer')
-    
+
 @stop
 
 @section('js')
-    
+
 @stop
