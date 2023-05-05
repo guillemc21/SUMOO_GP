@@ -16,7 +16,7 @@
 <hr>
 
 <br>
-<div class="menu_admin">
+<div class="menu_admin" style="background-color:#282b2e;" transition-style="in:circle:hesitate">
     
     <div class="card_ink">
         <div class="header">
