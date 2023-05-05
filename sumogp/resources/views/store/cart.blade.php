@@ -5,7 +5,7 @@
 @section('content')
 <div class="container text-center login-container" style="height: 55rem;">
     <div>
-        <h1></i>Carrito de compra</h1>
+        <h1>Carrito de compra</h1>
     </div>
     <div class="tsble-cart" id="main_transition">
         @if(count($cart)>2)
