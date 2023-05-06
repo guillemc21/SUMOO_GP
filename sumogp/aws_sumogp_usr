@@ -3,3 +3,5 @@ aws_sumogp_db
 
 aws_sumogp_usr
 Sumogp_10_zumogp
+
+ssh -i "laravel-8.pem" ubuntu@ec2-54-174-186-90.compute-1.amazonaws.com
