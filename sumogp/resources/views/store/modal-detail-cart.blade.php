@@ -45,38 +45,6 @@
                                 Total con IVA( 21% ): {{ number_format($total*(1.21),2) }} €
                             </span>
                         </h3><hr>
-
-                        <div class="card-container">
-                            <div class="panel">
-                                <div>
-                                <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
-                                <span class="sb-title">Address Selection</span>
-                                </div>
-                                <input type="text" placeholder="Address" id="location-input"/>
-                                <input type="text" placeholder="Apt, Suite, etc (optional)"/>
-                                <input type="text" placeholder="City" id="locality-input"/>
-                                <div class="half-input-container">
-                                <input type="text" class="half-input" placeholder="State/Province" id="administrative_area_level_1-input"/>
-                                <input type="text" class="half-input" placeholder="Zip/Postal code" id="postal_code-input"/>
-                                </div>
-                                <input type="text" placeholder="Country" id="country-input"/>
-                            </div>
-                            <div class="map" id="gmp-map"></div>
-                        </div>
-
-
-                        <!-- <h1>Realizar compra</h1>
-
-                        <div id="map"></div>
-
-                        <form action="" method="POST">
-                            @csrf
-                            <input type="text" name="calle" placeholder="Buscar calle">
-                            <button type="submit">Realizar compra</button>
-                        </form> -->
-                            
-                        <hr>
-                            
                         <div class="flip-card m-auto">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -146,12 +114,41 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <form action="{{ route('subtract.stock') }}" method="POST">
+                            {{ csrf_field() }}
+                            <div class="card-container">
+                                <div class="panel">
+                                    <div>
+                                    <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
+                                    <span class="sb-title">Address Selection</span>
+                                    </div>
+                                    <input type="text" placeholder="Address" id="location-input" name="address_selection"/>
+                                    <input type="text" placeholder="Apt, Suite, etc (optional)"/>
+                                    <input type="text" placeholder="City" id="locality-input"/>
+                                    <div class="half-input-container">
+                                    <input type="text" class="half-input" placeholder="State/Province" id="administrative_area_level_1-input"/>
+                                    <input type="text" class="half-input" placeholder="Zip/Postal code" id="postal_code-input"/>
+                                    </div>
+                                    <input type="text" placeholder="Country" id="country-input"/>
+                                </div>
+                                <div class="map" id="gmp-map"></div>
+                            </div>
+                            <br>
+                            <div class="modal-footer justify-content-between">
+                                <a href="{{ route('products.store') }}" class="custom-btn btn-14 w-100">
+                                    <input class="custom-btn" style="background: none;border: none;width: 100%;font-size: 0.7rem;font-family: 'Lato', sans-serif;font-weight: 500;" placeholder="Pagar" type="submit">
+                                </a>
+                            </div>
+                        </form>                 
+                            
+                        <hr>
+                            
                     </div>
                     
                 </div>
-                <div class="modal-footer justify-content-between">
-                    <a href="{{ route('subtract.stock') }}" class="custom-btn btn-14 w-50 m-auto">Pagar</a>
-                </div>
+                
             
         </div>
     <!-- /.modal-content -->

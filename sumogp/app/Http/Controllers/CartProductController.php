@@ -70,7 +70,7 @@ class CartProductController extends Controller
 
     }
 
-     public function add_order_details()
+     public function add_order_details(Request $request)
      {
         $cart = Session::get('cart');
         
@@ -115,6 +115,7 @@ class CartProductController extends Controller
         $newFactura->nameuser  = Auth::user()->name;
         $newFactura->last_name  = Auth::user()->last_name;
         $newFactura->email  = Auth::user()->email;
+        $newFactura->address  = $request->address_selection;
         $content_factura_serialize = serialize($content_factura);
         $newFactura->content  = $content_factura_serialize;
         $newFactura->sell_price_total  = $total;

@@ -57,7 +57,9 @@ Route::get('/store/pdf-facture/{id_facture}', [App\Http\Controllers\CartControll
 
 
 //Restar stock + crear factura + vaciar carrito//
-Route::get('/subtract/stock', [\App\Http\Controllers\CartProductController::class, 'add_order_details'])->name('subtract.stock');
+// Route::get('/subtract/stock', [\App\Http\Controllers\CartProductController::class, 'add_order_details'])->name('subtract.stock');
+Route::post('/subtract/stock', [\App\Http\Controllers\CartProductController::class, 'add_order_details'])->name('subtract.stock');
+
 
 
 //Generar pdf//
