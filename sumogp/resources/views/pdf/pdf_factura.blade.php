@@ -78,7 +78,7 @@
   <table style="font-size: 0.9rem;">
     <thead>
       <tr>
-        <th>SUMO GP</th>
+        <th>INK SPOT S.L.L</th>
         <th>CLIENTE</th>
       </tr>
     </thead>
@@ -101,7 +101,8 @@
             <p>Nombre: {{ $nameuser }}</p>
             <p>Apellidos: {{ $last_name }}</p>
             <p>Correo electronico: {{ $email }}</p>
-            <p>Teléfono: 555-1234</p>
+            <p>NIF/DNI: {{  }}</p>
+            <p>Teléfono: {{  }}</p>
           </div>
         </td>
       </tr>
