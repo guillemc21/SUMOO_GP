@@ -69,6 +69,7 @@
             <h5 style="line-height:35px;">Los productos permanecen en tu carrito durante 30 minutos<br>en el caso de que no haya ninguna modificación agregando nuevos productos.</h5>
         @endif
         <hr>
+        
         <div class="d-flex justify-content-center flex-column w-25 m-auto">
             <a href="{{ route('products.store') }}" class="custom-btn btn-14 w-100">
                 Seguir comprando

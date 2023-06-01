@@ -66,13 +66,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Acceder') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                                 </li>
                             @endif
                         @else
@@ -85,7 +85,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Cerrar sesión') }}
                                     </a>
                                     <a class="dropdown-item" href="/admin">{{ __('Panel Administrador') }}
                                         
@@ -261,7 +261,91 @@
                     ul.style.display = "none";
             }
         }
+
     </script>
+    <script>
+        "use strict";
+
+        function initMap() {
+            const CONFIGURATION = {
+                "ctaTitle": "Checkout",
+                "mapOptions": {"center":{"lat":37.4221,"lng":-122.0841},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":true,"zoom":11,"zoomControl":true,"maxZoom":22,"mapId":""},
+                "mapsApiKey": "YOUR_API_KEY_HERE",
+                "capabilities": {"addressAutocompleteControl":true,"mapDisplayControl":true,"ctaControl":false}
+            };
+            const componentForm = [
+                'location',
+                'locality',
+                'administrative_area_level_1',
+                'country',
+                'postal_code',
+            ];
+
+            const getFormInputElement = (component) => document.getElementById(component + '-input');
+            const map = new google.maps.Map(document.getElementById("gmp-map"), {
+                zoom: CONFIGURATION.mapOptions.zoom,
+                center: { lat: 37.4221, lng: -122.0841 },
+                mapTypeControl: false,
+                fullscreenControl: CONFIGURATION.mapOptions.fullscreenControl,
+                zoomControl: CONFIGURATION.mapOptions.zoomControl,
+                streetViewControl: CONFIGURATION.mapOptions.streetViewControl
+            });
+            const marker = new google.maps.Marker({map: map, draggable: false});
+            const autocompleteInput = getFormInputElement('location');
+            const autocomplete = new google.maps.places.Autocomplete(autocompleteInput, {
+                fields: ["address_components", "geometry", "name"],
+                types: ["address"],
+            });
+            autocomplete.addListener('place_changed', function () {
+                marker.setVisible(false);
+                const place = autocomplete.getPlace();
+                if (!place.geometry) {
+                // User entered the name of a Place that was not suggested and
+                // pressed the Enter key, or the Place Details request failed.
+                window.alert('No details available for input: \'' + place.name + '\'');
+                return;
+                }
+                renderAddress(place);
+                fillInAddress(place);
+            });
+
+            function fillInAddress(place) {  // optional parameter
+                const addressNameFormat = {
+                'street_number': 'short_name',
+                'route': 'long_name',
+                'locality': 'long_name',
+                'administrative_area_level_1': 'short_name',
+                'country': 'long_name',
+                'postal_code': 'short_name',
+                };
+                const getAddressComp = function (type) {
+                for (const component of place.address_components) {
+                    if (component.types[0] === type) {
+                    return component[addressNameFormat[type]];
+                    }
+                }
+                return '';
+                };
+                getFormInputElement('location').value = getAddressComp('street_number') + ' '
+                        + getAddressComp('route');
+                for (const component of componentForm) {
+                // Location field is handled separately above as it has different logic.
+                if (component !== 'location') {
+                    getFormInputElement(component).value = getAddressComp(component);
+                }
+                }
+            }
+
+            function renderAddress(place) {
+                map.setCenter(place.geometry.location);
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+            }
+        }
+        
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcwtqMq00bCR3nDhtHwe9cGbnNJrlOXVs&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cAB" async defer></script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
