@@ -101,8 +101,8 @@
             <p>Nombre: {{ $nameuser }}</p>
             <p>Apellidos: {{ $last_name }}</p>
             <p>Correo electronico: {{ $email }}</p>
-            <p>NIF/DNI: {{  }}</p>
-            <p>Teléfono: {{  }}</p>
+            <p>NIF/DNI: {{ $tel }}</p>
+            <p>Teléfono: {{ $nif }}</p>
           </div>
         </td>
       </tr>

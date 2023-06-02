@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
         $user->name = 'Admin';
         $user->last_name = 'admin';
         $user->email = 'admin@test.com';
+        $user->tel = 555555555;
+        $user->nif = "55555555J";
         $user->password = Hash::make('P@ssw0rd');
         $user->role = 'on';
 
