@@ -3,7 +3,7 @@
 @section('title', 'Carrito')
 
 @section('content')
-<div class="container text-center login-container" style="height: 55rem;">
+<div class="container text-center login-container" style="min-height: 55rem;">
     <div>
         <h1>Carrito de compra</h1>
     </div>

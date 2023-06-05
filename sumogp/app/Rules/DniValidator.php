@@ -14,6 +14,7 @@ class DniValidator implements Rule
         
         // Verificar que el DNI tenga 8 dígitos
         if (strlen($dni) !== 9) {
+            dd(strlen($dni));
             return false;
         }
         
