@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="featured">Imagen del producto</label> 
-                        <input type="file" name="featured" class="form-control" id="featured" value="{{ $product->image_product }}">
+                        <input type="file" name="featured" class="form-control" id="featured" accept="image/*" value="{{ $product->image_product }}" onchange="validarFile(this);">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -60,3 +60,21 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+<script>
+    function validarFile(all){
+        var extensiones_permitidas = [".png", ".bmp", ".jpg", ".jpeg", ".doc", ".docx", ".gif"];
+        var rutayarchivo = all.value;
+        var ultimo_punto = all.value.lastIndexOf(".");
+        var extension = rutayarchivo.slice(ultimo_punto, rutayarchivo.length);
+        if(extensiones_permitidas.indexOf(extension) == -1){
+            Swal.fire(
+                'Error!',
+                'El formato no es correcto.',
+                'error',
+            )
+            document.getElementById(all.id).value = "";
+            return;
+        }
+    }
+    
+</script>
