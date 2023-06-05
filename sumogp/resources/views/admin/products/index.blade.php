@@ -145,7 +145,7 @@
                     </div>
                     <div class="form-group">
                         <label for="featured">Imagen del producto</label> 
-                        <input type="file" name="featured" class="form-control" id="featured">
+                        <input type="file" name="featured" class="form-control" id="featured" accept="image/*" onchange="validarFile(this);">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">

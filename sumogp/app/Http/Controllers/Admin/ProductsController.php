@@ -79,6 +79,7 @@ class ProductsController extends Controller
             $filename = time() . '-' . $file->getClientOriginalName();
             $uploadSuccess = $request->file('featured')->move($destinationPath, $filename);
             $product->image_product = $destinationPath . $filename;
+             
         }
         $product->save();
         //dd($request->category);
