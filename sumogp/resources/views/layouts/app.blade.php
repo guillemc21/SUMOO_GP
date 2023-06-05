@@ -87,9 +87,11 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar sesión') }}
                                     </a>
-                                    <a class="dropdown-item" href="/admin">{{ __('Panel Administrador') }}
-                                        
-                                    </a>
+                                    @if (Auth::user()->role !== NULL)
+                                        <a class="dropdown-item" href="/admin">{{ __('Panel Administrador') }}
+                                            
+                                        </a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('list-facturas',Auth::user()->id) }}">{{ __('Facturas de') }} {{ Auth::user()->name }}
                                         
                                     </a>

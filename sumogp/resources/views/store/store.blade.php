@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Contenido -->
-<section class="container-fluid content" id="main_transition">
+<section class="container-fluid content" id="main_transition" style="min-height: 55rem;">
 
     <!-- Categorías -->
     <div id="bg_images" class="row justify-content-center">
