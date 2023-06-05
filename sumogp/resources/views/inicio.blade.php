@@ -53,7 +53,7 @@
         <h1 style="color: white; padding-top: 30px; text-align:center;">QUÉ VENDEMOS?</h1>
         <h5 style="color: white; text-align: center;">Nos dedicamos a vender material y mobiliario de oficina.</h5>
         <div class="row justify-content-center text-center" style="padding-top: 30px;margin: 0;">
-            <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 mb-5 d-flex justify-content-center">
                 <div class="card " style="width: 30rem;">
                     <img src="images\main\card1.webp" class="card-img-top" alt="Imagen 1">
                     <div class="card-body">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 mb-5 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 mb-5 d-flex justify-content-center">
                 <div class="card" style="width: 30rem;">
                     <img src="images\main\card2.webp" class="card-img-top" alt="Imagen 2">
                     <div class="card-body">
@@ -88,37 +88,37 @@
         <p>Aqui podras ver una pequeña muestra de los materiales escolares que vendemos, proximamente en nuestra tienda!.</p>
         <br>
         <div class="row">
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\mochila_hover.jpg" alt="">
                     <img src="images\main\mochila_hover_after.png" alt="">
                 </article>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\estuche_hover.jpg" alt="">
                     <img src="images\main\estuche_hover_after.png" alt="">
                 </article>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\sacapuntas_hover.jpg" alt="">
                     <img src="images\main\sacapuntas_hover_after.png" alt="">
                 </article>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\posit_hover.jpg" alt="">
                     <img src="images\main\posit_hover_after.png" alt="">
                 </article>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\libreta_hover.jpg" alt="">
                     <img src="images\main\libreta_hover_after.png" alt="">
                 </article>
             </div>
-            <div class="col-xl-4 col-md-6 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-md-6 col-6 d-flex justify-content-center">
                 <article>
                     <img src="images\main\retulador_hover.jpg" alt="">
                     <img src="images\main\retulador_hover_after.png" alt="">

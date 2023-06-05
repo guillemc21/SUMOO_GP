@@ -72,6 +72,20 @@ class CartProductController extends Controller
 
      public function add_order_details(Request $request)
      {
+        if($request->address_city !== 'Barcelona') {
+            return redirect()->route('cart.show')->with('err_city', 'OK');
+        }
+
+        $fechaActual = now()->format('Y-m-d');
+        $fechaCompra = $request->input('purchase_date');
+
+        if ($fechaCompra <= $fechaActual) {      
+            return redirect()->route('cart.show')->with('err_date', 'OK');
+        }
+
+        $address = array();
+        array_push($address, $request->address_selection, $request->address_num, $request->address_city, $request->address_stpr, $request->address_codepost, $request->address_country);
+        
         $cart = Session::get('cart');
         
         //Reducir la cantidad del stock de x producto mediante la compra del cliente
@@ -115,10 +129,12 @@ class CartProductController extends Controller
         $newFactura->nameuser  = Auth::user()->name;
         $newFactura->last_name  = Auth::user()->last_name;
         $newFactura->email  = Auth::user()->email;
-        $newFactura->address  = $request->address_selection;
+        $newFactura->address  = serialize($address);
         $content_factura_serialize = serialize($content_factura);
         $newFactura->content  = $content_factura_serialize;
         $newFactura->sell_price_total  = $total;
+        $newFactura->purchase_date = $fechaCompra;
+        $newFactura->purchase_time = $request->input('purchase_time');
         $newFactura->save();
         // dd($newFactura->id);
 

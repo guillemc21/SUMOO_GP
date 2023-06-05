@@ -122,18 +122,40 @@
                                 <div class="panel">
                                     <div>
                                     <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
-                                    <span class="sb-title">Address Selection</span>
+                                    <span class="sb-title">Selecciona una dirección de envío</span>
                                     </div>
-                                    <input type="text" placeholder="Address" id="location-input" name="address_selection"/>
-                                    <input type="text" placeholder="Apt, Suite, etc (optional)"/>
-                                    <input type="text" placeholder="City" id="locality-input"/>
+                                    <input type="text" placeholder="Dirección" id="location-input" name="address_selection" required/>
+                                    <input type="text" placeholder="Nº de piso,apart,suite,etc" name="address_num" required/>
+                                    <input type="text" placeholder="Ciudad" id="locality-input" name="address_city"/>
                                     <div class="half-input-container">
-                                    <input type="text" class="half-input" placeholder="State/Province" id="administrative_area_level_1-input"/>
-                                    <input type="text" class="half-input" placeholder="Zip/Postal code" id="postal_code-input"/>
+                                    <input type="text" class="half-input" placeholder="Estado/Provincia" id="administrative_area_level_1-input" name="address_stpr"/>
+                                    <input type="text" class="half-input" placeholder="Codigo Postal" id="postal_code-input" name="address_codepost" required/>
                                     </div>
-                                    <input type="text" placeholder="Country" id="country-input"/>
+                                    <input type="text" placeholder="País" id="country-input" name="address_country"/>
                                 </div>
                                 <div class="map" id="gmp-map"></div>
+                            </div>
+                            <br>                   
+                            <div class="d-flex flex-column align-items-center p-5" style="width: 100%;">
+                                <div class="m-3">
+                                    <img class="sb-title-icon" src="https://img.icons8.com/?size=512&id=10053&format=png" width="25" height="25" alt="">
+                                    <span style="font-family: Roboto, sans-serif;font-weight: 500;">Selecciona una fecha</span>
+                                </div>
+                                <div style="width: 100%;">
+                                    <label for="purchase_date">Fecha de entrega:</label>
+                                    <input type="date" id="purchase_date" name="purchase_date" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>                 
+                            <div class="d-flex flex-column align-items-center p-5" style="width: 100%;">
+                                <div class="m-3">
+                                    <img class="sb-title-icon" src="https://img.icons8.com/?size=512&id=42258&format=png" width="25" height="25" alt="">
+                                    <span style="font-family: Roboto, sans-serif;font-weight: 500;">Selecciona una hora</span>
+                                </div>
+                                <div style="width: 100%;">
+                                    <label for="purchase_time">Hora de entrega:</label>
+                                    <input type="time" id="purchase_time" name="purchase_time" class="form-control" required>
+                                </div>
                             </div>
                             <br>
                             <div class="modal-footer justify-content-between">

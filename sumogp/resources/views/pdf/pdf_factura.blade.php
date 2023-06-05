@@ -78,6 +78,7 @@
   <table style="font-size: 0.9rem;">
     <thead>
       <tr>
+        <th></th>
         <th>INK SPOT S.L.L</th>
         <th>CLIENTE</th>
       </tr>
@@ -85,37 +86,67 @@
     <tbody>
       <tr>
         <td>
-          
-          <div class="emisor">
-            <h2>Información de la empresa</h2>
-            <p>Nombre: INK SPOT S.L.L</p>
-            <p>Correo electronico: inkspotsll86@gmial.com</p>
-            <p>Teléfono: 613621145</p>
-            <p>Cif: B-43536274</p>
-            <p>Direccion: C/ Conssell de Cent nº282</p>
-          </div>
+          <b>Nombre:</b>
         </td>
         <td>
-          <div class="emisor">
-            <h2>Información del cliente</h2>
-            <p>Nombre: {{ $nameuser }}</p>
-            <p>Apellidos: {{ $last_name }}</p>
-            <p>Correo electronico: {{ $email }}</p>
-            <p>NIF/DNI: {{ $tel }}</p>
-            <p>Teléfono: {{ $nif }}</p>
-          </div>
+          INK SPOT S.L.L
+        </td>
+        <td>
+        {{ $nameuser }} {{ $last_name }}
         </td>
       </tr>
+
+      <tr>
+        <td>
+          <b>Correo electronico:</b>
+        </td>
+        <td>
+          inkspotsll86@gmial.com
+        </td>
+        <td>
+          {{ $email }}
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <b>Teléfono:</b>
+        </td>
+        <td>
+          613621145
+        </td>
+        <td>
+          {{ $tel }}
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <b>NIF/DNI:</b>
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          {{ $nif }}
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <b>Direccion:</b>
+        </td>
+        <td>
+          C/ Conssell de Cent nº282
+        </td>
+        <td>
+          <b>Se muestra detalladamente mas abajo</b>
+        </td>
+      </tr>  
     </tbody>
   </table>
 
   <hr>
-  <!-- <div class="receptor">
-      <h2>Información del receptor</h2>
-      <p>Nombre: Ana Gómez</p>
-      <p>Dirección: Calle 456, Ciudad</p>
-      <p>Teléfono: 555-5678</p>
-    </div> -->
 
   <table style="font-size: 0.9rem;">
     <thead>
@@ -130,11 +161,6 @@
     </thead>
     <tbody>
       @foreach($content as $item)
-      <!-- <h5>{{ $item->name_product }}</h5>
-        <h5>{{ $item->sell_price }}</h5>
-        <h5>{{ $item->content }}</h5>
-        <h5>{{ $item->category->name }}</h5>
-        <h5>{{ $item->brand->name }}</h5> -->
       <tr>
         <td>{{ $item->name_product }}</td>
         <td>{{ $item->category->name }}</td>
@@ -147,7 +173,42 @@
 
     </tbody>
   </table>
+  <hr>
+  <table style="font-size: 0.9rem;">
+    <thead>
+      <tr>
+        <th>Dirección</th>
+        <th>Nº de piso/casa</th>
+        <th>Ciudad</th>
+        <th>Estado/Provincia</th>
+        <th>Codigo Postal</th>
+        <th>País</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($address as $item)
+    
+        <td>{{ $item }}</td>
+    
+      @endforeach
 
+    </tbody>
+  </table>
+  <hr>
+  <table style="font-size: 0.9rem;">
+    <thead>
+      <tr>
+        <th>Dia de entrega</th>
+        <th>Hora de entrega</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{ $delivery_day }} </td>
+        <td> {{ $delivery_time }} </td>
+      </tr>
+    </tbody>
+  </table>
   <div class="total">
     <p>Total sin iva: {{ number_format($total,2) }} €</p>
     <p>Total con iva: {{ number_format($total*(1.21),2) }} €</p>

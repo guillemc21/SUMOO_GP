@@ -14,7 +14,6 @@ class DniValidator implements Rule
         
         // Verificar que el DNI tenga 8 dígitos
         if (strlen($dni) !== 9) {
-            dd(strlen($dni));
             return false;
         }
         
@@ -28,7 +27,7 @@ class DniValidator implements Rule
         
         // Obtener los 7 primeros dígitos del DNI
         $numeros = substr($dni, 0, 8);
-        
+      
         // Calcular la letra correspondiente a los números
         $letraCalculada = 'TRWAGMYFPDXBNJZSQVHLCKE'[$numeros % 23];
         

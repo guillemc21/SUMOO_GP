@@ -205,11 +205,29 @@
             });
         </script>
     @endif
+    @if (session('err_date') == 'OK')
+        <script>
+            Swal.fire(
+                'Error!',
+                'El campo de fecha no es valida.',
+                'error',
+            )
+        </script>
+    @endif
     @if (session('error_comment') == 'OK')
         <script>
             Swal.fire(
                 'Error!',
                 'Debes de llenar todos los campos.',
+                'error',
+            )
+        </script>
+    @endif
+    @if (session('err_city') == 'OK')
+        <script>
+            Swal.fire(
+                'Error!',
+                'Debes de indicar una dirección ubicada en Barcelona.',
                 'error',
             )
         </script>
