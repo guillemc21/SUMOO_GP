@@ -145,7 +145,8 @@
                     </div>
                     <div class="form-group">
                         <label for="featured">Imagen del producto</label> 
-                        <input type="file" name="featured" class="form-control" id="featured" accept="image/*" onchange="validarFile(this);">
+                        <input type="file" name="featured" class="form-control" id="featured" accept="image/*" value="" onchange="validarFile(this);">
+                        
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -163,6 +164,8 @@
 
 
 @stop
+
+
 
 @section('js')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -225,6 +228,27 @@
             }
             });
         });
+        
+        function validarFile(all){
+            var extensiones_permitidas = [".png", ".bmp", ".jpg", ".jpeg", ".doc", ".docx", ".gif"];
+            var rutayarchivo = all.value;
+            var ultimo_punto = all.value.lastIndexOf(".");
+            var extension = rutayarchivo.slice(ultimo_punto, rutayarchivo.length);
+            console.log(all.id);
+            if(extensiones_permitidas.indexOf(extension) == -1){
+                console.log(rutayarchivo);
+                document.getElementById(all.id).value = "";
+                console.log(rutayarchivo);
+                Swal.fire(
+                    'Error!',
+                    'El formato no es correcto.',
+                    'error',
+                )
+                return;
+            }
+        }
+    
+
 
         
 
