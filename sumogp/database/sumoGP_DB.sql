@@ -4,6 +4,7 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (3, 'Escritura y correccion', '2023-03-01 05:31:38', '2023-03-01 05:31:38'),
 (4, 'Articulos generales de oficina', '2023-03-01 05:31:46', '2023-03-01 05:31:46');
 
+
 INSERT INTO `brands` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Canson', '2023-03-01 05:32:23', '2023-03-01 05:32:23'),
 (2, 'Adagio', '2023-03-01 05:32:36', '2023-03-01 05:32:36'),
