@@ -146,5 +146,6 @@ Route::delete('/admin/facturas/{facturaId}/delete', [App\Http\Controllers\Admin\
 
 Auth::routes();
 
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
